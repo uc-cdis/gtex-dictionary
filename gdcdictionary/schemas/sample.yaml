@@ -37,31 +37,21 @@ links:
     backref: samples
     label: derived_from
     target_type: case
-    multiplicity: many_to_one #not sure
-    required: true
-  - name: diagnoses
-    backref: samples
-    label: related_to
-    target_type: diagnosis
     multiplicity: many_to_one
-    required: false
+    required: true
 
-# Sample properties: keep TCGA-specific fields
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  autolysis_score:
     description: >
-      The legacy barcode used before prior to the use UUIDs, varies by project.
-      For TCGA this is bcrsamplebarcode.
+      Autolysis Score
+    enum:
+      - None
+      - Mild
+      - Moderate
+      - Severe
+
   biospecimen_anatomic_site:
     term:
       $ref: "_terms.yaml#/biospecimen_anatomic_site"
@@ -132,7 +122,7 @@ properties:
       - Clavicle
       - Clitoris
       - Colon
-      - Colon - Mucosa Only
+      - Colon (Mucosa Only)
       - Common Duct
       - Conjunctiva
       - Connective Tissue
@@ -150,7 +140,7 @@ properties:
       - Epidural Space
       - Esophagogastric Junction
       - Esophagus
-      - Esophagus - Mucosa Only
+      - Esophagus (Mucosa Only)
       - Eye
       - Fallopian Tube
       - Femoral Artery
@@ -177,7 +167,7 @@ properties:
       - Hand
       - Hard Palate
       - Head & Neck
-      - Head - Face Or Neck, Nos
+      - Head (Face Or Neck) NOS
       - Heart
       - Hepatic
       - Hepatic Duct
@@ -253,7 +243,7 @@ properties:
       - Ocular Orbits
       - Omentum
       - Oral Cavity
-      - Oral Cavity - Mucosa Only
+      - Oral Cavity (Mucosa Only)
       - Oropharynx
       - Other
       - Ovary
@@ -301,7 +291,7 @@ properties:
       - Skin
       - Skull
       - Small Bowel
-      - Small Bowel - Mucosa Only
+      - Small Bowel (Mucosa Only)
       - Small Finger
       - Soft Tissue
       - Spinal Column
@@ -310,7 +300,7 @@ properties:
       - Splenic Flexure
       - Sternum
       - Stomach
-      - Stomach - Mucosa Only
+      - Stomach (Mucosa Only)
       - Subcutaneous Tissue
       - Synovium
       - Temporal Cortex
@@ -347,6 +337,73 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
+  biospecimen_anatomic_site_detail:
+    description: >
+      Tissue type, more specific detail of tissue tyep
+    enum:
+      - "Adipose - subcutaneous"
+      - "Adipose - visceral (Omentum)"
+      - "Artery - aorta"
+      - "Artery - coronary"
+      - "Artery - tibial"
+      - "Bladder"
+      - "Brain - amygdala"
+      - "Brain - anterior cingulate cortex (BA24)"
+      - "Brain - caudate (basal ganglia)"
+      - "Brain - cerebellar hemisphere"
+      - "Brain - Cerebellum"
+      - "Brain - cortex"
+      - "Brain - frontal cortex (BA9)"
+      - "Brain - hippocampus"
+      - "Brain - hypothalamus"
+      - "Brain - nucleus accumbens (basal ganglia)"
+      - "Brain - putamen (basal ganglia)"
+      - "Brain - spinal cord (cervical c-1)"
+      - "Brain - substantia nigra"
+      - "Breast - mammary Tissue"
+      - "Cervix - ectocervix"
+      - "Cervix - endocervix"
+      - "Colon - transverse"
+      - "Esophagus - mucosa"
+      - "Esophagus - muscularis"
+      - "Fallopian tube"
+      - "Heart - atrial appendage"
+      - "Heart - left ventricle"
+      - "Kidney - cortex"
+      - "Kidney - medulla"
+      - "Liver"
+      - "Lung"
+      - "Muscle - skeletal"
+      - "Nerve - tibial"
+      - "Ovary"
+      - "Pancreas"
+      - "Pituitary"
+      - "Prostate"
+      - "Skin - not sun exposed (suprapubic)"
+      - "Skin - sun exposed (lower leg)"
+      - "Spleen"
+
+  biospecimen_anatomic_site_uberon_id:
+    description: >
+      Uberon ID, anatomical location as described by the Uber Anatomy Ontology (UBERON)
+    type: string
+
+  biospecimen_anatomic_site_uberon_term:
+    description: >
+      Uberon Term, anatomical location as described by the Uber Anatomy Ontology (UBERON)
+    type: string
+
+  biospecimen_physical_site:
+    description: >
+      Tissue location
+    type: string
+
+  biospecimen_type:
+    description: >
+      Original material type of the collected sample
+    type: string
+
   composition:
     term:
       $ref: "_terms.yaml#/composition"
@@ -378,45 +435,50 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
+  collection_kit:
+    description: >
+      Category or classifier of a set of responses, indicates the color of the sample collection kit
+    enum:
+      - "Aqua Kit:Organ and Tissue donation"
+      - "Green Kit: Brain donation"
+      - "Yellow Kit: Skin and Blood donation"
+
+  collection_site:
+    description: >
+      Code for BSS collection site
+    type: string
+
   current_weight:
     term:
       $ref: "_terms.yaml#/current_weight"
     type: number
-  days_to_collection:
-    term:
-      $ref: "_terms.yaml#/days_to_collection"
+
+  hours_to_collection:
+    description: >
+      Total Ischemic time for a sample
     type: integer
+
   days_to_sample_procurement:
     term:
       $ref: "_terms.yaml#/days_to_sample_procurement"
     type: integer
-  diagnosis_pathologically_confirmed:
-    term:
-      ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
+
   freezing_method:
     term:
       $ref: "_terms.yaml#/freezing_method"
     type: string
-  initial_weight:
-    term:
-      $ref: "_terms.yaml#/initial_weight"
-    type: number
-  intermediate_dimension:
-    terms:
-      $ref: "_terms.yaml#/intermediate_dimension"
+
+  internal_notes:
+    description: >
+      Internal notes about the sample generated by the LDACC
     type: string
+
   is_ffpe:
     term:
       $ref: "_terms.yaml#/is_ffpe"
     type: boolean
-  longest_dimension:
-    terms:
-      $ref: "_terms.yaml#/longest_dimension"
-    type: string
+
   method_of_sample_procurement:
     term:
       $ref: "_terms.yaml#/method_of_sample_procurement"
@@ -477,10 +539,17 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
   oct_embedded:
     term:
       $ref: "_terms.yaml#/oct_embedded"
     type: string
+
+  pathology_notes:
+    description: >
+      Pathology Notes, notes from PRC Report
+    type: string
+
   preservation_method:
     term:
       $ref: "_terms.yaml#/preservation_method"
@@ -494,96 +563,24 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
+  prosector_notes:
+    description: >
+      Prosector comments
+    type: string
+
   sample_type:
-    description: "Characterization of the sample as either clinical or contrived."
+    description: >
+      Current material type of the sample as stored at the LDACC
     enum:
-      - Additional Metastatic
-      - Additional - New Primary
-      - Blood Derived Cancer - Bone Marrow, Post-treatment
-      - Blood Derived Cancer - Peripheral Blood, Post-treatment
-      - Blood Derived Normal
-      - Bone Marrow Normal
-      - Buccal Cell Normal
-      - Cell Line Derived Xenograft Tissue
-      - Cell Lines
-      - cfDNA
-      - Circulating Tumor Cell (CTC)
-      - Control Analyte
-      - Clinical
-      - Contrived
-      - ctDNA
-      - DNA
-      - EBV Immortalized Normal
-      - FFPE Recurrent
-      - FFPE Scrolls
-      - Fibroblasts from Bone Marrow Normal
-      - GenomePlex (Rubicon) Amplified DNA
-      - Granulocytes
-      - Human Tumor Original Cells
-      - Metastatic
-      - Mononuclear Cells from Bone Marrow Normal
-      - Primary Blood Derived Cancer - Peripheral Blood
-      - Recurrent Blood Derived Cancer - Peripheral Blood
-      - Pleural Effusion
-      - Primary Blood Derived Cancer - Bone Marrow
-      - Primary Tumor
-      - Primary Xenograft Tissue
-      - Post neo-adjuvant therapy
-      - Recurrent Blood Derived Cancer - Bone Marrow
-      - Recurrent Tumor
-      - Repli-G (Qiagen) DNA
-      - Repli-G X (Qiagen) DNA
-      - RNA
-      - Slides
-      - Solid Tissue Normal
-      - Total RNA
-      - Xenograft Tissue
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-  sample_type_id:
-    term:
-      $ref: "_terms.yaml#/sample_type_id"
-    enum:
-      - '01'
-      - '02'
-      - '03'
-      - '04'
-      - '05'
-      - '06'
-      - '07'
-      - '08'
-      - '09'
-      - '10'
-      - '11'
-      - '12'
-      - '13'
-      - '14'
-      - '15'
-      - '16'
-      - '20'
-      - '40'
-      - '41'
-      - '42'
-      - '50'
-      - '60'
-      - '61'
-      - '99'
-  sample_volume:
-    description: "The volume of the sample in mL."
-    type: number
-  shortest_dimension:
-    term:
-      $ref: "_terms.yaml#/shortest_dimension"
-    type: string
-  time_between_clamping_and_freezing:
-    term:
-      $ref: "_terms.yaml#/time_between_clamping_and_freezing"
-    type: string
-  time_between_excision_and_freezing:
-    term:
-      $ref: "_terms.yaml#/time_between_excision_and_freezing"
-    type: string
+      - PAXgene Preserved tissue
+      - Fresh frozen tissue
+      - Whole blood
+      - PAXgene Preserved whole blood
+      - Pellet frozen cells
+      - DNA genomic
+      - Fresh skin punch
+
   tissue_type:
     term:
       $ref: "_terms.yaml#/tissue_type"
@@ -596,90 +593,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-  tumor_code:
-    term:
-      $ref: "_terms.yaml#/tumor_code"
-    enum:
-      - Non cancerous tissue
-      - Diffuse Large B-Cell Lymphoma (DLBCL)
-      - Lung Cancer (all types)
-      - Lung Adenocarcinoma
-      - Non-small Cell Lung Carcinoma (NSCLC)
-      - Colon Cancer (all types)
-      - Breast Cancer (all types)
-      - Cervical Cancer (all types)
-      - Anal Cancer (all types)
-      - Acute lymphoblastic leukemia (ALL)
-      - Acute myeloid leukemia (AML)
-      - Induction Failure AML (AML-IF)
-      - Neuroblastoma (NBL)
-      - Osteosarcoma (OS)
-      - Ewing sarcoma
-      - Wilms tumor (WT)
-      - Clear cell sarcoma of the kidney (CCSK)
-      - Rhabdoid tumor (kidney) (RT)
-      - CNS, ependymoma
-      - CNS, glioblastoma (GBM)
-      - CNS, rhabdoid tumor
-      - CNS, low grade glioma (LGG)
-      - CNS, medulloblastoma
-      - CNS, other
-      - NHL, anaplastic large cell lymphoma
-      - NHL, Burkitt lymphoma (BL)
-      - Rhabdomyosarcoma
-      - Soft tissue sarcoma, non-rhabdomyosarcoma
-      - Castration-Resistant Prostate Cancer (CRPC)
-      - Prostate Cancer
-      - Hepatocellular Carcinoma (HCC)
-  tumor_code_id:
-    term:
-      $ref: "_terms.yaml#/tumor_code_id"
-    enum:
-      - "00"
-      - "01"
-      - "02"
-      - "03"
-      - "04"
-      - "10"
-      - "20"
-      - "21"
-      - "30"
-      - "40"
-      - "41"
-      - "50"
-      - "51"
-      - "52"
-      - "60"
-      - "61"
-      - "62"
-      - "63"
-      - "64"
-      - "65"
-      - "70"
-      - "71"
-      - "80"
-      - "81"
-  tumor_descriptor:
-    term:
-      $ref: "_terms.yaml#/tumor_descriptor"
-    enum:
-      - Metastatic
-      - Not Applicable
-      - Primary
-      - Recurrence
-      - Xenograft
-      - NOS
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-    description: "A description of the tumor from which the sample was derived." # TOREVIEW
+
   cases:
     $ref: "_definitions.yaml#/to_one"
-  diagnoses:
-    $ref: "_definitions.yaml#/to_one"
-  project_id:
-    type: string
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
