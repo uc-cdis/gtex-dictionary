@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "exposure"
 title: Exposure
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.gtexportal.org/
 category: clinical
 program: '*'
 project: '*'
@@ -38,20 +38,7 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 properties:
-  type:
-    enum: [ "exposure" ]
-
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
   alcohol_history:
     term:
@@ -120,9 +107,3 @@ properties:
 
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
