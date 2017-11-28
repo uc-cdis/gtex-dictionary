@@ -1,0 +1,21 @@
+{
+    "type": "serology",
+    "submitter_id": "GTEx-STST-sero",
+    "cmv": "Not performed",
+    "ebv_lgg": "Negative",
+    "ebv_lgm": "Indeterminate",
+    "hbcab_lgm": "Indeterminate",
+    "hbcab_total": "Negative",
+    "hbsab": "Not performed",
+    "hbsag": "Positive",
+    "hcv_1nat": "Indeterminate",
+    "hcv_ab": "Indeterminate",
+    "hiv_i": "Positive",
+    "hiv_i_ii": "Negative",
+    "hiv_i_ii_plus": "Not performed",
+    "prr_vdrl": "Positive",
+    "rpr": "Negative",
+    "cases": {
+        "submitter_id": "GTEx-STST"
+    }
+}

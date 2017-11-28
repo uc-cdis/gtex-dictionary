@@ -1,0 +1,170 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "serology"
+title: Serology
+type: object
+namespace: https://www.gtexportal.org/
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Local serology panel, dictated by the local institution (not the project) and performed in the subject.    
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: serologies
+    label: describes
+    target_type: case
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  cmv:
+    description: >
+      CMV Total Ab results from any local serology panel, dictated by the local institution (not the project). Test performed to determine the presence of a genus of the family herpesviridae, subfamily betaherpesvirinae, infecting the salivary glands, liver, spleen, lungs, eyes, and other organs, in which they produce characteristically enlarged cells with intranuclear inclusions.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  ebv_lgg:
+    description: >
+      EBV IgG Ab results from any local serology panel, dictated by the local institution (not the project). Test performed to determine the amount of immunoglobulin G present in a sample.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  ebv_lgm:
+    description: >
+      EBV IgM Ab results from any local serology panel, dictated by the local institution (not the project). Test performed to determine the amount of immunoglobulin M present in a sample.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  hbcab_lgm:
+    description: >
+      HBcAb-IgM results from any local serology panel, dictated by the local institution (not the project). Test performed to determine the amount of Hepatitis B virus core antibody and the amount of immunoglobulin M present in a sample.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  hbcab_total:
+    description: >
+      HBcAb (Total; IgG+IgM) results from any local serology panel, dictated by the local institution (not the project). Test performed to determine the amount of Hepatitis B virus core antibody present in a sample.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  hbsab:
+    description: >
+      HBsAb results from any local serology panel, dictated by the local institution (not the project). Test performed to determine the surface antibody reaction of a sample to the Hepatitis B virus.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  hbsag:
+    description: >
+      HBsAg results from any local serology panel, dictated by the local institution (not the project). Test performed to determine the presence of hepatitis B virus surface antigen.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  hcv_1nat:
+    description: >
+      HCV_1_NAT results from any local serology panel, dictated by the local institution (not the project). Any of various amplification and detection strategies applied to detection of virus contamination in donor blood, specifically small, enveloped, positive sense single strand RNA virus in the family Flaviviridae.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  hcv_ab:
+    description: >
+      HCV Ab results from any local serology panel, dictated by the local institution (not the project). Test performed to determine the presence of a small, enveloped, positive sense single strand RNA virus in the family Flaviviridae and protein made by B lymphocytes in response to a foreign substance (antigen).  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  hiv_i:
+    description: >
+      HIV-1 NAT results from any local serology panel, dictated by the local institution (not the project). Any of various amplification and detection strategies applied to detection of virus contamination in donor blood, specifically the virus isolated and recognized as the etiologic agent of AIDS.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  hiv_i_ii:
+    description: >
+      HIV I/II Ab results from any local serology panel, dictated by the local institution (not the project). Test performed using HIV antibodies produced by B-cells, human immunodeficiency virus (HIV) antibodies that react with HIV antigens.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  hiv_i_ii_plus:
+    description: >
+      HIV I/II Plus O Antibody results from any local serology panel, dictated by the local institution (not the project). Test performed using HIV antibodies produced by B-cells, human immunodeficiency virus (HIV) antibodies that determine the amount of HIV-1 group O antibody present in a sample.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  prr_vdrl:
+    description: >
+      PRR/VDRL results from any local serology panel, dictated by the local institution (not the project). A variety of serologic tests for syphilis.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  rpr:
+    description: >
+      RPR results from any local serology panel, dictated by the local institution (not the project). Test performed to determine the antibodies produced by cellular damage caused by Treponema pallidum present in a sample.  
+    enum:
+      - "Not performed"
+      - "Negative"
+      - "Positive"
+      - "Indeterminate"
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"
