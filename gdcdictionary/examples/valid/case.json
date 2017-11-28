@@ -1,7 +1,8 @@
 {
     "type": "case",
     "submitter_id": "BLGSP-71-06-00019",
-    "experiments": {
+    "index_date": "Cross Clamp",
+    "studies": {
         "id": "daa208a7-f57a-562c-a04a-7a7c77542c98"
     }
 }

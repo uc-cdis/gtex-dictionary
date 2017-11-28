@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "case"
 title: Case
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.gtexportal.org/
 category: administrative
 program: '*'
 project: '*'
@@ -22,16 +22,16 @@ systemProperties:
   - state
 
 links:
-  - name: experiments 
+  - name: studies 
     backref: cases
     label: member_of
-    target_type: experiment
+    target_type: study
     multiplicity: many_to_one
     required: true
 
 required:
   - submitter_id
-  - experiments 
+  - studies 
 
 uniqueKeys:
   - [id]
@@ -39,28 +39,16 @@ uniqueKeys:
 
 # Case properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-  primary_site:
-    description: "Primary site for the case."
-    type: string
-  disease_type:
-    description: "Name of the disease for the case."
-    type: string
-  experiments: 
-    $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  index_date:
+    description: >
+      Indicates whether the time point reference begins at the donor's actual death, presumed death, 
+      or when the cross clamp was applied in the case of surgical donors.
+    enum:
+      - Actual Death
+      - Presumed Death
+      - Cross Clamp
+
+  studies:
+    $ref: "_definitions.yaml#/to_many"
