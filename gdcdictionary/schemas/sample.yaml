@@ -459,9 +459,9 @@ properties:
       Total Ischemic time for a sample
     type: integer
 
-  days_to_sample_procurement:
-    term:
-      $ref: "_terms.yaml#/days_to_sample_procurement"
+  hours_to_sample_procurement:
+    description: >
+      Time a sample spent in the PAXgene fixative
     type: integer
 
   freezing_method:
