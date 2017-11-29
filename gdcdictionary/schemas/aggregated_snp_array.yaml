@@ -52,7 +52,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Aggregated SNP Array Data
+      - SNP Array Data
 
   data_type:
     term:

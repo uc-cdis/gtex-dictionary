@@ -52,13 +52,13 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Genotyping Array Variation
+      - SNP Array Data
 
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Genotyping Array Variation Data
+      - SNP Array Variation
 
   data_format:
     term:
