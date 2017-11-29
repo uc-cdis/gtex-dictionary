@@ -1,15 +1,16 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "submitted_unaligned_reads"
-title: Submitted Unaligned Reads
+id: "simple_germline_variation"
+title: Simple Germline Variation
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
-description: "Data file containing unaligned reads that have not been GDC Harmonized."
+description: >
+  Data file containing simple germline variations called from aligned reads.
 additionalProperties: false
-submittable: true
+submittable: false
 validators: null
 
 systemProperties:
@@ -22,10 +23,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: read_groups
-    backref: submitted_unaligned_reads_files # pretty ugly
+  - name: germline_mutation_calling_workflows
+    backref: simple_germline_variations
     label: data_from
-    target_type: read_group
+    target_type: germline_mutation_calling_workflow
     multiplicity: many_to_one
     required: true
 
@@ -38,7 +39,7 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - read_groups
+  - germline_mutation_calling_workflows
 
 uniqueKeys:
   - [ id ]
@@ -47,24 +48,19 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "submitted_unaligned_reads" ]
+    enum: [ "simple_germline_variation" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    enum:
-      - Sequencing Data
-      - Sequencing Reads
-      - Raw Sequencing Data
+    enum: [ "Simple Nucleotide Variation" ]
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Unaligned Reads" ]
+    enum: [ "Simple Germline Variation" ]
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    enum:
-      - BAM
-      - FASTQ
+    enum: [ "VCF" ]
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -73,8 +69,5 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
-      - RNA-Seq
-      - miRNA-Seq
-      - Total RNA-Seq
-  read_groups:
+  germline_mutation_calling_workflows:
     $ref: "_definitions.yaml#/to_one"

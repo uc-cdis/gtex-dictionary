@@ -1,15 +1,16 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "submitted_unaligned_reads"
-title: Submitted Unaligned Reads
+id: "exon_expression"
+title: Exon Expression
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
-description: "Data file containing unaligned reads that have not been GDC Harmonized."
+description: >
+  Data file containing exon expression information generated internally by the GDC.
 additionalProperties: false
-submittable: true
+submittable: false
 validators: null
 
 systemProperties:
@@ -22,10 +23,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: read_groups
-    backref: submitted_unaligned_reads_files # pretty ugly
+  - name: rna_expression_workflows
+    backref: exon_expressions
     label: data_from
-    target_type: read_group
+    target_type: rna_expression_workflow
     multiplicity: many_to_one
     required: true
 
@@ -38,7 +39,7 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - read_groups
+  - rna_expression_workflows
 
 uniqueKeys:
   - [ id ]
@@ -47,34 +48,27 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "submitted_unaligned_reads" ]
+    enum: [ "exon_expression" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    enum:
-      - Sequencing Data
-      - Sequencing Reads
-      - Raw Sequencing Data
+    enum: [ "Transcriptome Profiling" ]
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Unaligned Reads" ]
+    enum: [ "Exon Expression Quantification" ]
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - BAM
-      - FASTQ
+      - TXT
+      - TSV
+      - CSV
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
       - RNA-Seq
-      - miRNA-Seq
       - Total RNA-Seq
-  read_groups:
+  rna_expression_workflows:
     $ref: "_definitions.yaml#/to_one"
