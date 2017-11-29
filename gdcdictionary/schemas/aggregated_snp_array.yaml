@@ -1,0 +1,85 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "aggregated_snp_array"
+title: Aggregated SNP array
+type: object
+namespace: https://www.gtexportal.org/
+category: data_file
+program: '*'
+project: '*'
+description: "DNA array data files aggregating genome-wide SNP information from several subjects (cohort)."
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: submitted_snp_array_files
+    backref: aggregated_snp_array_files
+    label: data_from
+    target_type: submitted_snp_array_file
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - file_name
+  - data_category
+  - data_type
+  - data_format
+  - submitted_snp_array_files
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+
+  type:
+    enum: [ "submitted_snp_array" ]
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - Aggregated SNP Array Data
+
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum:
+      - Aggregated SNP Intensity Values
+
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum:
+      - PED
+      - VCF
+
+  experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
+    enum:
+      - SNP Array Genotyping
+
+  platform:
+    term:
+      $ref: "_terms.yaml#/platform"
+    enum:
+      - Illumina Infinium HumanExome BeadChip
+      - Illumina OMNI 5M SNP Array
+      - Illumina OMNI 2.5M SNP Array
+
+  submitted_snp_array_files:
+    $ref: "_definitions.yaml#/to_one"
