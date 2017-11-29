@@ -7,7 +7,7 @@
     "sequencing_date": "2010-08-04",
     "platform": "Illumina",
     "instrument_model": "Illumina HiSeq 2000",
-    "library_strategy": "WXS",
+    "library_strategy": "OMNI",
     "flow_cell_barcode": "205DDABXX",
     "library_selection": "Hybrid_Selection",
     "library_name": "Solexa-34688",
