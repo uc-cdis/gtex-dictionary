@@ -175,7 +175,7 @@ data_file_properties:
 workflow_properties:
   $ref: "#/ubiquitous_properties"
   workflow_link:
-    description: "Link to Github hash for the CWL workflow used."
+    description: "Link to Github hash for the workflow code used."
     type: string
   workflow_version:
     description: "Major version for a GDC workflow."
