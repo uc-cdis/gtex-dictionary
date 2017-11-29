@@ -30,7 +30,7 @@ uniqueKeys:
 
 links:
   - name: samples
-    backref: aliquots
+    backref: aliquotsc
     label: derived_from
     multiplicity: many_to_many
     target_type: sample
@@ -40,63 +40,68 @@ constraints: null
 
 # Aliquot properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use
-      UUIDs. For TCGA this is bcraliquotbarcode.
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
   aliquot_quantity:
     term:
       $ref: "_terms.yaml#/aliquot_quantity"
     type: number
+
   aliquot_volume:
     term:
       $ref: "_terms.yaml#/aliquot_volume"
     type: number
+
   amount:
     term:
       $ref: "_terms.yaml#/amount"
     type: number
+
+  analyte_isolation_batch_id:
+    description: >
+      Nucleic acid isolation batch ID
+    type: string
+
+  analyte_isolation_method:
+    description: >
+      Type of nucleic acid isolation batch
+    type: string
+
+  analyte_isolation_date:
+    $ref: "_definitions.yaml#/datetime"
+
   analyte_type:
     term:
       $ref: "_terms.yaml#/analyte_type"
     type: string
-  analyte_type_id:
-    term:
-      $ref: "_terms.yaml#/analyte_type_id"
-    enum:
-      - D
-      - E
-      - G
-      - H
-      - R
-      - S
-      - T
-      - W
-      - X
-      - Y
+
   concentration:
     term:
       $ref: "_terms.yaml#/concentration"
     type: number
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  source_center:
-    term:
-      $ref: "_terms.yaml#/source_center"
+
+  exclude:
+    description: >
+      Samples flagged for removal from analysis
+    type: boolean
+
+  exclusion_criteria:
+    description: >
+      Additional remarks about flagged samples
     type: string
+
+  experiment_batch_id:
+    description: >
+      Genotype or expression batch ID
+    type: string
+
+  experiment_date:
+    $ref: "_definitions.yaml#/datetime"
+
+  experimental_strategy:
+    description: >
+      Type of genotype or expression batch
+    type: string
+
   samples:
     $ref: "_definitions.yaml#/to_one"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
