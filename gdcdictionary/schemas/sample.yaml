@@ -446,7 +446,8 @@ properties:
 
   collection_site:
     description: >
-      Code for BSS collection site
+      Code for BSS collection site. Indicates the site that enrolled the donor, 
+      brain subregions may have more than one site. 
     type: string
 
   current_weight:
