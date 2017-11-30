@@ -52,7 +52,7 @@ properties:
     enum: [ "alignment_workflow" ]
   workflow_type:
     enum:
-      - "STAR 2-Pass"
+      - "STAR"
       - "BWA-aln"
       - "BWA-mem"
   submitted_aligned_reads_files:
