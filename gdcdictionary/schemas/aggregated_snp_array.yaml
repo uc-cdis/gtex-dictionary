@@ -25,7 +25,7 @@ links:
   - name: submitted_snp_array_files
     backref: aggregated_snp_array_files
     label: data_from
-    target_type: submitted_snp_array_file
+    target_type: submitted_snp_array
     multiplicity: many_to_one
     required: true
 
