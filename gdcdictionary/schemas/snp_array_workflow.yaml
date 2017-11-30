@@ -23,7 +23,7 @@ links:
   - name: aggregated_snp_array_files
     backref: snp_array_workflows
     label: performed_on
-    target_type: aggregated_snp_array_file
+    target_type: aggregated_snp_array
     multiplicity: one_to_one
     required: true
 
