@@ -1,0 +1,90 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "body_storage"
+title: Body Storage
+type: object
+namespace: https://www.gtexportal.org/
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Collection of information related to circunstances and special characteristics about how body was maintanined and storage after death.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: body_storages
+    label: describes
+    target_type: case
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  ischemic_time:
+    description: >
+      Time Interval between actual death, presumed death, or cross clamp application and the start of the GTEx Procedure (Unit is Minutes).  
+    type: integer
+
+  chest_incision_time:
+    description: >
+      Time Interval between actual death, presumed death, or cross clamp application and the time of chest incision (Unit is Minutes).  
+    type: integer
+
+  cross_clamp_time:
+    description: >
+      Timepoint at which the blood supply to the aorta for organ donor collection, or artery supplying blood to the knee for surgical collections is externally closed by a surgical clamp.  
+    type: integer
+
+  on_ventilator_lt_24h:
+    description: >
+      Did site receive verbal confirmation of ventilator status <24 hours prior to collection start? Verification from the site that the Donor was ventilated (on life support) for <24 hours prior to the estimated procurement start time.  
+    type: boolean
+
+  total_ischemic_time:
+    description: >
+      Time Interval between actual death, presumed death, or cross clamp application and first tissue stabilization; A single donor-level ischemic time point at which the first tissue was collected for that donor.  
+    type: integer
+
+  performed_autopsy:
+    description: >
+      Autopsy Performed By Coroner Or ME? (In case a postmortem examination of the body was performed that includes an examination of the internal organs and structures after dissection to determine the cause of death and the nature of pathological changes.  
+    enum:
+      - "No"
+      - "Yes"
+      - "Unknown"
+
+  refrigerated_body:
+    description: >
+      Was the body refrigerated at any time before procurement? Report by the site procurement team on whether the Donor's body was refrigerated where refrigerated (temperature range of refrigeration not defined).  
+    enum:
+      - "No"
+      - "Yes"
+      - "Unknown"
+
+  hours_in_refrigerator:
+    description: >
+      The period of time during which body was refrigerated (hours)  
+    type: integer
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"
