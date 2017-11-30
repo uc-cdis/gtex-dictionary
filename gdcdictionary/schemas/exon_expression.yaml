@@ -3,12 +3,12 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "exon_expression"
 title: Exon Expression
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.gtexportal.org/
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing exon expression information generated internally by the GDC.
+  Data file containing exon expression information generated internally by the GTEx.
 additionalProperties: false
 submittable: false
 validators: null
