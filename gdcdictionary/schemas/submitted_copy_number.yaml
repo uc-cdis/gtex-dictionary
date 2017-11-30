@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "submitted_copy_number"
 title: Submitted Copy Number
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.gtexportal.org/
 category: data_file
 program: '*'
 project: '*'

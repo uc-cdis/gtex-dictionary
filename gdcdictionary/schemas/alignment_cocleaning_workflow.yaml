@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "alignment_cocleaning_workflow"
 title: Alignment Cocleaning Workflow
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.gtexportal.org/
 category: analysis
 program: '*'
 project: '*'
