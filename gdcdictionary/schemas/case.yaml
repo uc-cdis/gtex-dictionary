@@ -41,14 +41,10 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  index_date:
+  amputation_type:
     description: >
-      Indicates whether the time point reference begins at the donor's actual death, presumed death, 
-      or when the cross clamp was applied in the case of surgical donors.
-    enum:
-      - Actual Death
-      - Presumed Death
-      - Cross Clamp
+      If amputated, the amputation type for leg, above the knee or below the knee.   
+    type: string
 
   cohort_id:
     description: >
@@ -65,6 +61,20 @@ properties:
       to eligibility questions. All Eligibility conditions require confirmation from the donor procurement team (staff team where 
       tissue collection and data abstraction takes place) and must be met in order for donor to eligible.  
     type: boolean
+
+  index_date:
+    description: >
+      Indicates whether the time point reference begins at the donor's actual death, presumed death, 
+      or when the cross clamp was applied in the case of surgical donors.
+    enum:
+      - Actual Death
+      - Presumed Death
+      - Cross Clamp
+
+  transplanted_organ:
+    description: >
+      If the Donor was an Organ Donor, which Organs were donated.  
+    type: string
 
   studies:
     $ref: "_definitions.yaml#/to_many"
