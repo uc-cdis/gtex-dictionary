@@ -50,6 +50,22 @@ properties:
       - Presumed Death
       - Cross Clamp
 
+  cohort_id:
+    description: >
+      The study subgroup that the participant belongs to. This indicates whether the participant was a postmortem donor, 
+      an organ donor, or a surgical donor.   
+    enum: 
+      - Postmortem
+      - Organ Donor (OPO)
+      - Surgical Donor
+
+  eligibility:
+    description: >
+      A verification field of whether the Donor has met the overall eligibility criteria for GTEx collection based on answers 
+      to eligibility questions. All Eligibility conditions require confirmation from the donor procurement team (staff team where 
+      tissue collection and data abstraction takes place) and must be met in order for donor to eligible.  
+    type: boolean
+
   collection_site:
     description: >
       Code for BSS collection site. Indicates the site that enrolled the donor, 
