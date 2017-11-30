@@ -39,12 +39,12 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  3_normalization:
+  norm_to_3prime:
     description: >
       3' 50-base normalization: the ratio between the coverage at the 3' end and the average coverage of the full transcript, averaged over all transcripts
     type: number
 
-  5_normalization:
+  norm_to_5prime:
     description: >
       5' 50-based normalization: 50 (this number is the value for the transcript end length parameter) refers to the definition of how many bases are considered at the end; this value is the ratio between the coverage at the 5' end and the average coverage of the full transcript, averaged over all transcripts
     type: number
