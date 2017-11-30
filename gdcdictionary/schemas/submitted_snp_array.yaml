@@ -78,6 +78,8 @@ properties:
       $ref: "_terms.yaml#/platform"
     enum:
       - Illumina Infinium HumanExome BeadChip
+      - Illumina OMNI 5M SNP Array
+      - Illumina OMNI 2.5M SNP Array
 
   aliquots:
     $ref: "_definitions.yaml#/to_one"
