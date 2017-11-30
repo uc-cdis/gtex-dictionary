@@ -41,6 +41,11 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+  age_range:
+    description: >
+        Range of ages for the subject
+    type: string
+
   gender:
     term:
       $ref: "_terms.yaml#/gender"
