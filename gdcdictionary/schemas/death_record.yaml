@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "death_history"
-title: Death History
+id: "death_record"
+title: Death Record
 type: object
 namespace: https://www.gtexportal.org/
 category: clinical
@@ -22,7 +22,7 @@ systemProperties:
 
 links:
   - name: cases
-    backref: death_historyies
+    backref: death_records
     label: describes
     target_type: case
     multiplicity: one_to_one
@@ -39,21 +39,6 @@ required:
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
-
-  ischemic_time:
-    description: >
-      Time Interval between actual death, presumed death, or cross clamp application and the start of the GTEx Procedure (Unit is Minutes).  
-    type: integer
-
-  chest_incision_time:
-    description: >
-      Time Interval between actual death, presumed death, or cross clamp application and the time of chest incision (Unit is Minutes).  
-    type: integer
-
-  cross_clamp_time:
-    description: >
-      Timepoint at which the blood supply to the aorta for organ donor collection, or artery supplying blood to the knee for surgical collections is externally closed by a surgical clamp.  
-    type: integer
 
   body_temperature:
     description: >
@@ -72,16 +57,6 @@ properties:
       The method for obtaining core body temperature.  
     type: string
 
-  on_ventilator_lt_24h:
-    description: >
-      Did site receive verbal confirmation of ventilator status <24 hours prior to collection start? Verification from the site that the Donor was ventilated (on life support) for <24 hours prior to the estimated procurement start time.  
-    type: boolean
-
-  total_ischemic_time:
-    description: >
-      Time Interval between actual death, presumed death, or cross clamp application and first tissue stabilization; A single donor-level ischemic time point at which the first tissue was collected for that donor.  
-    type: integer
-
   death_pronounced_interval:
     description: >
       Time pronounced dead Interval between Date and time pronounced dead and observed/witnessed death (hours)  
@@ -94,22 +69,6 @@ properties:
       - "Actual Death"
       - "Presumed Death"
 
-  performed_autopsy:
-    description: >
-      Autopsy Performed By Coroner Or ME? (In case a postmortem examination of the body was performed that includes an examination of the internal organs and structures after dissection to determine the cause of death and the nature of pathological changes.  
-    enum:
-      - "No"
-      - "Yes"
-      - "Unknown"
-
-  refrigerated_body:
-    description: >
-      Was the body refrigerated at any time before procurement? Report by the site procurement team on whether the Donor's body was refrigerated where refrigerated (temperature range of refrigeration not defined).  
-    enum:
-      - "No"
-      - "Yes"
-      - "Unknown"
-
   available_death_certificate:
     description: >
       Is death certificate available? Whether the death certificate is available to the collection team at the time of determination of eligibility.  
@@ -117,11 +76,6 @@ properties:
       - "No"
       - "Yes"
       - "Unknown"
-
-  on_ventilator_immediate:
-    description: >
-      Was donor on a ventilator immediately prior to Death? (Ascertion that donor was assisted by a medical device that facilitates breathing immediately prior to death).  
-    type: boolean
 
   first_cause_of_death:
     description: >
@@ -172,11 +126,6 @@ properties:
       Manner of Death An adverse event resulting in death.  
     type: string
 
-  hours_in_refrigerator:
-    description: >
-      The period of time during which body was refrigerated (hours)  
-    type: integer
-
   determining_person:
     description: >
       If death occurred outside of hospital, who determined date/time of death Type of person who provided the time of death.  
@@ -194,6 +143,11 @@ properties:
     description: >
       Period of time that donor was assisted by a medical device that facilitates breathing prior to death.  
     type: integer
+
+  on_ventilator_immediate:
+    description: >
+      Was donor on a ventilator immediately prior to Death? (Ascertion that donor was assisted by a medical device that facilitates breathing immediately prior to death).  
+    type: boolean
 
   witnessed_death:
     description: >
