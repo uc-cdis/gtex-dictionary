@@ -1,0 +1,54 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "copy_number_workflow"
+title: Copy Number Workflow
+type: object
+namespace: https://www.gtexportal.org/
+category: analysis
+program: '*'
+project: '*'
+description: >
+  Metadata for the copy number liftover workflow used to harmonize TCGA copy number data.
+additionalProperties: false
+submittable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: aligned_reads_files
+    backref: germline_mutation_calling_workflows
+    label: performed_on
+    target_type: aligned_reads
+    multiplicity: one_to_many
+    required: true
+
+required:
+  - submitter_id
+  - workflow_link
+  - workflow_type
+  - aligned_reads_files
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/workflow_properties"
+
+  type:
+    enum: [ "copy_number_workflow" ]
+
+  workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
+    enum:
+      - Genome STRiP
+
+  aligned_reads_files:
+    $ref: "_definitions.yaml#/to_many"

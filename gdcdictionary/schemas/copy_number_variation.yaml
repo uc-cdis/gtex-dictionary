@@ -1,0 +1,90 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "copy_number_variation"
+title: Copy Number Variation
+type: object
+namespace: https://www.gtexportal.org/
+category: data_file
+program: '*'
+project: '*'
+description: >
+  Data file containing the copy number data from a copy number variation workflow. Contains all copy numbers detected.
+additionalProperties: false
+submittable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: copy_number_workflows
+    backref: copy_number_variations
+    label: derived_from
+    target_type: copy_number_workflow
+    multiplicity: one_to_one
+    required: false
+
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - data_format
+  - md5sum
+  - data_category
+  - data_type
+  - experimental_strategy
+  - platform
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+
+  type:
+    enum: [ "copy_number_segment" ]
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - Copy Number Variation
+
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum:
+      - Copy Number Segment
+      - Masked Copy Number Segment
+      - Gene Level Copy Number
+      - Gene Level Copy Number Scores
+
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum:
+      - TXT
+      - VCF
+
+  experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
+    enum:
+      - Genotyping Array
+      - Targeted Sequencing
+      - WGS
+      - WXS
+
+  platform:
+    $ref: "read_group.yaml#/properties/platform"
+
+  copy_number_workflows:
+    $ref: "_definitions.yaml#/to_one"

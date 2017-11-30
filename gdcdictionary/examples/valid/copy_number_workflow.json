@@ -1,0 +1,9 @@
+{
+    "type": "copy_number_workflow",
+    "submitter_id": "cnv_run_1",
+    "workflow_link": "http://software.broadinstitute.org/software/genomestrip/org_broadinstitute_sv_qscript_LCNVDiscoveryPipeline.html",
+    "workflow_type": "Genome STRiP",
+    "aligned_reads_files": {
+		"id": "0cb66276-c29b-4811-a704-38502173c0f8"
+    }
+}
