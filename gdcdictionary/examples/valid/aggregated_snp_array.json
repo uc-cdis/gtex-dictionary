@@ -5,7 +5,7 @@
     "file_size": 28165335141,
     "md5sum": "d3266f2577584713ea17f94d331f30c4",
     "data_category": "SNP Array Data",
-    "data_type": "Aggregated SNP Intensity Values",
+    "data_type": "Aggregated SNP Alleles",
     "data_format": "PED",
     "experimental_strategy": "SNP Array Genotyping",
     "platform": "Illumina Infinium HumanExome BeadChip",

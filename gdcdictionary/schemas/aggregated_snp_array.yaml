@@ -58,7 +58,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Aggregated SNP Intensity Values
+      - Aggregated SNP Alleles
 
   data_format:
     term:
