@@ -26,7 +26,7 @@ links:
     backref: cases
     label: member_of
     target_type: study
-    multiplicity: many_to_one
+    multiplicity: many_to_many
     required: true
 
 required:

@@ -4,7 +4,8 @@
     "index_date": "Cross Clamp",
     "eligibility": true,
     "cohort_id": "Organ Donor (OPO)",
-    "studies": {
-        "id": "daa208a7-f57a-562c-a04a-7a7c77542c98"
-    }
+    "studies": [
+        {"submitter_id": "GTEx_MidPoint"},
+        {"submitter_id": "GTEx_Pilot"}
+    ]
 }
