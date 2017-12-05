@@ -82,4 +82,4 @@ properties:
       - Illumina OMNI 2.5M SNP Array
 
   submitted_snp_array_files:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
