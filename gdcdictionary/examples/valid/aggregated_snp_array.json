@@ -10,7 +10,7 @@
     "experimental_strategy": "SNP Array Genotyping",
     "platform": "Illumina Infinium HumanExome BeadChip",
     "submitted_snp_array_files": [
-        {"submitter_id": "gtex-0001-gtc"},
-        {"submitter_id": "gtex-0002-gtc"}
+        {"submitter_id#1": "gtex-0001-gtc"},
+        {"submitter_id#2": "gtex-0002-gtc"}
     ]
 }
