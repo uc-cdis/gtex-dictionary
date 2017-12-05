@@ -24,7 +24,7 @@ links:
     backref: snp_array_workflows
     label: performed_on
     target_type: aggregated_snp_array
-    multiplicity: one_to_one
+    multiplicity: many_to_many
     required: true
 
 required:

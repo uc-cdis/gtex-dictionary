@@ -26,7 +26,7 @@ links:
     backref: submitted_unaligned_reads_files # pretty ugly
     label: data_from
     target_type: read_group
-    multiplicity: many_to_one
+    multiplicity: one_to_many
     required: true
 
 required:

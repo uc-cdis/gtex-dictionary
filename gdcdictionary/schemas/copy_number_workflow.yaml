@@ -8,7 +8,7 @@ category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the copy number liftover workflow used to harmonize TCGA copy number data.
+  Metadata for the copy number workflow used to aggregate copy number data.
 additionalProperties: false
 submittable: false
 validators: null
