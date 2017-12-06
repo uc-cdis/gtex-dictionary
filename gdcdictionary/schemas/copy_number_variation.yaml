@@ -27,7 +27,7 @@ links:
     backref: copy_number_variations
     label: derived_from
     target_type: copy_number_workflow
-    multiplicity: one_to_one
+    multiplicity: many_to_one
     required: false
 
 
