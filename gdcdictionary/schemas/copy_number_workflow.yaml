@@ -41,7 +41,6 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - aligned_reads_files
 
 uniqueKeys:
   - [ id ]
@@ -60,4 +59,7 @@ properties:
       - Genome STRiP
 
   aligned_reads_files:
+    $ref: "_definitions.yaml#/to_many"
+
+  submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
