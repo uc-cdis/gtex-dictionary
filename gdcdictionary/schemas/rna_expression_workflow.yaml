@@ -70,6 +70,7 @@ properties:
       - RNASeQC
       - RSEM
       - Flux
+      - ASE
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
   submitted_aligned_reads_files:
