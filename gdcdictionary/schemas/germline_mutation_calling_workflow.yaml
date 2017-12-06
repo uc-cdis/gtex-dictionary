@@ -26,13 +26,13 @@ links:
     required: true
     subgroup:
       - name: submitted_aligned_reads_files
-        backref: alignment_cocleaning_workflows
+        backref: germline_mutation_calling_workflows
         label: performed_on
         target_type: submitted_aligned_reads
         multiplicity: one_to_many
         required: false
       - name: aligned_reads_files
-        backref: alignment_cocleaning_workflows
+        backref: germline_mutation_calling_workflows
         label: performed_on
         target_type: aligned_reads
         multiplicity: one_to_many
