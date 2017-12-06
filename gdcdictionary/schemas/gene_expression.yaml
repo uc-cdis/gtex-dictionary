@@ -64,7 +64,7 @@ properties:
       - TXT
       - TSV
       - CSV
-      - GTC
+      - GCT
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
