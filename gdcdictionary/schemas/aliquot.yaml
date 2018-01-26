@@ -31,7 +31,7 @@ uniqueKeys:
 
 links:
   - name: samples
-    backref: aliquotsc
+    backref: aliquots
     label: derived_from
     multiplicity: many_to_many
     target_type: sample
