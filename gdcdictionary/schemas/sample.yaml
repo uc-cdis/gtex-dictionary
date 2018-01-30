@@ -421,33 +421,34 @@ properties:
     term:
       $ref: "_terms.yaml#/composition"
     enum:
-      - Buccal Cells
-      - Buffy Coat
-      - Bone Marrow Components
-      - Bone Marrow Components NOS
-      - Control Analyte
-      - Cell
-      - Circulating Tumor Cell (CTC)
-      - Derived Cell Line
-      - EBV Immortalized
-      - Fibroblasts from Bone Marrow Normal
-      - Granulocytes
-      - Human Original Cells
-      - Lymphocytes
-      - Mononuclear Cells from Bone Marrow Normal
-      - Peripheral Blood Components NOS
-      - Peripheral Blood Nucleated Cells
-      - Pleural Effusion
-      - Plasma
-      - Peripheral Whole Blood
-      - Serum
-      - Saliva
-      - Sputum
-      - Solid Tissue
-      - Whole Bone Marrow
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
+      - "B-lymphocyte"
+      - "Buccal Cells"
+      - "Buffy Coat"
+      - "Bone Marrow Components"
+      - "Bone Marrow Components NOS"
+      - "Control Analyte"
+      - "Cell"
+      - "Circulating Tumor Cell (CTC)"
+      - "Derived Cell Line"
+      - "EBV Immortalized"
+      - "Fibroblasts from Bone Marrow Normal"
+      - "Granulocytes"
+      - "Human Original Cells"
+      - "Lymphocytes"
+      - "Mononuclear Cells from Bone Marrow Normal"
+      - "Peripheral Blood Components NOS"
+      - "Peripheral Blood Nucleated Cells"
+      - "Pleural Effusion"
+      - "Plasma"
+      - "Peripheral Whole Blood"
+      - "Serum"
+      - "Saliva"
+      - "Sputum"
+      - "Solid Tissue"
+      - "Whole Bone Marrow"
+      - "Unknown"
+      - "Not Reported"
+      - "Not Allowed To Collect"
 
   collection_kit:
     description: >
