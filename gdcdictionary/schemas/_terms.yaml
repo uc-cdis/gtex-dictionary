@@ -1777,7 +1777,7 @@ vital_status:
 
 weight:
   description: >
-    The weight of the patient measured in kilograms.
+    The weight of the patient measured in lbs.
   termDef:
     term: Patient Weight Measurement
     source: caDSR
