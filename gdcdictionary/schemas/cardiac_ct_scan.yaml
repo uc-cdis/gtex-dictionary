@@ -1,0 +1,204 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "cardiac_ct_scan"
+title: Cardiac Topographic Scan
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Coronary calcium information determined with electron-beam or helical CT.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: cardiac_ct_scans
+    label: describes
+    target_type: cardiac_ct_scan
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  nine11:
+    description: >
+      Ct data corrected because of 9/11/01
+    type: boolean
+
+  agatum1c:
+    description: >
+      Mean: agatston calcium score, unadjusted
+    type: number
+
+  volum1c:
+    description: >
+      Mean: total calcium volume, unadjusted
+    type: number
+
+  volsum1c:
+    description: >
+      Mean: total volume score, unadjusted
+    type: number
+
+  massm1c:
+    description: >
+      Mean: cac arterial mass
+    type: number
+
+  agatpm1c:
+    description: >
+      Mean: agatston calcium score, phantom-adjusted
+    type: number
+
+  agatpm1t:
+    description: >
+      Natural log-transformed phantom-adjusted agatston score (positive scores only) - e1
+    type: number
+
+  cacgt01c:
+    description: >
+      Presence of calcium indicator - e1
+    type: boolean
+
+  volpm1c:
+    description: >
+      Mean: total calcium volume, phantom-adjusted
+    type: number
+
+  volspm1c:
+    description: >
+      Mean total isometric volume score, phantom adjusted
+    type: number
+
+  agatu11c:
+    description: >
+      Scan 1: agatston calcium score, unadjusted
+    type: number
+
+  volu11c:
+    description: >
+      Scan 1: total calcium volume, unadjusted
+    type: number
+
+  volsu11c:
+    description: >
+      Scan 1: total volume score, unadjusted
+    type: number
+
+  mass11c:
+    description: >
+      Scan 1: cac arterial mass
+    type: number
+
+  agatp11c:
+    description: >
+      Scan 1: agatston calcium score, phantom-adjusted
+    type: number
+
+  volp11c:
+    description: >
+      Scan 1: total calcium volume, phantom-adjusted
+    type: number
+
+  volsp11c:
+    description: >
+      Scan 1: total volume score, phantom-adjusted
+    type: number
+
+  phok11c:
+    description: >
+      Scan 1: phantom adjustment valid
+    enum:
+      - "NOT VALID"
+      - "VALID"
+
+  agatu21c:
+    description: >
+      Scan 2: agatston calcium score, unadjusted
+    type: number
+
+  volu21c:
+    description: >
+      Scan 2: total calcium volume, unadjusted
+    type: number
+
+  volsu21c:
+    description: >
+      Scan 2: total volume score, unadjusted
+    type: number
+
+  mass21c:
+    description: >
+      Scan 2: cac arterial mass
+    type: number
+
+  agatp21c:
+    description: >
+      Scan 2: agatston calcium score, phantom-adjusted
+    type: number
+
+  volp21c:
+    description: >
+      Scan 2: total calcium volume, phantom-adjusted
+    type: number
+
+  volsp21c:
+    description: >
+      Scan 2: total volume score, phantom-adjusted
+    type: number
+
+  phok21c:
+    description: >
+      Scan 2: phantom adjustment valid
+    enum:
+      - "NOT VALID"
+      - "VALID"
+
+  cacq1c:
+    description: >
+      Age, gender, race-adjusted quantiles of cac score (mcclelland, circulation 2006), between prcacgt0 and 1
+    type: number
+
+  prcacgt01c:
+    description: >
+      Age, gender, race-adjusted probability of a non-zero calcium score (mcclelland, circulation 2006)
+    type: number
+
+  ctsmod1:
+    description: >
+      Exam 1 ct scanner model
+    enum:
+      - "AQUILION"
+      - "AQUILION 64"
+      - "IMATRON C-150"
+      - "INNER EBT"
+      - "LIGHT SPEED 16"
+      - "LIGHT SPEED PLUS"
+      - "LIGHT SPEED PRO 16"
+      - "LIGHT SPEED QX/I"
+      - "SENSATION 16"
+      - "SENSATION CARDIAC 64"
+      - "VOLUME ZOOM"
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"

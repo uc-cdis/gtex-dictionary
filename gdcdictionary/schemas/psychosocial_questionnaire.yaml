@@ -1,0 +1,861 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "psychosocial_questionnaire"
+title: Psycho-social Questionnaire
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Standard questionnaire used to collect information about psycosocial behaviour
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: psychosocial_questionnaires
+    label: describes
+    target_type: psychosocial_questionnaire
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  qktempr1:
+    description: >
+      I am quick tempered
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  frtempr1:
+    description: >
+      I have a fiery temper
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  hothead1:
+    description: >
+      I am a hotheaded person
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  angry1:
+    description: >
+      I get angry when slowed by others' mistakes
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  annoyed1:
+    description: >
+      I am annoyed when not regognized for good work
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  flyoff1:
+    description: >
+      I fly off the handle
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  nasty1:
+    description: >
+      I say nasty things when mad
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  furious1:
+    description: >
+      I get furious when criticized in front of others
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  fruhit1:
+    description: >
+      I feel like hitting someone when frustrated
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  infurat1:
+    description: >
+      I feel infuriated when i do a good job and get a poor evaluation
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  steady1:
+    description: >
+      I am a steady person
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  satisf1:
+    description: >
+      I feel satisfied with myself
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  nervous1:
+    description: >
+      I feel nervous and restless
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  unhappy1:
+    description: >
+      I wish to be as happy as others seem to be
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  failure1:
+    description: >
+      I feel like a failure
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  turmoil1:
+    description: >
+      I feel tension when i think of recent concerns/interests
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  secure1:
+    description: >
+      I feel secure
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  noconf1:
+    description: >
+      I lack self-confidence
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  inadeqt1:
+    description: >
+      I feel inadequate
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  worry1:
+    description: >
+      I worry too much over something that does not matter
+    enum:
+      - "ALMOST NEVER"
+      - "SOMETIMES"
+      - "OFTEN"
+      - "ALMOST ALWAYS"
+
+  hprb1pt1:
+    description: >
+      Serious ongoing health problem (self)
+    type: boolean
+
+  hprb2pt1:
+    description: >
+      Ongoing health problem (self), > 6 mothths
+    type: boolean
+
+  hprb3pt1:
+    description: >
+      Ongoing health problem (self), how stressful
+    enum:
+      - "NOT VERY STRESSFUL"
+      - "MODERATELY STRESSFUL"
+      - "VERY STRESSFUL"
+
+  hprb1ot1:
+    description: >
+      Serious ongoing health problem (someone close to you)
+    type: boolean
+
+  hprb2ot1:
+    description: >
+      Ongoing health problem (someone close to you), >6 months
+    type: boolean
+
+  hprb3ot1:
+    description: >
+      Ongoing health problem (someone close to you), how stressful
+    enum:
+      - "NOT VERY STRESSFUL"
+      - "MODERATELY STRESSFUL"
+      - "VERY STRESSFUL"
+
+  job1prb1:
+    description: >
+      Ongoing job difficulties
+    type: boolean
+
+  job2prb1:
+    description: >
+      Ongoing job difficulties, > 6 months
+    type: boolean
+
+  job3prb1:
+    description: >
+      Ongoing job difficulties, how stressful
+    enum:
+      - "NOT VERY STRESSFUL"
+      - "MODERATELY STRESSFUL"
+      - "VERY STRESSFUL"
+
+  mon1prb1:
+    description: >
+      Ongoing financial strain
+    type: boolean
+
+  mon2prb1:
+    description: >
+      Ongoing financial strain, > 6 months
+    type: boolean
+
+  mon3prb1:
+    description: >
+      Ongoing financial strain, how stressful
+    enum:
+      - "NOT VERY STRESSFUL"
+      - "MODERATELY STRESSFUL"
+      - "VERY STRESSFUL"
+
+  rel1prb1:
+    description: >
+      Ongoing relationship problems
+    type: boolean
+
+  rel2prb1:
+    description: >
+      Ongoing relationship problems, > 6 months
+    type: boolean
+
+  rel3prb1:
+    description: >
+      Ongoing relationship problems, how stressful
+    enum:
+      - "NOT VERY STRESSFUL"
+      - "MODERATELY STRESSFUL"
+      - "VERY STRESSFUL"
+
+  bother1:
+    description: >
+      Bothered by things, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  noteat1:
+    description: >
+      Poor appetite, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  blue1:
+    description: >
+      Could not shake the blues, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  asgood1:
+    description: >
+      Felt i was as good as other people, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  concntr1:
+    description: >
+      Trouble keeping my mind on what i'm doing, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  depress1:
+    description: >
+      Felt depressed, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  effort1:
+    description: >
+      Felt everything was an effort, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  hopeful1:
+    description: >
+      Felt hopeful about future, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  lffail1:
+    description: >
+      Thought life had been a failure, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  fearful1:
+    description: >
+      Felt fearful, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  badslp1:
+    description: >
+      Sleep was restless, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  happy1:
+    description: >
+      Was happy, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  lestalk1:
+    description: >
+      Talked less than usual, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  lonely1:
+    description: >
+      Felt lonely, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  unfrnly1:
+    description: >
+      People were unfriendly, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  enjlife1:
+    description: >
+      Enjoyed life, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  cryspel1:
+    description: >
+      Had crying spells, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  sad1:
+    description: >
+      Felt sad, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  dislikd1:
+    description: >
+      Felt people disliked me, past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  getgoin1:
+    description: >
+      Could not "get going", past week
+    enum:
+      - "<1 DAY"
+      - "1-2 DAYS"
+      - "3-4 DAYS"
+      - "5-7 DAYS"
+
+  talkto1:
+    description: >
+      Someone available to listen to you
+    enum:
+      - "NONE OF THE TIME"
+      - "A LITTLE OF THE TIME"
+      - "SOME OF THE TIME"
+      - "MOST OF THE TIME"
+      - "ALL OF THE TIME"
+
+  advice1:
+    description: >
+      Someone available to give you advice
+    enum:
+      - "NONE OF THE TIME"
+      - "A LITTLE OF THE TIME"
+      - "SOME OF THE TIME"
+      - "MOST OF THE TIME"
+      - "ALL OF THE TIME"
+
+  affectn1:
+    description: >
+      Someone available to show you love and affection
+    enum:
+      - "NONE OF THE TIME"
+      - "A LITTLE OF THE TIME"
+      - "SOME OF THE TIME"
+      - "MOST OF THE TIME"
+      - "ALL OF THE TIME"
+
+  hlpchr1:
+    description: >
+      Someone available to help with daily chores
+    enum:
+      - "NONE OF THE TIME"
+      - "A LITTLE OF THE TIME"
+      - "SOME OF THE TIME"
+      - "MOST OF THE TIME"
+      - "ALL OF THE TIME"
+
+  emospt1:
+    description: >
+      Someone available to provide emotional support
+    enum:
+      - "NONE OF THE TIME"
+      - "A LITTLE OF THE TIME"
+      - "SOME OF THE TIME"
+      - "MOST OF THE TIME"
+      - "ALL OF THE TIME"
+
+  confide1:
+    description: >
+      Sufficient contact with someone you can confide in
+    enum:
+      - "NONE OF THE TIME"
+      - "A LITTLE OF THE TIME"
+      - "SOME OF THE TIME"
+      - "MOST OF THE TIME"
+      - "ALL OF THE TIME"
+
+  uf1fire1:
+    description: >
+      Unfairly fired or denied a promotion
+    type: boolean
+
+  uf2fire1:
+    description: >
+      Unfairly fired or denied a promotion, reason
+    enum:
+      - "RACE OR ETHNICITY"
+      - "GENDER"
+      - "AGE"
+      - "RELIGION"
+      - "PHYSICAL APPEARANCE"
+      - "SEXUAL ORIENTATION"
+      - "INCOME/SOCIAL CLASS"
+      - "OTHER"
+
+  uf3fire1:
+    description: >
+      Unfairly fired or denied a promotion, during last 12 months
+    type: boolean
+
+  uf1hire1:
+    description: >
+      Unfairly not hired for a job
+    type: boolean
+
+  uf2hire1:
+    description: >
+      Unfairly not hired, reason
+    enum:
+      - "RACE OR ETHNICITY"
+      - "GENDER"
+      - "AGE"
+      - "RELIGION"
+      - "PHYSICAL APPEARANCE"
+      - "SEXUAL ORIENTATION"
+      - "INCOME/SOCIAL CLASS"
+      - "OTHER"
+
+  uf3hire1:
+    description: >
+      Unfairly not hired, during last 12 months
+    type: boolean
+
+  uf1stop1:
+    description: >
+      Treated unfairly by the police
+    type: boolean
+
+  uf2stop1:
+    description: >
+      Treated unfairly by the police, reason
+    enum:
+      - "RACE OR ETHNICITY"
+      - "GENDER"
+      - "AGE"
+      - "RELIGION"
+      - "PHYSICAL APPEARANCE"
+      - "SEXUAL ORIENTATION"
+      - "INCOME/SOCIAL CLASS"
+      - "OTHER"
+
+  uf3stop1:
+    description: >
+      Treated unfairly by the police, during last 12 months
+    type: boolean
+
+  uf1educ1:
+    description: >
+      Unfairly discouraged by a teacher from continuing education
+    type: boolean
+
+  uf2educ1:
+    description: >
+      Unfairly discouraged by a teacher, reason
+    enum:
+      - "RACE OR ETHNICITY"
+      - "GENDER"
+      - "AGE"
+      - "RELIGION"
+      - "PHYSICAL APPEARANCE"
+      - "SEXUAL ORIENTATION"
+      - "INCOME/SOCIAL CLASS"
+      - "OTHER"
+
+  uf3educ1:
+    description: >
+      Unfairly discouraged by a teacher, during last 12 months
+    type: boolean
+
+  uf1move1:
+    description: >
+      Unfairly prevented from moving into a neighborhood
+    type: boolean
+
+  uf2move1:
+    description: >
+      Unfairly prevented from moving, reason
+    enum:
+      - "RACE OR ETHNICITY"
+      - "GENDER"
+      - "AGE"
+      - "RELIGION"
+      - "PHYSICAL APPEARANCE"
+      - "SEXUAL ORIENTATION"
+      - "INCOME/SOCIAL CLASS"
+      - "OTHER"
+
+  uf3move1:
+    description: >
+      Unfairly prevented from moving, during last 12 months
+    type: boolean
+
+  uf1nghb1:
+    description: >
+      Neighbors made life difficult for you
+    type: boolean
+
+  uf2nghb1:
+    description: >
+      Neighbors made life difficult, reason
+    enum:
+      - "RACE OR ETHNICITY"
+      - "GENDER"
+      - "AGE"
+      - "RELIGION"
+      - "PHYSICAL APPEARANCE"
+      - "SEXUAL ORIENTATION"
+      - "INCOME/SOCIAL CLASS"
+      - "OTHER"
+
+  curtesy1:
+    description: >
+      Treated with less courtesy than others
+    enum:
+      - "ALMOST EVERY DAY"
+      - "AT LEAST ONCE A WEEK"
+      - "A FEW TIMES A MONTH"
+      - "A FEW TIMES A YEAR"
+      - "LESS THAN ONCE A YEAR"
+      - "NEVER"
+
+  respect1:
+    description: >
+      Treated with less respect than others
+    enum:
+      - "ALMOST EVERY DAY"
+      - "AT LEAST ONCE A WEEK"
+      - "A FEW TIMES A MONTH"
+      - "A FEW TIMES A YEAR"
+      - "LESS THAN ONCE A YEAR"
+      - "NEVER"
+
+  service1:
+    description: >
+      Receive poorer service than others
+    enum:
+      - "ALMOST EVERY DAY"
+      - "AT LEAST ONCE A WEEK"
+      - "A FEW TIMES A MONTH"
+      - "A FEW TIMES A YEAR"
+      - "LESS THAN ONCE A YEAR"
+      - "NEVER"
+
+  smart1:
+    description: >
+      People act as if you are not smart
+    enum:
+      - "ALMOST EVERY DAY"
+      - "AT LEAST ONCE A WEEK"
+      - "A FEW TIMES A MONTH"
+      - "A FEW TIMES A YEAR"
+      - "LESS THAN ONCE A YEAR"
+      - "NEVER"
+
+  afraid1:
+    description: >
+      People act as if they are afraid of you
+    enum:
+      - "ALMOST EVERY DAY"
+      - "AT LEAST ONCE A WEEK"
+      - "A FEW TIMES A MONTH"
+      - "A FEW TIMES A YEAR"
+      - "LESS THAN ONCE A YEAR"
+      - "NEVER"
+
+  dishon1:
+    description: >
+      People act as if you are dishonest
+    enum:
+      - "ALMOST EVERY DAY"
+      - "AT LEAST ONCE A WEEK"
+      - "A FEW TIMES A MONTH"
+      - "A FEW TIMES A YEAR"
+      - "LESS THAN ONCE A YEAR"
+      - "NEVER"
+
+  better1:
+    description: >
+      People act as if they are better than you
+    enum:
+      - "ALMOST EVERY DAY"
+      - "AT LEAST ONCE A WEEK"
+      - "A FEW TIMES A MONTH"
+      - "A FEW TIMES A YEAR"
+      - "LESS THAN ONCE A YEAR"
+      - "NEVER"
+
+  insult1:
+    description: >
+      You are called names or insulted
+    enum:
+      - "ALMOST EVERY DAY"
+      - "AT LEAST ONCE A WEEK"
+      - "A FEW TIMES A MONTH"
+      - "A FEW TIMES A YEAR"
+      - "LESS THAN ONCE A YEAR"
+      - "NEVER"
+
+  threat1:
+    description: >
+      You are threatened or harassed
+    enum:
+      - "ALMOST EVERY DAY"
+      - "AT LEAST ONCE A WEEK"
+      - "A FEW TIMES A MONTH"
+      - "A FEW TIMES A YEAR"
+      - "LESS THAN ONCE A YEAR"
+      - "NEVER"
+
+  uf1resp1:
+    description: >
+      When treated unfairly, what do you do about it
+    enum:
+      - "ALMOST EVERY DAY"
+      - "AT LEAST ONCE A WEEK"
+      - "A FEW TIMES A MONTH"
+      - "A FEW TIMES A YEAR"
+      - "LESS THAN ONCE A YEAR"
+      - "NEVER"
+
+  uf2resp1:
+    description: >
+      When treated unfairly, do you tell others
+    enum:
+      - "TALK TO OTHERS ABOUT IT"
+      - "KEEP IT TO YOURSELF"
+
+  hlfadm1:
+    description: >
+      Questionnaire administrator - health & life
+    enum:
+      - "SELF-ADMINISTERED"
+      - "INTERVIEWER-ADMINISTERED"
+
+  uf3nghb1:
+    description: >
+      Neighbors made life difficult, during last 12 months
+    type: boolean
+
+  splang1c:
+    description: >
+      Spielberger trait anger scale
+    type: number
+
+  chrbur1c:
+    description: >
+      Chronic burden
+    type: number
+
+  chrbu61c:
+    description: >
+      Chronic burden, >6 months
+    type: number
+
+  cesd1c:
+    description: >
+      Center for epidemiologic studies - depression scale
+    type: number
+
+  emot1c:
+    description: >
+      Emotional social support index
+    type: number
+
+  discrl1c:
+    description: >
+      Perceived discrimination, lifetime
+    type: number
+
+  discry1c:
+    description: >
+      Perceived discrimination, past year
+    type: number
+
+  hassl1c:
+    description: >
+      Everyday hassles
+    type: number
+
+  splanx1c:
+    description: >
+      Spielberger trait anxiety scale
+    type: number
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"

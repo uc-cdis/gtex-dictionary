@@ -1,0 +1,651 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "cardiac_mri"
+title: Cardiac Magnetic Resonance Image
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Cardiac MRI used to obtain measures of left ventricular mass, wall thickness, ejection fraction, cardiac output, aortic atherosclerosis, and aortic distensibility.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: cardiac_mris
+    label: describes
+    target_type: cardiac_mri
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  oardis1:
+    description: >
+      Flow parameter: aortic distensibility
+    type: number
+
+  presys1:
+    description: >
+      Systolic blood pressure before series 7 mri
+    type: number
+
+  predia1:
+    description: >
+      Diastolic blood pressure before series 7 mri
+    type: number
+
+  postsys1:
+    description: >
+      Systolic blood pressure after series 7 mri
+    type: number
+
+  postdia1:
+    description: >
+      Diastolic blood pressure after series 7 mri
+    type: number
+
+  oaormx1:
+    description: >
+      Flow parameter: maximum aortic area
+    type: number
+
+  oaormn1:
+    description: >
+      Flow parameter: minimum aortic area
+    type: number
+
+  mripp1:
+    description: >
+      Pulse pressures average from the brachial blood pressures before and after series 7
+    type: number
+
+  aad1c:
+    description: >
+      Average aortic diameter (mm)
+    type: number
+
+  crdout1c:
+    description: >
+      Cardiac output (l/min)
+    type: number
+
+  odapa1:
+    description: >
+      Apical slice: segment a, end-diastole (mm)
+    type: number
+
+  odapb1:
+    description: >
+      Apical slice: segment b, end-diastole (mm)
+    type: number
+
+  odapc1:
+    description: >
+      Apical slice: segment c, end-diastole (mm)
+    type: number
+
+  odapd1:
+    description: >
+      Apical slice: segment d, end-diastole (mm)
+    type: number
+
+  odape1:
+    description: >
+      Apical slice: segment e, end-diastole (mm)
+    type: number
+
+  odapf1:
+    description: >
+      Apical slice: segment f, end-diastole (mm)
+    type: number
+
+  odmda1:
+    description: >
+      Mid slice: segment a (inferior septum), end-diastole (mm)
+    type: number
+
+  odmdb1:
+    description: >
+      Mid slice: segment b (superior septum), end-diastole (mm)
+    type: number
+
+  odmdc1:
+    description: >
+      Mid slice: segment c (anterior wall), end-diastole (mm)
+    type: number
+
+  odmdd1:
+    description: >
+      Mid slice: segment d (superior lateral wall), end-diastole (mm)
+    type: number
+
+  odmde1:
+    description: >
+      Mid slice: segment e (inferior lateral wall), end-diastole (mm)
+    type: number
+
+  odmdf1:
+    description: >
+      Mid slice: segment f (inferior wall), end-diastole (mm)
+    type: number
+
+  odbsa1:
+    description: >
+      Basal slice: segment a (inferior septum), end-diastole (mm)
+    type: number
+
+  odbsb1:
+    description: >
+      Basal slice: segment b (superior septum), end-diastole (mm)
+    type: number
+
+  odbsc1:
+    description: >
+      Basal slice: segment c (anterior wall), end-diastole (mm)
+    type: number
+
+  odbsd1:
+    description: >
+      Basal slice: segment d (superior lateral wall), end-diastole (mm)
+    type: number
+
+  odbse1:
+    description: >
+      Basal slice: segment e (inferior lateral wall), end-diastole (mm)
+    type: number
+
+  odbsf1:
+    description: >
+      Basal slice: segment f (inferior wall), end-diastole (mm)
+    type: number
+
+  osapa1:
+    description: >
+      Apical slice: segment a (inferior septum), end-systole (mm)
+    type: number
+
+  osapb1:
+    description: >
+      Apical slice: segment b (superior septum), end-systole (mm)
+    type: number
+
+  osapc1:
+    description: >
+      Apical slice: segment c (anterior wall), end-systole (mm)
+    type: number
+
+  osapd1:
+    description: >
+      Apical slice: segment d (superior lateral wall), end-systole (mm)
+    type: number
+
+  osape1:
+    description: >
+      Apical slice: segment e (inferior lateral wall), end-systole (mm)
+    type: number
+
+  osapf1:
+    description: >
+      Apical slice: segment f (inferior wall), end-systole (mm)
+    type: number
+
+  osmda1:
+    description: >
+      Mid slice: segment a (inferior septum), end-systole (mm)
+    type: number
+
+  osmdb1:
+    description: >
+      Mid slice: segment b (superior septum), end-systole (mm)
+    type: number
+
+  osmdc1:
+    description: >
+      Mid slice: segment c (anterior wall), end-systole (mm)
+    type: number
+
+  osmdd1:
+    description: >
+      Mid slice: segment d (superior lateral wall), end-systole (mm)
+    type: number
+
+  osmde1:
+    description: >
+      Mid slice: segment e (inferior lateral wall), end-systole (mm)
+    type: number
+
+  osmdf1:
+    description: >
+      Mid slice: segment f (inferior wall), end-systole (mm)
+    type: number
+
+  osbsa1:
+    description: >
+      Basal slice: segment a (inferior septum), end-systole (mm)
+    type: number
+
+  osbsb1:
+    description: >
+      Basal slice: segment b (superior septum), end-systole (mm)
+    type: number
+
+  osbsc1:
+    description: >
+      Basal slice: segment c (anterior wall), end-systole (mm)
+    type: number
+
+  osbsd1:
+    description: >
+      Basal slice: segment d (superior lateral wall), end-systole (mm)
+    type: number
+
+  osbse1:
+    description: >
+      Basal slice: segment e (inferior lateral wall), end-systole (mm)
+    type: number
+
+  osbsf1:
+    description: >
+      Basal slice: segment f (inferior wall), end-systole (mm)
+    type: number
+
+  omassv1:
+    description: >
+      Version of mass used
+    type: string
+
+  r1wm1:
+    description: >
+      Wall motion, region 1
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r2wm1:
+    description: >
+      Wall motion, region 2
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r3wm1:
+    description: >
+      Wall motion, region 3
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r4wm1:
+    description: >
+      Wall motion, region 4
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r5wm1:
+    description: >
+      Wall motion, region 5
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r6wm1:
+    description: >
+      Wall motion, region 6
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r7wm1:
+    description: >
+      Wall motion, region 7
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r8wm1:
+    description: >
+      Wall motion, region 8
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r9wm1:
+    description: >
+      Wall motion, region 9
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r10wm1:
+    description: >
+      Wall motion, region 10
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r11wm1:
+    description: >
+      Wall motion, region 11
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r12wm1:
+    description: >
+      Wall motion, region 12
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r13wm1:
+    description: >
+      Wall motion, region 13
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r14wm1:
+    description: >
+      Wall motion, region 14
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r15wm1:
+    description: >
+      Wall motion, region 15
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  r16wm1:
+    description: >
+      Wall motion, region 16
+    enum:
+      - "UNINTERPRETABLE"
+      - "NORMAL"
+      - "HYPOKINESIS"
+      - "AKINESIS"
+      - "KYSKINESIS"
+      - "ANEURYSM"
+
+  pheval1:
+    description: >
+      Was the the study evaluable?
+    type: boolean
+
+  globscr1:
+    description: >
+      Global score
+    enum:
+      - "NORMAL"
+      - "MINIMAL DYSFUNCTION"
+      - "MODERATE DYSFUNCTION"
+      - "SEVERE DYSFUNCTION"
+
+  lvh1:
+    description: >
+      Lvh alert
+    enum:
+      - "NO REFERRAL"
+      - "ABNORMAL REFERRAL"
+      - "URGENT REFERRAL"
+
+  aneursm1:
+    description: >
+      Aneurysm alert
+    enum:
+      - "NO REFERRAL"
+      - "ABNORMAL REFERRAL"
+      - "URGENT REFERRAL"
+
+  perieff1:
+    description: >
+      Pericard effusion alert
+    enum:
+      - "NO REFERRAL"
+      - "ABNORMAL REFERRAL"
+      - "URGENT REFERRAL"
+
+  massnd1:
+    description: >
+      Mediastinal mass node alert
+    enum:
+      - "NO REFERRAL"
+      - "ABNORMAL REFERRAL"
+      - "URGENT REFERRAL"
+
+  lungmss1:
+    description: >
+      Lung mass alert
+    enum:
+      - "NO REFERRAL"
+      - "ABNORMAL REFERRAL"
+      - "URGENT REFERRAL"
+
+  bnsftts1:
+    description: >
+      Bone soft tissue alert
+    enum:
+      - "NO REFERRAL"
+      - "ABNORMAL REFERRAL"
+      - "URGENT REFERRAL"
+
+  othalrt1:
+    description: >
+      Other alert
+    enum:
+      - "NO REFERRAL"
+      - "ABNORMAL REFERRAL"
+      - "URGENT REFERRAL"
+
+  datrcvd1:
+    description: >
+      Rc received the study?
+    type: boolean
+
+  refstat1:
+    description: >
+      Overall mri alert status
+    type: string
+
+  oavflw1:
+    description: >
+      Flow parameter: average flow velocity (cm/sec)
+    type: number
+
+  osv1:
+    description: >
+      Flow parameter: stroke volume
+    type: number
+
+  ovpm1:
+    description: >
+      Flow parameter: volume per minute
+    type: number
+
+  rchrtrt1:
+    description: >
+      Heart rate (bpm)
+    type: number
+
+  lvedd1c:
+    description: >
+      Lv end-diastolic diameter (mm), computed (devereux, am j cardiol 1986)
+    type: number
+
+  olvedm1t:
+    description: >
+      Lv end-diastolic mass (g) using ssfg mri pulse sequence
+    type: number
+
+  olvedv1t:
+    description: >
+      Lv end-diastolic volume (ml) using ssfg mri pulse sequence
+    type: number
+
+  olvesv1t:
+    description: >
+      Lv end-systolic volume (ml) using ssfg mri pulse sequence
+    type: number
+
+  olvef1t:
+    description: >
+      Lv ejection fraction (%) using ssfg mri pulse sequence
+    type: number
+
+  olvsv1t:
+    description: >
+      Lv stroke volume (ml) using ssfg mri pulse sequence
+    type: number
+
+  apoeig1:
+    description: >
+      Apolipoprotein e (apo e) isoform genotype
+    type: string
+
+  apoea11:
+    description: >
+      Apolipoprotein e: allele 1
+    enum:
+      - "E2: ALLELE DENOTES ISOFORM 112CYS/158CYS OF THE MATURE PROTEIN"
+      - "E3: ALLELE DENOTES ISOFORM 112CYS/158ARG OF THE MATURE PROTEIN"
+      - "E4: ALLELE DENOTES ISOFORM 112ARG/158ARG OF THE MATURE PROTEIN"
+
+  apoea21:
+    description: >
+      Apolipoprotein e: allele 2
+    enum:
+      - "E2: ALLELE DENOTES ISOFORM 112CYS/158CYS OF THE MATURE PROTEIN"
+      - "E3: ALLELE DENOTES ISOFORM 112CYS/158ARG OF THE MATURE PROTEIN"
+      - "E4: ALLELE DENOTES ISOFORM 112ARG/158ARG OF THE MATURE PROTEIN"
+
+  olvedm1:
+    description: >
+      Lv mass (g) using fgre mri pulse sequence
+    type: number
+
+  olvedv1:
+    description: >
+      Lv end-diastolic volume (ml) using fgre mri pulse sequence
+    type: number
+
+  olvesv1:
+    description: >
+      Lv end-systolic volume (ml) using fgre mri pulse sequence
+    type: number
+
+  olvef1:
+    description: >
+      Lv ejection fraction (%) using fgre mri pulse sequence
+    type: number
+
+  olvsv1:
+    description: >
+      Lv stroke volume (ml) using fgre mri pulse sequence
+    type: number
+
+  ppa_101:
+    description: >
+      Pulse pressure amplification x10
+    type: number
+
+  rm_101:
+    description: >
+      Reflection magnitude x10
+    type: number
+
+  aix_ao_101:
+    description: >
+      Aortic augmentation index x10
+    type: number
+
+  mlvwall1c:
+    description: >
+      Mean lv wall thickness, end-diastole (mm)
+    type: number
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"

@@ -1,0 +1,912 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "lab_result"
+title: Laboratory Results
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Measurements obtained from blood or other laboratory tests required by a medical professional. These will include lipids and lipid metabolism parameters, lipid oxidation markers, cytokines, adhesion molecules, nitric oxide, and hemostasis/fibrinolysis markers.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: lab_results
+    label: describes
+    target_type: lab_result
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  cer451q1:
+    description: >
+      Cholesterol ester transfer protein - r451q genotype
+    enum:
+      - "RR"
+      - "RQ"
+      - "QQ"
+
+  oxldl1:
+    description: >
+      Oxldl (mg/dl)
+    type: number
+
+  f81c:
+    description: >
+      Calibrated factor viii (%)
+    type: number
+
+  renins1c:
+    description: >
+      Indicator of renal insufficiency (gfr<60)
+    type: number
+
+  cystatc1:
+    description: >
+      Cystatin c (mg/l)
+    type: number
+
+  trig1:
+    description: >
+      Triglycerides (mg/dl)
+    type: number
+
+  glucos1c:
+    description: >
+      Exam 1 fasting glucose- calibrated
+    type: number
+
+  glucos1u:
+    description: >
+      Exam 1 fasting glucose- original
+    type: number
+
+  ldl1:
+    description: >
+      Ldl cholesterol (mg/dl)
+    type: number
+
+  hdl1:
+    description: >
+      Hdl cholesterol (mg/dl)
+    type: number
+
+  creatin1:
+    description: >
+      Creatinine (mg/dl)
+    type: number
+
+  chol1:
+    description: >
+      Total cholesterol (mg/dl)
+    type: number
+
+  chlcat1c:
+    description: >
+      Total cholesterol, ncep categories
+    enum:
+      - "DESIRABLE, <200"
+      - "BORDERLINE HIGH, 200-239"
+      - "HIGH, 240+"
+
+  ldlcat1c:
+    description: >
+      Ldl cholesterol, ncep categories
+    enum:
+      - "OPTIMAL, <100"
+      - "NEAR OPTIMAL, 100-129"
+      - "BORDERLINE HIGH, 130-159"
+      - "HIGH, 160-189"
+      - "VERY HIGH, 190+"
+
+  hdlcat1c:
+    description: >
+      Hdl cholesterol, ncep categories
+    enum:
+      - "HIGH, 60+"
+      - "40-59"
+      - "LOW, <40"
+
+  trgcat1c:
+    description: >
+      Triglycerides, ncep categories
+    enum:
+      - "NORMAL, <150"
+      - "BORDERLINE HIGH, 150-199"
+      - "HIGH, 200-499"
+      - "VERY HIGH, 500+"
+
+  lastdrk1:
+    description: >
+      How long ago last drink or eat? (hrs)
+    type: number
+
+  hcytot1:
+    description: >
+      Total homocysteine (thcy) (umol/l)
+    type: number
+
+  cpn1c:
+    description: >
+      Chlamydia pneumoniae results as pos, neg & nsf
+    type: string
+
+  cpntite1:
+    description: >
+      Chlamydia pneumoniae (igg antibodies)
+    enum:
+      - "NEGATIVE, NO FLUORESCENCE (NEG)"
+      - "1+, DEFINITE, BUT DIM FLUORESCENCE (POS)"
+      - "2+, MODERATE TO INTENSE FLUORESCENCE (POS)"
+      - "3+, MODERATE TO INTENSE FLUORESCENCE (POS)"
+      - "4+, MODERATE TO INTENSE FLUORESCENCE (POS)"
+
+  CPNTIT1M:
+    description: >
+      Exceptional missing cpn titer
+    enum:
+      - "NONSPECIFIC FLUORESCENCE, ASSAY NOT INTERPRETABLE"
+
+  homair1c:
+    description: >
+      Homeostasis model assessment for insulin resistance
+    type: number
+
+  INSUL1M:
+    description: >
+      Exceptional missing insulin
+    enum:
+      - "VALUE BELOW MEASUREMENT LIMITS"
+
+  il61:
+    description: >
+      Interleukin-6 (il-6) (pg/ml)
+    type: number
+
+  il61M:
+    description: >
+      Exceptional missing il61
+    enum:
+      - "INVALID (UNREPORTABLE) RESULT"
+      - "VALUE > 13"
+      - "VALUE < 0.09 (BELOW MEASUREMENT LIMITS)"
+
+  il61t:
+    description: >
+      Natural log transformed interleukin-6 (il-6)
+    type: number
+
+  pap1:
+    description: >
+      Plasmin-antiplasmin complex (pap) (nm)
+    type: number
+
+  pap1M:
+    description: >
+      Exceptional missing pap1
+    enum:
+      - "INVALID (UNREPORTABLE) RESULT"
+      - "VALUE IS ABOVE MEASUREMENT LIMITS"
+      - "VALUE < 0.20 (BELOW MEASUREMENT LIMITS)"
+
+  fib1:
+    description: >
+      Fibrinogen antigen (mg/dl)
+    type: number
+
+  crp1:
+    description: >
+      C-reactive protein (crp) (mg/l)
+    type: number
+
+  crp1t:
+    description: >
+      Natural log transformed c-reactive protein (crp)
+    type: number
+
+  ddimer1:
+    description: >
+      D-dimer (ug/ml)
+    type: number
+
+  DDIMER1M:
+    description: >
+      Exceptional missing ddimer
+    enum:
+      - "INVALID (UNREPORTABLE) RESULT"
+      - "EXTREME LOW (EXTRAPOLATED)"
+      - "HIGH (> 20, EXTRAPOLATED)"
+
+  f81:
+    description: >
+      Factor viii (%)
+    type: number
+
+  factr81M:
+    description: >
+      Extrapolated factor viii
+    enum:
+      - "LOW (EXTRAPOLATED)"
+      - "HIGH (EXTRAPOLATED)"
+
+  cd40l1:
+    description: >
+      Cd40 ligand (pg/ml)
+    type: number
+
+  eselect1:
+    description: >
+      E-selectin (ng/ml)
+    type: number
+
+  mmp31:
+    description: >
+      Matrix metalloproteinase 3 (ng/ml)
+    type: number
+
+  mmp31t:
+    description: >
+      Natural log transformed matrix metalloproteinase 3
+    type: number
+
+  mmp91:
+    description: >
+      Matrix metalloproteinase 9 (ng/ml)
+    type: number
+
+  mmp91t:
+    description: >
+      Natural log transformed matrix metalloproteinase 9
+    type: number
+
+  hsv1:
+    description: >
+      Herpes simplex virus (eu/ml)
+    type: number
+
+  hsv1c:
+    description: >
+      Herpes simplex virus (pos/neg)
+    type: string
+
+  cmv1:
+    description: >
+      Cytomegalovirus (eu/ml)
+    type: number
+
+  cmv1c:
+    description: >
+      Cytomegalovirus (pos/neg)
+    type: string
+
+  hpylori1:
+    description: >
+      Helicobacter pylori antibodies
+    type: number
+
+  hpylor1c:
+    description: >
+      Helicobacter pylori antibodies (pos/neg)
+    type: string
+
+  havab1:
+    description: >
+      Hepatitis a virus antibodies
+    type: number
+
+  havab1c:
+    description: >
+      Hepatitis a virus antibodies (pos/neg)
+    type: string
+
+  pai1:
+    description: >
+      Pai-1 (ng/ml)
+    type: number
+
+  PAI1M:
+    description: >
+      Exceptional missing pai1
+    enum:
+      - "VALUE < 1.8 (BELOW DETECTION LIMITS)"
+
+  stf1:
+    description: >
+      Soluble tf (pg/ml)
+    type: number
+
+  STF1M:
+    description: >
+      Exceptional missing stf1
+    enum:
+      - "VALUE < 2.0 pg/ml (BELOW DETECTION LIMITS)"
+
+  tfpi1:
+    description: >
+      Tfpi (ng/ml)
+    type: number
+
+  TFPI1M:
+    description: >
+      Exceptional missing tfpi1
+    enum:
+      - "VALUE > 100 ng/ml (ABOVE DETECTION LIMITS)"
+
+  stm1:
+    description: >
+      Soluble thrombomodulin (ng/ml)
+    type: number
+
+  STM1M:
+    description: >
+      Exceptional missing stm
+    enum:
+      - "VALUE < 0.8 ng/ml (BELOW DETECTION LIMITS)"
+
+  abcact1:
+    description: >
+      Abca1 -477 c/t genotype
+    enum:
+      - "C/C"
+      - "C/T"
+      - "T/T"
+
+  abcaga1:
+    description: >
+      Abca1 1051 g/a (r219k) genotype
+    enum:
+      - "G/G"
+      - "G/A"
+      - "A/A"
+
+  rlpc1:
+    description: >
+      Remnant-like particle cholesterol (mg/dl)
+    type: number
+
+  hdl11:
+    description: >
+      Hdl-1 (%)
+    type: number
+
+  hdl21:
+    description: >
+      Hdl-2 (%)
+    type: number
+
+  hdl31:
+    description: >
+      Hdl-3 (%)
+    type: number
+
+  hdl41:
+    description: >
+      Hdl-4 (%)
+    type: number
+
+  hdl51:
+    description: >
+      Hdl-5 (%)
+    type: number
+
+  hdl61:
+    description: >
+      Hdl-6 (%)
+    type: number
+
+  hdl71:
+    description: >
+      Hdl-7 (%)
+    type: number
+
+  hdl81:
+    description: >
+      Hdl-8 (%)
+    type: number
+
+  hdl1md1:
+    description: >
+      Hdl-1 (mg/dl)
+    type: number
+
+  hdl2md1:
+    description: >
+      Hdl-2 (mg/dl)
+    type: number
+
+  hdl3md1:
+    description: >
+      Hdl-3 (mg/dl)
+    type: number
+
+  hdl4md1:
+    description: >
+      Hdl-4 (mg/dl)
+    type: number
+
+  hdl5md1:
+    description: >
+      Hdl-5 (mg/dl)
+    type: number
+
+  hdl6md1:
+    description: >
+      Hdl-6 (mg/dl)
+    type: number
+
+  hdl7md1:
+    description: >
+      Hdl-7 (mg/dl)
+    type: number
+
+  hdl8md1:
+    description: >
+      Hdl-8 (mg/dl)
+    type: number
+
+  antHsp61:
+    description: >
+      Anti-human heat shock protein-60 (ng/ml)
+    type: number
+
+  anthsp61t:
+    description: >
+      Natural log transformed anti-human heat shock protein-60
+    type: number
+
+  ceact1:
+    description: >
+      Cholesterol ester transfer protein activity (nmol/ml/hr)
+    type: number
+
+  cemass1:
+    description: >
+      Cholesterol ester transfer protein mass (mg/ml)
+    type: number
+
+  cea373p1:
+    description: >
+      Cholesterol ester transfer protein - a373p genotype
+    enum:
+      - "AA"
+      - "AP"
+      - "PP"
+
+  ce629ca1:
+    description: >
+      Cholesterol ester transfer protein - -629ca genotype
+    enum:
+      - "CC"
+      - "CA"
+      - "AA"
+
+  CEP6291M:
+    description: >
+      Exceptional missing cept_629
+    enum:
+      - "OTHER MISSING (-77)"
+
+  cetaq1b1:
+    description: >
+      Cholesterol ester transfer protein - taq1b genotype
+    enum:
+      - "B1B1"
+      - "B1B2"
+      - "B2B2"
+
+  CETP25051:
+    description: >
+      Cholesterol ester transfer protein - 2505
+    enum:
+      - "AA"
+      - "CA"
+      - "CC"
+      - "NO AMP"
+      - "NO SAMPLE"
+
+  ISOPROST:
+    description: >
+      Exam 1 isoprostane (pg/ml)
+    type: number
+
+  ISOPRO1M:
+    description: >
+      Exceptional missing isoprost
+    enum:
+      - "POOR PEAK DETECTION (OR OUT OF ASSAY RANGE)"
+
+  vwf1:
+    description: >
+      Percent von willebrand factor (vwf)
+    type: number
+
+  VWF1M:
+    description: >
+      Exceptional missing vwf
+    enum:
+      - "INVALID (UNREPORTABLE) RESULT"
+      - "LOW (EXTRAPOLATED)"
+
+  cpn31:
+    description: >
+      Chlamydia (from group 3 lipids)
+    type: number
+
+  cpn31c:
+    description: >
+      Chlamydia pos/neg (from group3 lipids)
+    type: string
+
+  cer452q1:
+    description: >
+      Cholesterol ester transfer protein - r451q genotype
+    enum:
+      - "RR"
+      - "RQ"
+      - "QQ"
+
+  i14_0_e1:
+    description: >
+      14:0 myristic acid
+    type: number
+
+  i15_0_e1:
+    description: >
+      15:0 pentadecanoic acid
+    type: number
+
+  i16_0_e1:
+    description: >
+      16:0 hexadecanoic acid
+    type: number
+
+  i16_1_9t_e1:
+    description: >
+      16:1 9 trans palmitoleic acid
+    type: number
+
+  i16_1_9c_e1:
+    description: >
+      16:1 9 cis palmitoleic acid
+    type: number
+
+  i18_0_e1:
+    description: >
+      18:0 stearic acid
+    type: number
+
+  i18_1_9_11t_e1:
+    description: >
+      18:1 9-11 trans oleic acid
+    type: number
+
+  i18_1_12_t_e1:
+    description: >
+      18:1 12 trans oleic acid
+    type: number
+
+  i18_1_9_c_e1:
+    description: >
+      18:1:9 cis linoleic acid
+    type: number
+
+  i18_1_11_c_e1:
+    description: >
+      18:1:11 cis linoleic acid
+    type: number
+
+  i18_1_12_c_e1:
+    description: >
+      18:1:12 cis linoleic acid
+    type: number
+
+  i18_2_t_t_e1:
+    description: >
+      18:2 t/t linoleic acid
+    type: number
+
+  i18_2_c_t_e1:
+    description: >
+      18:2 c/t linoleic acid
+    type: number
+
+  i18_2_t_c_e1:
+    description: >
+      18:2 t/c linoleic acid
+    type: number
+
+  i18_2_c_c_e1:
+    description: >
+      18:2 c/c linoleic acid
+    type: number
+
+  i18_3_n6_e1:
+    description: >
+      18:3 n6 gamma-linolenic acid
+    type: number
+
+  i18_3_n3_e1:
+    description: >
+      18:3 n3 alpha-linolenic acid
+    type: number
+
+  i20_0_e1:
+    description: >
+      20:0 arachidic acid
+    type: number
+
+  i20_1_n9_e1:
+    description: >
+      20:1n9 gadoleic acid
+    type: number
+
+  i20_2_n6_e1:
+    description: >
+      20:2n6 eicosanoic acid
+    type: number
+
+  i20_3_n6_e1:
+    description: >
+      20:3n6 eicosanoic acid
+    type: number
+
+  i20_4_n6_e1:
+    description: >
+      20:4n6 arachidonic acid (aa)
+    type: number
+
+  i22_0_e1:
+    description: >
+      22:0 behenic acid
+    type: number
+
+  i20_5_n3_e1:
+    description: >
+      20:5n3 timnodonic acid
+    type: number
+
+  i24_1_n9_e1:
+    description: >
+      24:1n9 nervonic acid
+    type: number
+
+  i22_5_n3_e1:
+    description: >
+      22:5n3 clupanodonic acid
+    type: number
+
+  i22_6_n3_e1:
+    description: >
+      22:6n3 docosahexaenoic acid (dha)
+    type: number
+
+  total_trans_e1c:
+    description: >
+      Sum of 16:1 9 trans, 18:1 9-11 trans, 18:1 12 trans, 18:2 t/t, 18:2
+    type: number
+
+  i16_1_trans_e1c:
+    description: >
+      16:1 9 trans
+    type: number
+
+  i18_1_trans_e1c:
+    description: >
+      Sum of 18:1 9-11 trans, 18:1 12 trans
+    type: number
+
+  i18_2_trans_e1c:
+    description: >
+      Sum of 18:2 t/t, 18:2 c/t, 18:2 t/c
+    type: number
+
+  total_cis_e1c:
+    description: >
+      Sum of 16:1 9 cis, 18:1 9 cis, 18:1 11 cis, 18:1 12 cis, 18:2 c/c
+    type: number
+
+  i16_1_cis_e1c:
+    description: >
+      16:1 9 cis
+    type: number
+
+  i18_1_cis_e1c:
+    description: >
+      18:1 9 cis, 18:1 11 cis, 18:1 12 cis
+    type: number
+
+  i18_2_cis_e1c:
+    description: >
+      18:2 c/c
+    type: number
+
+  epa_dha_e1c:
+    description: >
+      Sum of 20:5n3 and 22:6n3
+    type: number
+
+  icam1:
+    description: >
+      Sicam (ng/ml)
+    type: number
+
+  icam11M:
+    description: >
+      Exceptional missing icam11
+    enum:
+      - "INVALID (UNREPORTABLE) RESULT"
+      - "VALUE IS > 900 ng/ml (ABOVE MEASUREMENT LIMITS)"
+      - "VALUE < 0.35 ng/ml (BELOW MEASUREMENT LIMITS)"
+
+  ualbumn1:
+    description: >
+      Urinary albumin (mg/dl)
+    type: number
+
+  ualbcre1:
+    description: >
+      Urinary albumin/creatinine (mg/g)
+    type: number
+
+  ualbcre1t:
+    description: >
+      Natural log transformed ratio of urinary albumin (mg) to creatinine (g)
+    type: number
+
+  ucreat1:
+    description: >
+      Urinary creatinine (mg/dl)
+    type: number
+
+  uabcat1c:
+    description: >
+      Urine: microalbuminuria
+    enum:
+      - "NORMAL"
+      - "MICROALBUMINURIA"
+      - "MACROALBUMINURIA"
+
+  inslnr1t:
+    description: >
+      Serum insulin recoded to e5 elecsys scale (mu/l)
+    type: number
+
+  vldlp31c:
+    description: >
+      Vldl particles (total) (nmol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  vl31:
+    description: >
+      Large vldl >60 nm (nmol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  vm31:
+    description: >
+      Medium vldl 35-60 nm (nmol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  vs31:
+    description: >
+      Small vldl 29-35 nm (nmol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  ldlp31c:
+    description: >
+      Ldl particles (total) (nmol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  idl31:
+    description: >
+      Idl 23-29 nm (nmol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  ll31:
+    description: >
+      Large ldl 20.5-23 nm (nmol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  ls31:
+    description: >
+      Small ldl 18-20.5 nm (nmol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  hdlp31c:
+    description: >
+      Hdl particles (total) (umol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  hl31:
+    description: >
+      Large hdl 9.4-14 nm (umol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  hm31:
+    description: >
+      Medium hdl 8.2-9.4 nm (umol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  hs31:
+    description: >
+      Small hdl 7.3-8.2 nm (umol/l) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  vz31:
+    description: >
+      Mean vldl size (nm) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  lz31:
+    description: >
+      Mean ldl size (nm) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  hz31:
+    description: >
+      Mean hdl size (nm) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  ntrg31c:
+    description: >
+      Calculated total triglycerides (mg/dl) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  nvtrg31c:
+    description: >
+      Calculated vldl triglycerides (mg/dl) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  nhdlc31c:
+    description: >
+      Calculated hdl cholesterol (mg/dl) from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  lp3lpir1:
+    description: >
+      Lipoprotein insulin resistance score from nmr lipoprofile-3 spectral analysis
+    type: number
+
+  lpcomm31:
+    description: >
+      Comments from nmr lipoprofile-3 spectral analysis
+    type: string
+
+  il2sr1:
+    description: >
+      Interleukin-2 (pg/ml)
+    type: number
+
+  il2sr1t:
+    description: >
+      Natural log transformed interleukin-2
+    type: number
+
+  tnfri1:
+    description: >
+      Tumor necrosis factor-a soluble receptors (pg/ml)
+    type: number
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"

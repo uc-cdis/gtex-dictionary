@@ -1,0 +1,745 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "electrocardiogram_test"
+title: Electrocardiogram
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  A 12-lead ECG will be obtained and transmitted to the ECG Reading Center via telephone lines for Minnesota coding.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: electrocardiogram_tests
+    label: describes
+    target_type: electrocardiogram_test
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  ecglvh1c:
+    description: >
+      Left ventricular hypertrophy by novacode
+    type: boolean
+
+  afib1c:
+    description: >
+      Atrial fibrillation / flutter by novacode
+    type: boolean
+
+  epicare1:
+    description: >
+      Epicare sequence number
+    type: number
+
+  prdur1:
+    description: >
+      Pr interval (msec)
+    type: number
+
+  qrsdur1:
+    description: >
+      Qrs interval (msec)
+    type: number
+
+  qtdur1:
+    description: >
+      Qt interval (msec)
+    type: number
+
+  qtcdur1:
+    description: >
+      Qtc interval (msec)
+    type: number
+
+  paxis1:
+    description: >
+      P axis (degrees)
+    type: number
+
+  qrsaxis1:
+    description: >
+      Qrs axis (degrees)
+    type: number
+
+  taxis1:
+    description: >
+      T axis (degrees)
+    type: number
+
+  ecgqgrd1:
+    description: >
+      Ecg quality grade
+    type: number
+
+  leadswp1:
+    description: >
+      Lead connection interchange
+    type: number
+
+  ncvp1a1:
+    description: >
+      Novacode 1 rhythm score a
+    type: string
+
+  ncvp1b1:
+    description: >
+      Novacode 1 rhythm score b
+    type: string
+
+  ncvp1c1:
+    description: >
+      Novacode 1 rhythm score c
+    type: string
+
+  ncvp1d1:
+    description: >
+      Novacode 1 rhythm score d
+    type: string
+
+  ncvp1e1:
+    description: >
+      Novacode 1 rhythm score e
+    type: string
+
+  ncvp1f1:
+    description: >
+      Novacode 1 rhythm score f
+    type: string
+
+  ncvp1g1:
+    description: >
+      Novacode 1 rhythm score g
+    type: string
+
+  ncsuppa1:
+    description: >
+      Novacode 1 supplemental score a
+    type: string
+
+  ncsuppb1:
+    description: >
+      Novacode 1 supplemental score b
+    type: string
+
+  ncsuppc1:
+    description: >
+      Novacode 1 supplemental score c
+    type: string
+
+  ncsuppd1:
+    description: >
+      Novacode 1 supplemental score d
+    type: string
+
+  ncsuppe1:
+    description: >
+      Novacode 1 supplemental score e
+    type: string
+
+  ncsuppf1:
+    description: >
+      Novacode 1 supplemental score f
+    type: string
+
+  ncsuppg1:
+    description: >
+      Novacode 1 supplemental score g
+    type: string
+
+  ncsp21:
+    description: >
+      Novacode prevalent code 2: software
+    type: string
+
+  ncsp31:
+    description: >
+      Novacode prevalent code 3: software
+    type: string
+
+  ncsp41:
+    description: >
+      Novacode prevalent code 4: software
+    type: string
+
+  ncsp51:
+    description: >
+      Novacode prevalent code 5: software
+    type: string
+
+  ncsp61:
+    description: >
+      Novacode prevalent code 6: software
+    type: string
+
+  ncsp71:
+    description: >
+      Novacode prevalent code 7: software
+    type: string
+
+  ncsp81:
+    description: >
+      Novacode prevalent code 8: software
+    type: string
+
+  ncsp91:
+    description: >
+      Novacode prevalent code 9: software
+    type: string
+
+  ncsp101:
+    description: >
+      Novacode prevalent code 10: software
+    type: string
+
+  ncvp21:
+    description: >
+      Novacode prevalent code 2: visual
+    type: string
+
+  ncvp31:
+    description: >
+      Novacode prevalent code 3: visual
+    type: string
+
+  ncvp41:
+    description: >
+      Novacode prevalent code 4: visual
+    type: string
+
+  ncvp51:
+    description: >
+      Novacode prevalent code 5: visual
+    type: string
+
+  ncvp61:
+    description: >
+      Novacode prevalent code 6: visual
+    type: string
+
+  ncvp71:
+    description: >
+      Novacode prevalent code 7: visual
+    type: string
+
+  ncvp81:
+    description: >
+      Novacode prevalent code 8: visual
+    type: string
+
+  ncvp91:
+    description: >
+      Novacode prevalent code 9: visual
+    type: string
+
+  ncvp101:
+    description: >
+      Novacode prevalent code 10: visual
+    type: string
+
+  mcl11:
+    description: >
+      Minnesota code 1 score: l leadgroup
+    type: string
+
+  mcl41:
+    description: >
+      Minnesota code 4 score: l leadgroup
+    type: string
+
+  mcl51:
+    description: >
+      Minnesota code 5 score: l leadgroup
+    type: string
+
+  mcl921:
+    description: >
+      Minnesota code 92 score: l leadgroup
+    type: string
+
+  mcf11:
+    description: >
+      Minnesota code 1 score: f leadgroup
+    type: string
+
+  mcf41:
+    description: >
+      Minnesota code 4 score: f leadgroup
+    type: string
+
+  mcf51:
+    description: >
+      Minnesota code 5 score: f leadgroup
+    type: string
+
+  mcf921:
+    description: >
+      Minnesota code 92 score: f leadgroup
+    type: string
+
+  mcv11:
+    description: >
+      Minnesota code 1 score: v leadgroup
+    type: string
+
+  mcv41:
+    description: >
+      Minnesota code 4 score: v leadgroup
+    type: string
+
+  mcv51:
+    description: >
+      Minnesota code 5 score: v leadgroup
+    type: string
+
+  mcv921:
+    description: >
+      Minnesota code 92 score: v leadgroup
+    type: string
+
+  mc21:
+    description: >
+      Minnesota code 2 score
+    type: string
+
+  mc31:
+    description: >
+      Minnesota code 3 score
+    type: string
+
+  mc71:
+    description: >
+      Minnesota code 7 score
+    type: string
+
+  mc911:
+    description: >
+      Minnesota code 9.1 score
+    type: string
+
+  mc931:
+    description: >
+      Minnesota code 9.3 score
+    type: string
+
+  mc941:
+    description: >
+      Minnesota code 9.4 score
+    type: string
+
+  mc951:
+    description: >
+      Minnesota code 9.5 score
+    type: string
+
+  mcr611:
+    description: >
+      Minnesota code 6 score: visual 1
+    type: string
+
+  mcr621:
+    description: >
+      Minnesota code 6 score: visual 2
+    type: string
+
+  mcr631:
+    description: >
+      Minnesota code 6 score: visual 3
+    type: string
+
+  mcr641:
+    description: >
+      Minnesota code 6 score: visual 4
+    type: string
+
+  mcr651:
+    description: >
+      Minnesota code 6 score: visual 5
+    type: string
+
+  mcr681:
+    description: >
+      Minnesota code 6 score: visual 8
+    type: string
+
+  mcr811:
+    description: >
+      Minnesota code 8 score: visual 1
+    type: string
+
+  mcr821:
+    description: >
+      Minnesota code 8 score: visual 2
+    type: string
+
+  mcr831:
+    description: >
+      Minnesota code 8 score: visual 3
+    type: string
+
+  mcr841:
+    description: >
+      Minnesota code 8 score: visual 4
+    type: string
+
+  mcr861:
+    description: >
+      Minnesota code 8 score: visual 6
+    type: string
+
+  mcr871:
+    description: >
+      Minnesota code 8 score: visual 7
+    type: string
+
+  mcr881:
+    description: >
+      Minnesota code 8 score: visual 8
+    type: string
+
+  mcr891:
+    description: >
+      Minnesota code 8 score: visual 9
+    type: string
+
+  rmsdd1:
+    description: >
+      Estimate of heart rate variability short-term components
+    type: number
+
+  sdnn1:
+    description: >
+      Estimate of overall heart rate variability
+    type: number
+
+  ecgnum1:
+    description: >
+      Total # ecgs used in heart rate variability analysis
+    type: number
+
+  baseseq1:
+    description: >
+      Baseline seq id of compar rec for serial analysis
+    type: number
+
+  paxis1c:
+    description: >
+      P axis (degrees) - with 999 values recoded to missing
+    type: number
+
+  prdur1c:
+    description: >
+      Pr interval (msec) - with 0=supressed recoded to missing
+    type: number
+
+  hrtrate1:
+    description: >
+      Heart rate (beats/min)
+    type: number
+
+  supprss1:
+    description: >
+      Flag for supressed codes
+    enum:
+      - "NON-SUPPRESSED"
+      - "SUPPRESSED"
+
+  qsupprs1:
+    description: >
+      Suppressed q mc1, other than quality issues
+    enum:
+      - "SUPPRESSED Q MC1, OTHER THAN QUALITY ISSUES"
+
+  ssupprs1:
+    description: >
+      Suppressed st mc4, other than quality issues
+    enum:
+      - "SUPPRESSED ST MC4, OTHER THAN QUALITY ISSUES"
+
+  tsupprs1:
+    description: >
+      Suppressed t mc5, other than quality issues
+    enum:
+      - "SUPPRESSED T MC5, OTHER THAN QUALITY ISSUES"
+
+  minor11:
+    description: >
+      Minor abnormality 1 per minnesota code: minor-isolated q, qs waves
+    enum:
+      - "MINOR ISOLATED Q,QS WAVES"
+
+  minor21:
+    description: >
+      Minor abnormality 2 per minnesota code: minor-isolated st, t waves
+    enum:
+      - "MINOR ISOLATED ST,T ABNORMALITIES"
+
+  minor31:
+    description: >
+      Minor abnormality 3 per minnesota code: high r waves
+    enum:
+      - "HIGH R WAVES"
+
+  minor4l1:
+    description: >
+      Minor abnormality 4l per minnesota code: st segment elevation, anterolateral site
+    enum:
+      - "ST SEGMENT ELEVATION, ANTEROLATERAL SITE"
+
+  minor4f1:
+    description: >
+      Minor abnormality 4f per minnesota code: st segment elevation, posterior site
+    enum:
+      - "ST SEGMENT ELEVATION, POSTERIOR SITE"
+
+  minor4v1:
+    description: >
+      Minor abnormality 4v per minnesota code: st segment elevation, anterior site
+    enum:
+      - "ST SEGMENT ELEVATION, ANTERIOR SITE"
+
+  minor5l1:
+    description: >
+      Minor abnormality 5l per minnesota code: incomplete lbbb
+    enum:
+      - "INCOMPLETE RBBB"
+
+  minor5r1:
+    description: >
+      Minor abnormality 5r per minnesota code: incomplete rbbb
+    enum:
+      - "INCOMPLETE LBB"
+
+  minor61:
+    description: >
+      Minor abnormality 6 per minnesota code: minor qt prolongation, jti >=112% or minor qt prolongation, qti >=112%
+    enum:
+      - "MINOR QT PROLONGATION, JTI >"
+      - "MINOR QT PROLONGATION, QTI >"
+
+  minor71:
+    description: >
+      Minor abnormality 7 per minnesota code: short pr
+    enum:
+      - "SHORT PR"
+
+  minor81:
+    description: >
+      Minor abnormality 8 per minnesota code: left axis deviation
+    enum:
+      - "LEFT AXIS DEVIATION"
+
+  minor91:
+    description: >
+      Minor abnormality 9 per minnesota code: right axis deviation
+    enum:
+      - "RIGHT AXIS DEVIATION"
+
+  minor101:
+    description: >
+      Minor abnormality 10 per minnesota code: frequent ventricular premature beats
+    enum:
+      - "FREQUENT VENTRICULAR PREMATURE BEATS"
+
+  minor11a1:
+    description: >
+      Minor abnormality 11a per minnesota code: p-r interval > .22 sec
+    enum:
+      - "P-R INTERVAL > .22 SEC"
+
+  minor11b1:
+    description: >
+      Minor abnormality 11b per minnesota code: frequent atrial or junctional premature beats or wandering atrial pacemaker or frequent atrial or ventricular premature beats and wandering atrial pacemaker
+    enum:
+      - "FREQUENT ATRIAL OR JUNCTIONAL PREMATURE BEATS"
+      - "WANDERING ATRIAL PACEMAKER"
+      - "FREQUENT ATRIAL OR VENTRICULAR PREMATURE BEATS AND WANDERING ATRIAL PACEMAKER"
+
+  minor11c1:
+    description: >
+      Minor abnormality 11c per minnesota code: supraventricular rhythm
+    enum:
+      - "SUPRAVENTRICULAR RHYTHM"
+
+  minor11d1:
+    description: >
+      Minor abnormality 11d per minnesota code: sinus tachycardia
+    enum:
+      - "SINUS TACHYCARDIA"
+
+  minor11e1:
+    description: >
+      Minor abnormality 11e per minnesota code: sinus bradycardia
+    enum:
+      - "SINUS BRADYCARDIA"
+
+  minor11f1:
+    description: >
+      Minor abnormality 11f per minnesota code: low qrs amplitude
+    enum:
+      - "LOW QRS AMPLITUDE"
+
+  minor11g1:
+    description: >
+      Minor abnormality 11g per minnesota code: p-wave amplitude high
+    enum:
+      - "P-WAVE AMPLITUDE HIGH"
+
+  major11:
+    description: >
+      Major abnormality 1 per minnesota code: complete/intermittent lbbb or complete/intermittent rbbb or nonspecific intraventricular block or complete/intermittent rbbb w/ left anterior hemiblock
+    enum:
+      - "COMPLETE/INTERMITTENT LBBB"
+      - "COMPLETE/INTERMITTENT RBBB"
+      - "NONSPECIFIC INTRAVENTRICULAR BLOCK"
+      - "COMPLETE/INTERMITTENT RBBB W/ LEFT ANTERIOR HEMIBLOCK"
+
+  major21:
+    description: >
+      Major abnormality 2 per minnesota code: major q wave abnormalities [old myocardial infarction (mi)]
+    enum:
+      - "MAJOR Q WAVE ABNORMALITIES [OLD MYOCARDIAL INFARCTION (MI)]"
+
+  major31:
+    description: >
+      Major abnormality 3 per minnesota code: minor q,qs waves with st,t abnormalities (possible old mi)
+    enum:
+      - "MINOR Q,QS WAVES WITH ST,T ABNORMALITIES (POSSIBLE OLD MI)"
+
+  major41:
+    description: >
+      Major abnormality 4 per minnesota code: major isolated_st_t_abnormalities
+    enum:
+      - "MAJOR ISOLATED_ST_T_ABNORMALITIES"
+
+  major51:
+    description: >
+      Major abnormality 5 per minnesota code: left ventricular hypertrophy
+    enum:
+      - "LEFT VENTRICULAR HYPERTROPHY"
+
+  major61:
+    description: >
+      Major abnormality 6 per minnesota code: atrial fibrillation or flutter
+    enum:
+      - "ATRIAL FIBRILLATION OR FLUTTER"
+
+  major7a1:
+    description: >
+      Major abnormality 7a per minnesota code: mobitz type ii or partial (second degree) a-v block or wenckebach's phenomenon
+    enum:
+      - "MOBITZ TYPE II"
+      - "PARTIAL (SECOND DEGREE) A-V BLOCK"
+      - "WENCKEBACH'S PHENOMENON"
+
+  major7b1:
+    description: >
+      Major abnormality 7b per minnesota code: complete (third degree) a-v block
+    enum:
+      - "COMPLETE (THIRD DEGREE) A-V BLOCK"
+
+  major7c1:
+    description: >
+      Major abnormality 7c per minnesota code: a-v dissociation with ventricular pacemaker (without capture) or a-v dissociation with ventricular pacemaker (with capture)
+    enum:
+      - "A-V DISSOCIATION WITH VENTRICULAR PACEMAKER (WITHOUT CAPTURE)"
+      - "A-V DISSOCIATION WITH VENTRICULAR PACEMAKER (WITH CAPTURE)"
+
+  major7d1:
+    description: >
+      Major abnormality 7d per minnesota code: wolff-parkinson-white pattern
+    enum:
+      - "WOLFF-PARKINSON-WHITE PATTERN"
+
+  major81:
+    description: >
+      Major abnormality 8 per minnesota code: major qt prolongation, qti >= 116%
+    enum:
+      - "MAJOR QT PROLONGATION, QTI >"
+
+  major91:
+    description: >
+      Major abnormality 9 per minnesota code: pacemaker
+    enum:
+      - "PACEMAKER"
+
+  major10a1:
+    description: >
+      Major abnormality 10a: ventricular fibrillation or ventricular asystole or persistent ventricular rhythm with no codable segment, regardless of rate or intermittent ventricular tachycardia or ventricular parasystole
+    enum:
+      - "VENTRICULAR FIBRILLATION OR VENTRICULAR ASYSTOLE"
+      - "PERSISTENT VENTRICULAR RHYTHM WITH NO CODABLE SEGMENT, REGARDLESS OF RATE"
+      - "INTERMITTENT VENTRICULAR TACHYCARDIA"
+      - "VENTRICULAR PARASYSTOLE"
+
+  major10b1:
+    description: >
+      Major abnormality 10b: atrial flutter or intermittent atrial fibrillation
+    enum:
+      - "ATRIAL FLUTTER"
+      - "INTERMITTENT ATRIAL FIBRILLATION"
+
+  major10c1:
+    description: >
+      Major abnormality 10c: supraventricular tachycardia intermittent
+    enum:
+      - "SUPRAVENTRICULAR TACHYCARDIA INTERMITTENT"
+
+  jtdur1:
+    description: >
+      Jt duration (qtdur1 - qrsdur1)
+    type: number
+
+  jtindex1:
+    description: >
+      Jt index ((jt/518) * (hrtrate1 + 100))
+    type: number
+
+  qtindex1:
+    description: >
+      Qt index (qtdur1 * (hrtrate1 + 100)/656)
+    type: number
+
+  majabn1c:
+    description: >
+      Any major ecg abnormalities
+    type: boolean
+
+  minabn1c:
+    description: >
+      Any minor ecg abnormalities
+    type: boolean
+
+  mmflag1c:
+    description: >
+      Any major or minor ecg abnormalities per minnesota code
+    enum:
+      - "NORMAL (NO MAJOR OR MINOR)"
+      - "MINOR (MINOR WITH NO MAJOR)"
+      - "MAJOR (MAJOR WITH POSSIBLE MINOR ABNORMALITIES)"
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"

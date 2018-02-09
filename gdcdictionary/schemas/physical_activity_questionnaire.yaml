@@ -1,0 +1,439 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "physical_activity_questionnaire"
+title: Physical Activity Questionnaire
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Standard questionnaire used to collect information related to the subject's physical activities
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: physical_activity_questionnaires
+    label: describes
+    target_type: physical_activity_questionnaire
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  q01hlcn1:
+    description: >
+      1: light household chores min/wk m-su
+    type: number
+
+  q01hlcm1:
+    description: >
+      1: light household chores met-min/wk m-su
+    type: number
+
+  q02hmcn1:
+    description: >
+      2: moderate household chores min/wk m-su
+    type: number
+
+  q02hmcm1:
+    description: >
+      2: moderate household chores met-min/wk m-su
+    type: number
+
+  hsemn1c:
+    description: >
+      Total household chores min/wk m-su
+    type: number
+
+  hsemt1c:
+    description: >
+      Total household chores met-min/wk m-su
+    type: number
+
+  q03ymcn1:
+    description: >
+      3: moderate yard work min/wk m-su
+    type: number
+
+  q03ymcm1:
+    description: >
+      3: moderate yard work met-min/wk m-su
+    type: number
+
+  q04yvcn1:
+    description: >
+      4: vigorous yard work min/wk m-su
+    type: number
+
+  q04yvcm1:
+    description: >
+      4: vigorous yard work met-min/wk m-su
+    type: number
+
+  yrdmn1c:
+    description: >
+      Total yard work min/wk m-su
+    type: number
+
+  yrdmt1c:
+    description: >
+      Total yard work met-min/wk m-su
+    type: number
+
+  q05olcn1:
+    description: >
+      5: light care others min/wk m-su
+    type: number
+
+  q05olcm1:
+    description: >
+      5: light care others met-min/wk m-su
+    type: number
+
+  q06omcn1:
+    description: >
+      6: moderate care others min/wk m-su
+    type: number
+
+  q06omcm1:
+    description: >
+      6: moderate care others met-min/wk m-su
+    type: number
+
+  caremn1c:
+    description: >
+      Total care others min/wk m-su
+    type: number
+
+  caremt1c:
+    description: >
+      Total care others met-min/wk m-su
+    type: number
+
+  q07tlcn1:
+    description: >
+      7: light transportation min/wk m-su
+    type: number
+
+  q07tlcm1:
+    description: >
+      7: light transportation met-min/wk m-su
+    type: number
+
+  trnmn1c:
+    description: >
+      Total transportation min/wk m-su
+    type: number
+
+  trnmt1c:
+    description: >
+      Total transportation met-min/wk m-su
+    type: number
+
+  q08wmcn1:
+    description: >
+      8: moderate walking min/wk m-su
+    type: number
+
+  q08wmcm1:
+    description: >
+      8: moderate walking met-min/wk m-su
+    type: number
+
+  q09wmcn1:
+    description: >
+      9: moderate walking exercise min/wk m-su
+    type: number
+
+  q09wmcm1:
+    description: >
+      9: moderate walking exercise met-min/wk m-su
+    type: number
+
+  walkmn1c:
+    description: >
+      Total walking min//wk m-su
+    type: number
+
+  walkmt1c:
+    description: >
+      Total walking met-min/wk m-su
+    type: number
+
+  q10smcn1:
+    description: >
+      10: moderate dance min/wk m-su
+    type: number
+
+  q10smcm1:
+    description: >
+      10: moderate dance met-min/wk m-su
+    type: number
+
+  q11svcn1:
+    description: >
+      11: vigorous team sports min/wk m-su
+    type: number
+
+  q11svcm1:
+    description: >
+      11: vigorous team sports met-min/wk m-su
+    type: number
+
+  q12svcn1:
+    description: >
+      12: vigorous dual sports min/wk m-su
+    type: number
+
+  q12svcm1:
+    description: >
+      12: vigorous dual sports met-min/wk m-su
+    type: number
+
+  q13smcn1:
+    description: >
+      13: moderate individual activities min/wk m-su
+    type: number
+
+  q13smcm1:
+    description: >
+      13: moderate individual activities met-min/wk m-su
+    type: number
+
+  sptnmn1c:
+    description: >
+      Total dance/sport min/wk m-su
+    type: number
+
+  sptnmt1c:
+    description: >
+      Total dance/sport met-min/wk m-su
+    type: number
+
+  q14cmcn1:
+    description: >
+      14: moderate conditioning min/wk m-su
+    type: number
+
+  q14cmcm1:
+    description: >
+      14: moderate conditioning met-min/wk m-su
+    type: number
+
+  q15cvcn1:
+    description: >
+      15: vigorous conditioning min/wk m-su
+    type: number
+
+  q15cvcm1:
+    description: >
+      15: vigorous conditioning met-min/wk m-su
+    type: number
+
+  condmn1c:
+    description: >
+      Total conditioning min/wk m-su
+    type: number
+
+  condmt1c:
+    description: >
+      Total conditioning met-min/wk m-su
+    type: number
+
+  q16ilcn1:
+    description: >
+      16: light leisure tv min/wk m-su
+    type: number
+
+  q16ilcm1:
+    description: >
+      16: light leisure tv met-min/wk m-su
+    type: number
+
+  q17ilcn1:
+    description: >
+      17: light leisure read min/wk m-su
+    type: number
+
+  q17ilcm1:
+    description: >
+      17: light leisure read met-min/wk m-su
+    type: number
+
+  leismn1c:
+    description: >
+      Total leisure min/wk m-su
+    type: number
+
+  leismt1c:
+    description: >
+      Total leisure met-min/wk m-su
+    type: number
+
+  q18jyn1:
+    description: >
+      Work to earn money?
+    type: number
+
+  q19wcn1:
+    description: >
+      19: total work (q19) min/wk m-su
+    type: number
+
+  q20jlcn1:
+    description: >
+      20: light work sitting min/wk m-su
+    type: number
+
+  q20jlcm1:
+    description: >
+      20: light work sitting met-min/wk m-su
+    type: number
+
+  q21jlcn1:
+    description: >
+      21: light work standing min/wk m-su
+    type: number
+
+  q21jlcm1:
+    description: >
+      21: light work standing met-min/wk m-su
+    type: number
+
+  q22jmcn1:
+    description: >
+      22: moderate work min/wk m-su
+    type: number
+
+  q22jmcm1:
+    description: >
+      22: moderate work met-min/wk m-su
+    type: number
+
+  q23jvcn1:
+    description: >
+      23: vigorous work min/wk m-su
+    type: number
+
+  q23jvcm1:
+    description: >
+      23: vigorous work met-min/wk m-su
+    type: number
+
+  occmn1c:
+    description: >
+      Total work min m-su/wk
+    type: number
+
+  occmt1c:
+    description: >
+      Total work met-min/wk m-su
+    type: number
+
+  q24uyn1:
+    description: >
+      24: work as a volunteer?
+    type: number
+
+  q25ulcn1:
+    description: >
+      25: light volunteer min/wk m-su
+    type: number
+
+  q25ulcm1:
+    description: >
+      25: light volunteer met-min/wk m-su
+    type: number
+
+  q26umcn1:
+    description: >
+      26: moderate volunteer min/wk m-su
+    type: number
+
+  q26umcm1:
+    description: >
+      26: moderate volunteer met-min/wk m-su
+    type: number
+
+  q27uvcn1:
+    description: >
+      27: vigorous volunteer min/wk m-su
+    type: number
+
+  q27uvcm1:
+    description: >
+      27: vigorous volunteer met-min/wk m-su
+    type: number
+
+  volmn1c:
+    description: >
+      Total volunteer min/wk m-su
+    type: number
+
+  volmt1c:
+    description: >
+      Total volunteer met-min/wk m-su
+    type: number
+
+  wlkpace1:
+    description: >
+      Walking pace outside home
+    enum:
+      - "NO WALKING AT ALL"
+      - "CASUAL STROLLING (<2 MPH)"
+      - "AVERAGE OR NORMAL (2-3 MPH)"
+      - "FAIRLY BRISKLY (4-5 MPH)"
+      - "BRISK OR STRIDING (>5 MPH)"
+
+  pahrdy1c:
+    description: >
+      Reported total pa hours per day
+    type: number
+
+  wkhrwk1c:
+    description: >
+      Reported total work hours per week
+    type: number
+
+  exercm1c:
+    description: >
+      Total intentional exercise (q9-15) met-min/wk
+    type: number
+
+  pamcm1c:
+    description: >
+      Moderate physical activity total (met-min/wk m-su)
+    type: number
+
+  pavcm1c:
+    description: >
+      Vigorous physical activity total (met-min/wk m-su)
+    type: number
+
+  pamvcm1c:
+    description: >
+      Moderate and vigorous physical activity total (met-min/wk m-su)
+    type: number
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"
