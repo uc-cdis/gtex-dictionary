@@ -79,29 +79,48 @@ properties:
       - number
       - "null"
 
+  diabetes_diagnosis:
+    description: >
+      Exam diabetes mellitus by 2003 ada fasting criteria algorithm
+    enum:
+      - "NORMAL"
+      - "IFG"
+      - "UNTREATED DIABETES"
+      - "TREATED DIABETES"
+
+  diabetes_type:
+    description: >
+      Diabetes type
+    enum:
+      - "TYPE 1 DIABETES"
+      - "TYPE 2 DIABETES"
+      - "NOT APPLICABLE"
+
+  hypertension_diagnosis:
+    description: >
+      Hypertension by jnc vi (1997) criteria
+    type: boolean
+
+  hypertension_stage:
+    description: >
+      Hypertension stage
+    enum:
+      - "OPTIMAL"
+      - "NORMAL"
+      - "HIGH-NORMAL"
+      - "STAGE 1 HYPERTENSION"
+      - "STAGE 2 HYPERTENSION"
+      - "STAGE 3 HYPERTENSION"
+
+  metabolic_syndrome_diagnosis:
+    description: >
+      Metabolic syndrome by updated ncep guidelines (circulation 2004;109;433-438)
+    type: boolean
+
   method_of_diagnosis:
     term:
       $ref: "_terms.yaml#/method_of_diagnosis"
-    enum:
-      - Autopsy
-      - Biopsy
-      - Blood Draw
-      - Bone Marrow Aspirate
-      - Core Biopsy
-      - Cytology
-      - Debulking
-      - Diagnostic Imaging
-      - Excisional Biopsy
-      - Fine Needle Aspiration
-      - Incisional Biopsy
-      - Laparoscopy
-      - Laparotomy
-      - Other
-      - Surgical Resection
-      - Ultrasound Guided Biopsy
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
+    type: string
 
   morphology:
     term:
@@ -131,58 +150,6 @@ properties:
     type:
       - number
       - "null"
-
-  dm031c:
-    description: >
-      Exam 1 diabetes mellitus by 2003 ada fasting criteria algorithm
-    enum:
-      - "NORMAL"
-      - "IFG"
-      - "UNTREATED DIABETES"
-      - "TREATED DIABETES"
-
-  dm031t:
-    description: >
-      Recode of dm031c combining untreated and treated diabetes - e1
-    enum:
-      - "NORMAL OR IFG"
-      - "DIABETES (TREATED AND NON-TREATED)"
-
-  dm031t2:
-    description: >
-      Secondary recode of dm031c omitting ifg and combining untreated and treated diabetes - e1
-    enum:
-      - "NORMAL"
-      - "DIABETES (TREATED AND NON-TREATED)"
-
-  htn1c:
-    description: >
-      Hypertension by jnc vi (1997) criteria
-    type: boolean
-
-  htnstg1c:
-    description: >
-      Hypertension stage
-    enum:
-      - "OPTIMAL"
-      - "NORMAL"
-      - "HIGH-NORMAL"
-      - "STAGE 1 HYPERTENSION"
-      - "STAGE 2 HYPERTENSION"
-      - "STAGE 3 HYPERTENSION"
-
-  dmtype1c:
-    description: >
-      Diabetes type
-    enum:
-      - "TYPE 1 DIABETES"
-      - "TYPE 2 DIABETES"
-      - "NOT APPLICABLE"
-
-  mtsy031c:
-    description: >
-      Metabolic syndrome by updated ncep guidelines (circulation 2004;109;433-438)
-    type: boolean
 
   cases:
     $ref: "_definitions.yaml#/to_one"
