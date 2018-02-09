@@ -159,7 +159,6 @@ properties:
       - "HETEROGENEOUS"
       - "ULCERATED"
       - "CALCIFIED"
-      - "NO LESION"
       - "CAN'T TELL"
 
   maxstn1c:
