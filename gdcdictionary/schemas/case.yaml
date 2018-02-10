@@ -46,6 +46,11 @@ properties:
       If amputated, the amputation type for leg, above the knee or below the knee.   
     type: string
 
+  site:
+    description: >
+      Site where the case was recruted.
+    type: string
+
   cohort_id:
     description: >
       The study subgroup that the participant belongs to. This indicates whether the participant was a postmortem donor, 
