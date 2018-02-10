@@ -1,0 +1,495 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "medical_history"
+title: Medical History
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Standard questionnaire used to collect medical records from the subject
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: medical_histories
+    label: describes
+    target_type: medical_history
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  emphys1:
+    description: >
+      Emphysema: self-report
+    type: boolean
+
+  asthma1:
+    description: >
+      Asthma: self-report
+    type: boolean
+
+  arthrit1:
+    description: >
+      Arthritis: self-report
+    type: boolean
+
+  cancer1:
+    description: >
+      Cancer: self-report
+    type: boolean
+
+  prostcn1:
+    description: >
+      Prostate cancer
+    type: boolean
+
+  brstcn1:
+    description: >
+      Breast cancer
+    type: boolean
+
+  lungcn1:
+    description: >
+      Lung cancer
+    type: boolean
+
+  coloncn1:
+    description: >
+      Colon cancer
+    type: boolean
+
+  nmskncn1:
+    description: >
+      Non-melanoma skin cancer
+    type: boolean
+
+  bloodcn1:
+    description: >
+      Blood cancer
+    type: boolean
+
+  othcn1:
+    description: >
+      Other cancer
+    type: boolean
+
+  rheuhv1:
+    description: >
+      Rheumatic heart disease: self-report
+    type: boolean
+
+  bldclot1:
+    description: >
+      Blood clots in legs/lungs: self-report
+    type: boolean
+
+  liverd1:
+    description: >
+      Liver disease: self-report
+    type: boolean
+
+  cirrh1:
+    description: >
+      Cirrhosis: self-report
+    type: boolean
+
+  hepat1:
+    description: >
+      Hepatitis: self-report
+    type: boolean
+
+  heptpa1:
+    description: >
+      Hepatitis, type a
+    type: boolean
+
+  heptpb1:
+    description: >
+      Hepatitis, type b
+    type: boolean
+
+  heptpc1:
+    description: >
+      Hepatitis, type c
+    type: boolean
+
+  heptpd1:
+    description: >
+      Hepatitis, type d
+    type: boolean
+
+  heptpe1:
+    description: >
+      Hepatitis, type e
+    type: boolean
+
+  heptpu1:
+    description: >
+      Hepatitis, unknown type
+    enum:
+      - "NO HEPATITIS OR TYPE KNOWN"
+      - "TYPE UNKNOWN"
+
+  kdnydis1:
+    description: >
+      Kidney disease: self-report
+    type: boolean
+
+  highbp1:
+    description: >
+      Hypertension: self-report
+    type: boolean
+
+  hghchol1:
+    description: >
+      High cholesterol: self-report
+    type: boolean
+
+  diabet1:
+    description: >
+      Diabetes: self-report
+    type: boolean
+
+  dbpreg1:
+    description: >
+      Women: diabetes occur only during pregnancy
+    type: boolean
+
+  hwt3ylb1:
+    description: >
+      Highest weight in last 3 years (lbs)
+    type: number
+
+  wt20lb1:
+    description: >
+      Weight at age 20 (lbs)
+    type: number
+
+  wt40lb1:
+    description: >
+      Weight at age 40 (lbs)
+    type: number
+
+  preg1:
+    description: >
+      Ever been pregnant
+    type: boolean
+
+  pregn1:
+    description: >
+      # of pregnancies
+    type: number
+
+  birthn1:
+    description: >
+      # of live births
+    type: number
+
+  agebrth1:
+    description: >
+      Age at first live birth
+    type: number
+
+  hystrct1:
+    description: >
+      Hysterectomy
+    type: boolean
+
+  hystage1:
+    description: >
+      Age at hysterectomy
+    type: number
+
+  ovarem1:
+    description: >
+      Surgery to remove ovaries
+    type: boolean
+
+  ovaage1:
+    description: >
+      Age when ovaries removed
+    type: number
+
+  ovaremn1:
+    description: >
+      # of ovaries removed
+    enum:
+      - "1 OVARY REMOVED"
+      - "2 OVARIES REMOVED"
+
+  mnpause1:
+    description: >
+      Gone through menopause
+    type: boolean
+
+  menop1:
+    description: >
+      Currently going through menopause
+    type: boolean
+
+  mnspmo1:
+    description: >
+      Month of last menstrual period
+    type: number
+
+  mnspyr1:
+    description: >
+      Year of last menstrual period
+    type: number
+
+  prdsnum1:
+    description: >
+      # of menstrual periods in past 12 months
+    type: number
+
+  menoage1:
+    description: >
+      Age went through menopause
+    type: number
+
+  hrmqage1:
+    description: >
+      Hormone replacement therapy, age stopped use
+    type: number
+
+  hrmtyp1:
+    description: >
+      Type of hormone replacement therapy
+    enum:
+      - "ESTROGEN ALONE"
+      - "ESTROGEN WITH PROGESTIN"
+
+  legpain1:
+    description: >
+      Pain in leg or buttock while walking
+    type: boolean
+
+  lprest1:
+    description: >
+      Leg pain begin when standing or sitting
+    type: boolean
+
+  lpcalf1:
+    description: >
+      Pain occurs in what portion of leg
+    enum:
+      - "PAIN INCLUDES CALF"
+      - "PAIN DOES NOT INCLUDE CALF"
+
+  lpuphl1:
+    description: >
+      Leg pain if walk uphill or hurry
+    type: boolean
+
+  lpnorm1:
+    description: >
+      Leg pain if walk at ordinary pace on the level
+    type: boolean
+
+  lpdis1:
+    description: >
+      Leg pain ever disappear while walking
+    type: boolean
+
+  lpstop1:
+    description: >
+      Stop walking during leg pain
+    enum:
+      - "STOP OR SLOW DOWN"
+      - "CONTINUE ON"
+
+  lpstnd1:
+    description: >
+      What happens to leg pain if stand still
+    enum:
+      - "RELIEVED"
+      - "NOT RELIEVED"
+
+  lprelv1:
+    description: >
+      How soon is leg pain relieved when still
+    enum:
+      - "MORE THAN 10 MINUTES"
+      - "10 MINUTES OR LESS"
+
+  lploc1:
+    description: >
+      On what side is leg pain predominant
+    enum:
+      - "RIGHT SIDE"
+      - "LEFT SIDE"
+      - "BOTH LEGS"
+
+  swllft1:
+    description: >
+      Swelling of feet or ankles
+    type: boolean
+
+  swllday1:
+    description: >
+      Feet swelling during day, diminished overnight
+    type: boolean
+
+  slppllw1:
+    description: >
+      Sleep on two or more pillows to help breathe
+    type: boolean
+
+  wakebr1:
+    description: >
+      Awakened at night by trouble breathing
+    type: boolean
+
+  fever1:
+    description: >
+      Fever, past two weeks
+    type: boolean
+
+  coldflu1:
+    description: >
+      Cold or flu, past two weeks
+    type: boolean
+
+  urininf1:
+    description: >
+      Urinary infection, past two weeks
+    type: boolean
+
+  allrgy1:
+    description: >
+      Seasonal allergy, past two weeks
+    type: boolean
+
+  bronch1:
+    description: >
+      Bronchitis, past two weeks
+    type: boolean
+
+  sinuinf1:
+    description: >
+      Sinus infection, past two weeks
+    type: boolean
+
+  pneumo1:
+    description: >
+      Pneumonia, past two weeks
+    type: boolean
+
+  bldgums1:
+    description: >
+      Bleeding gums, past two weeks
+    type: boolean
+
+  tthinf1:
+    description: >
+      Tooth infection, past two weeks
+    type: boolean
+
+  gout1:
+    description: >
+      Gout flare-up, past two weeks
+    type: boolean
+
+  arth2wk1:
+    description: >
+      Arthritis flare-up, past two weeks
+    type: boolean
+
+  abnum1:
+    description: >
+      # of times treated w/ antibiotics, past year
+    type: number
+
+  noab1:
+    description: >
+      # of times treated w/ antibiotics (past year) unknown
+    enum:
+      - "# TIMES UNKNOWN"
+
+  ab5ynum1:
+    description: >
+      # of times treated w/ antibiotics, last five years
+    type: number
+
+  noab5y1:
+    description: >
+      # of times treated w/ antibiotics (past 5 years) unknown
+    enum:
+      - "# TIMES UNKNOWN"
+
+  gumdis1:
+    description: >
+      Periodontitis or gum disease
+    type: boolean
+
+  losttth1:
+    description: >
+      Lost teeth due to gum disease
+    type: boolean
+
+  tthnum1:
+    description: >
+      # teeth lost due to gum disease
+    type: number
+
+  mhxadm1:
+    description: >
+      Questionnaire administrator - medical history
+    enum:
+      - "SELF-ADMIN"
+      - "INTERVIEWER-ADMIN"
+
+  frncep1c:
+    description: >
+      10 yr hard chd risk--ncep version
+    type: number
+
+  frjama1c:
+    description: >
+      10yr hard chd risk per jama 2001 paper
+    type: number
+
+  frcirc1c:
+    description: >
+      10yr hard chd risk per circ 1998 paper
+    type: number
+
+  frci081c:
+    description: >
+      Framingham global cvd risk per circ 2008 paper
+    type: number
+
+  egfr1c:
+    description: >
+      Estimated glomerular filtration rate by simplified mdrd equation
+    type: number
+
+  cepgfr1c:
+    description: >
+      Exam 1 (calibrated cr) egfr using ckd-epi equation
+    type: number
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"

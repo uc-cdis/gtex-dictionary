@@ -1,0 +1,300 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "blood_pressure_test"
+title: Blood Pressure Test
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Resting blood pressure will be measured in the right arm after five minutes in the seated position. An automated oscillometric method (Dinamap) and appropriate cuff size will be used. Three readings will be taken; the second and third readings will be averaged to obtain the blood pressure levels used in analyses. An additional systolic blood pressure will be measured in both the right and left brachial, posterior tibial, and dorsalis pedis arteries with a Doppler instrument. 
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: blood_pressure_test
+    label: describes
+    target_type: blood_pressure_test
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  rbrach1:
+    description: >
+      Right brachial bp (mmhg)
+    type: number
+
+  rdpedis1:
+    description: >
+      Right dorsalis pedis bp (mmhg)
+    type: number
+
+  rptib1:
+    description: >
+      Right posterior tibial bp (mmhg)
+    type: number
+
+  lptib1:
+    description: >
+      Left posterior tibial bp (mmhg)
+    type: number
+
+  ldpedis1:
+    description: >
+      Left dorsalis pedis bp (mmhg)
+    type: number
+
+  lbrach1:
+    description: >
+      Left brachial bp (mmhg)
+    type: number
+
+  aabpcmp1:
+    description: >
+      Aabp completed successfully
+    type: boolean
+
+  rluoccl1:
+    description: >
+      Reason aabp incomplete (r): unable to occlude
+    type: boolean
+
+  rlulcer1:
+    description: >
+      Reason aabp incomplete (r): ulceration
+    type: boolean
+
+  rulocpt1:
+    description: >
+      Reason aabp incomplete (r): unable to locate pt
+    type: boolean
+
+  lluoccl1:
+    description: >
+      Reason aabp incomplete (l): unable to occlude
+    type: boolean
+
+  llulcer1:
+    description: >
+      Reason aabp incomplete (l): ulceration
+    type: boolean
+
+  lulocdp1:
+    description: >
+      Reason aabp incomplete (l): unable to locate dp
+    type: boolean
+
+  lulocpt1:
+    description: >
+      Reason aabp incomplete (l): unable to locate pt
+    type: boolean
+
+  rulocdp1:
+    description: >
+      Reason aabp incomplete (r): unable to locate dp
+    type: boolean
+
+  abi1c:
+    description: >
+      Ankle-brachial index
+    type: number
+
+  sbpcp1:
+    description: >
+      Systolic blood pressure (from oscillometric cuff), (mmhg)
+    type: number
+
+  dbpcp1:
+    description: >
+      Diastolic blood pressure (from oscillometric cuff), (mmhg)
+    type: number
+
+  mnapcp1:
+    description: >
+      Mean arterial pressure (from oscillometric cuff), (mmhg)
+    type: number
+
+  pprescp1:
+    description: >
+      Pulse pressure (from oscillometric cuff), (mmhg)
+    type: number
+
+  pulsecp1:
+    description: >
+      Pulse rate (from oscillometric cuff), (beats/minute)
+    type: number
+
+  sbpwp1:
+    description: >
+      Systolic blood pressure (from waveform analysis), (mmhg)
+    type: number
+
+  dbpwp1:
+    description: >
+      Diastolic blood pressure (from waveform analysis), (mmhg)
+    type: number
+
+  mnapwp1:
+    description: >
+      Mean arterial pressure (from waveform analysis), (mmhg)
+    type: number
+
+  pulsewp1:
+    description: >
+      Pulse rate (from waveform analysis), (beats/minute)
+    type: number
+
+  lae1c:
+    description: >
+      Large artery elasticity index (ml/mmhg x10)
+    type: number
+
+  sae1c:
+    description: >
+      Small artery elasticity index (ml/mmhg x100)
+    type: number
+
+  svr1c:
+    description: >
+      Systemic vascular resistance (dyne sec / cm5)
+    type: number
+
+  totvip1:
+    description: >
+      Total vascular impedance (dyne sec / cm5) (machine computed)
+    type: number
+
+  eco1c:
+    description: >
+      Estimated cardiac output (l/minute)
+    type: number
+
+  cardx1c:
+    description: >
+      Estimated cardiac output index
+    type: number
+
+  cejectp1:
+    description: >
+      Estimated cardiac ejection time, (millisecond)
+    type: number
+
+  stkvol1c:
+    description: >
+      Estimated stroke volume (ml/beat)
+    type: number
+
+  stkvx1c:
+    description: >
+      Estimated stroke volume index
+    type: number
+
+  dmapnum1:
+    description: >
+      Dinamap number
+    type: number
+
+  armcm1:
+    description: >
+      Arm circumference (cm)
+    type: number
+
+  cuffsz1:
+    description: >
+      Seated bp cuff size
+    enum:
+      - "SMALL ADULT (17-25cm)"
+      - "ADULT (25.1-33cm)"
+      - "LARGE ADULT (33.1-40cm)"
+      - "THIGH (40.1-50cm)"
+      - "FOREARM, ADULT (25.1-33cm)"
+      - "FOREARM, LARGE ADULT (33.1-40cm)"
+
+  s1bp1:
+    description: >
+      Seated bp: systolic 1st reading (mmhg)
+    type: number
+
+  d1bp1:
+    description: >
+      Seated bp: diastolic 1st reading (mmhg)
+    type: number
+
+  bptm1:
+    description: >
+      Time of day, seated bp
+    type: string
+
+  s2bp1:
+    description: >
+      Seated bp: systolic 2nd reading (mmhg)
+    type: number
+
+  d2bp1:
+    description: >
+      Seated bp: diastolic 2nd reading (mmhg)
+    type: number
+
+  s3bp1:
+    description: >
+      Seated bp: systolic 3rd reading (mmhg)
+    type: number
+
+  d3bp1:
+    description: >
+      Seated bp: diastolic 3rd reading (mmhg)
+    type: number
+
+  rmtempf1:
+    description: >
+      Room temperature (fahrenheit), seated bp
+    type: number
+
+  sbp1c:
+    description: >
+      Seated systolic blood pressure (mmhg)
+    type: number
+
+  dbp1c:
+    description: >
+      Seated diastolic blood pressure (mmhg)
+    type: number
+
+  spp1c:
+    description: >
+      Seated pulse pressure (mmhg)
+    type: number
+
+  dcoeff1:
+    description: >
+      Distensibility coefficient
+    type: number
+
+  youngm1:
+    description: >
+      Youngs modulus
+    type: number
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"
