@@ -24,7 +24,7 @@ links:
   - name: cases
     backref: carotid_ultrasound_tests
     label: describes
-    target_type: carotid_ultrasound_test
+    target_type: case
     multiplicity: one_to_one
     required: true
 

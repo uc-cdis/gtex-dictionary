@@ -24,7 +24,7 @@ links:
   - name: cases
     backref: electrocardiogram_tests
     label: describes
-    target_type: electrocardiogram_test
+    target_type: case
     multiplicity: one_to_one
     required: true
 

@@ -24,7 +24,7 @@ links:
   - name: cases
     backref: lab_results
     label: describes
-    target_type: lab_result
+    target_type: case
     multiplicity: one_to_one
     required: true
 

@@ -24,7 +24,7 @@ links:
   - name: cases
     backref: cardiac_mris
     label: describes
-    target_type: cardiac_mri
+    target_type: case
     multiplicity: one_to_one
     required: true
 

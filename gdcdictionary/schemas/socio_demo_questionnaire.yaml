@@ -24,7 +24,7 @@ links:
   - name: cases
     backref: socio_demo_questionnaires
     label: describes
-    target_type: socio_demo_questionnaire
+    target_type: case
     multiplicity: one_to_one
     required: true
 

@@ -24,7 +24,7 @@ links:
   - name: cases
     backref: medical_histories
     label: describes
-    target_type: medical_history
+    target_type: case
     multiplicity: one_to_one
     required: true
 
