@@ -24,7 +24,7 @@ links:
   - name: cases
     backref: blood_pressure_test
     label: describes
-    target_type: blood_pressure_test
+    target_type: case
     multiplicity: one_to_one
     required: true
 

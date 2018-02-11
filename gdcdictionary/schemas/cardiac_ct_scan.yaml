@@ -24,7 +24,7 @@ links:
   - name: cases
     backref: cardiac_ct_scans
     label: describes
-    target_type: cardiac_ct_scan
+    target_type: case
     multiplicity: one_to_one
     required: true
 

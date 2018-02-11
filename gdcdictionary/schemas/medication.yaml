@@ -1,0 +1,624 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "medication"
+title: Medication Use Record
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Recods about historical medication use
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: medication_records
+    label: describes
+    target_type: case
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  diabins1:
+    description: >
+      Insulin or oral hypoglycemics for diabetes?
+    type: boolean
+
+  diabhx1:
+    description: >
+      Taking meds for diabetes
+    type: boolean
+
+  cholmed1:
+    description: >
+      Taking meds for high cholesterol
+    type: boolean
+
+  bpmed1:
+    description: >
+      Taking meds for hypertension
+    type: boolean
+
+  bphxage1:
+    description: >
+      Hypertension meds, age started use
+    type: number
+
+  bpmageu1:
+    description: >
+      Hypertension meds, age started unknown
+    enum:
+      - "AGE UNKNOWN"
+
+  cholage1:
+    description: >
+      Cholesterol meds, age started use
+    type: number
+
+  chlageu1:
+    description: >
+      Cholesterol meds, age started unknown
+    enum:
+      - "AGE UNKNOWN"
+
+  dbhxtyp1:
+    description: >
+      Diabetes meds, type
+    enum:
+      - "INSULIN"
+      - "PILLS"
+
+  dbage1:
+    description: >
+      Diabetes meds, age started use
+    type: number
+
+  dbageu1:
+    description: >
+      Diabetes meds, age started unknown
+    enum:
+      - "AGE UNKNOWN"
+
+  dbinsul1:
+    description: >
+      Was insulin first diabetes medicine
+    type: boolean
+
+  bcpills1:
+    description: >
+      Ever taken birth control pills
+    type: boolean
+
+  bpillyr1:
+    description: >
+      # of years took birth control pills
+    type: number
+
+  hrmrep1:
+    description: >
+      Ever taken hormone replacement therapy
+    type: boolean
+
+  hrmrepc1:
+    description: >
+      Hormone replacement therapy, current user
+    type: boolean
+
+  hrmrage1:
+    description: >
+      Hormone replacement therapy, age started use (current user)
+    type: number
+
+  hrmsage1:
+    description: >
+      Hormone replacement therapy, age started use (former user)
+    type: number
+
+  hrmage1c:
+    description: >
+      Age started hrt use, current and former users
+    type: number
+
+  aspirin1:
+    description: >
+      Aspirin: ever used on regular basis
+    type: boolean
+
+  aspsage1:
+    description: >
+      Aspirin: age started regular use
+    type: number
+
+  aspnow1:
+    description: >
+      Aspirin: currently using regularly
+    type: boolean
+
+  aspdays1:
+    description: >
+      Aspirin: days per week
+    type: number
+
+  aspeage1:
+    description: >
+      Aspirin: age stopped using regularly
+    type: number
+
+  asacat1c:
+    description: >
+      Current aspirin use (taking aspirin at least 3 days per week at baseline)
+    type: boolean
+
+  htnmed1c:
+    description: >
+      Hypertension medication
+    type: boolean
+
+  totmed1c:
+    description: >
+      Total number of medications in exam1
+    type: number
+
+  a2a1c:
+    description: >
+      Angiotensin type 2 antagonists
+    type: boolean
+
+  a2ad1c:
+    description: >
+      Combinations of angiotensin ii antagonists plus diuretics
+    type: boolean
+
+  ace1c:
+    description: >
+      Ace inhibitors without diuretics
+    type: boolean
+
+  aced1c:
+    description: >
+      Ace inhibitors with diuretics
+    type: boolean
+
+  adpi1c:
+    description: >
+      Inhibitors of adp-induced platelet aggregation
+    type: boolean
+
+  agdi1c:
+    description: >
+      Alpha-glucosidase inhibitors
+    type: boolean
+
+  alpha1c:
+    description: >
+      Alpha-blockers without diuretics
+    type: boolean
+
+  alphad1c:
+    description: >
+      Alpha-blockers with diuretics
+    type: boolean
+
+  alzh1c:
+    description: >
+      Acetylcholine esterase inhibitors for alzh'
+    type: boolean
+
+  amlod1c:
+    description: >
+      Amlodipine
+    type: boolean
+
+  anar1a1c:
+    description: >
+      Anti-arrhythmics, class 1a
+    type: boolean
+
+  anar1b1c:
+    description: >
+      Anti-arrhythmics, class 1b
+    type: boolean
+
+  anar1c1c:
+    description: >
+      Anti-arrhythmics, class 1c
+    type: boolean
+
+  anar31c:
+    description: >
+      Anti-arrhythmics, class 3
+    type: boolean
+
+  apsy1c:
+    description: >
+      Anti-psychotic medications
+    type: boolean
+
+  asa1c:
+    description: >
+      Aspirin from 280804 (anti-inflam agents)
+    type: boolean
+
+  basq1c:
+    description: >
+      Bile-acid sequestrants
+    type: boolean
+
+  benzod1c:
+    description: >
+      Benzodiazepines
+    type: boolean
+
+  beta1c:
+    description: >
+      Beta-blockers without diuretics
+    type: boolean
+
+  betad1c:
+    description: >
+      Beta-blockers with diuretics
+    type: boolean
+
+  bgnd1c:
+    description: >
+      Biguanides
+    type: boolean
+
+  ccb1c:
+    description: >
+      Any calcium-channel blocker = ccir or ccbsr or ccbt
+    type: boolean
+
+  ccbir1c:
+    description: >
+      Immediate-release ccbs = nifir or dihir or verir or dltir
+    type: boolean
+
+  ccbsr1c:
+    description: >
+      Slow-release ccbs = nifsr or dihsr or versr or dltsr or amlod
+    type: boolean
+
+  ccbt1c:
+    description: >
+      T-type calcium-channel blocker
+    type: boolean
+
+  cox21c:
+    description: >
+      Cox-2 inhibitors (nsaid agents); separate from nsaid variable
+    type: boolean
+
+  dig1c:
+    description: >
+      Digitalis preparations
+    type: boolean
+
+  dihir1c:
+    description: >
+      Immediate-release dihydropyridines other than nifedipine
+    type: boolean
+
+  dihsr1c:
+    description: >
+      Slow-release dihydropyridines other than nifedipine or amlopidine
+    type: boolean
+
+  dltir1c:
+    description: >
+      Immediate-release diltiazem
+    type: boolean
+
+  dltsr1c:
+    description: >
+      Slow-release diltiazem
+    type: boolean
+
+  edd1c:
+    description: >
+      Erectile dysfunction drugs
+    type: boolean
+
+  estrgn1c:
+    description: >
+      Estrogens, excluding vaginal creams
+    type: boolean
+
+  fibr1c:
+    description: >
+      Fibrates
+    type: boolean
+
+  h2b1c:
+    description: >
+      H-2 blockers
+    type: boolean
+
+  hctz1c:
+    description: >
+      Thiazide diuretics without k-sparing agents
+    type: boolean
+
+  hctzk1c:
+    description: >
+      Thiazide diuretics with k-sparing agents
+    type: boolean
+
+  hprns1c:
+    description: >
+      Heparins
+    type: boolean
+
+  insln1c:
+    description: >
+      Insulins
+    type: boolean
+
+  iprtr1c:
+    description: >
+      Anticholinergics + combination with beta2-agonist (121200)
+    type: boolean
+
+  istrd1c:
+    description: >
+      Inhaled steroids for asthma
+    type: boolean
+
+  kblkr1c:
+    description: >
+      K-channel blockers to enhance insulin secretion for diabetics
+    type: boolean
+
+  kcl1c:
+    description: >
+      Potassium supplements
+    type: boolean
+
+  kspr1c:
+    description: >
+      Potassium-sparing agents alone
+    type: boolean
+
+  loop1c:
+    description: >
+      Loop diuretics
+    type: boolean
+
+  maoi1c:
+    description: >
+      Mao inhibitors
+    type: boolean
+
+  mlpd1c:
+    description: >
+      Miscellaneous lipid-lowering drugs
+    type: boolean
+
+  niac1c:
+    description: >
+      Niacin and nicotinic acid
+    type: boolean
+
+  nifir1c:
+    description: >
+      Immediate-release nifedipine
+    type: boolean
+
+  nifsr1c:
+    description: >
+      Slow-release nifedipine
+    type: boolean
+
+  nsaid1c:
+    description: >
+      Non-steroidal anti-inflammatory agents, excluding aspirin
+    type: boolean
+
+  ntg1c:
+    description: >
+      Nitrates
+    type: boolean
+
+  oaia1c:
+    description: >
+      Oral anti-inflammatory asthma drugs leukotriene receptor antagonists and inhibitors of lipo-oxygenase
+    type: boolean
+
+  ohga1c:
+    description: >
+      Oral hypoglycemic agents-now constructed from:
+    type: boolean
+
+  ostrd1c:
+    description: >
+      Oral steroids
+    type: boolean
+
+  otch2b1c:
+    description: >
+      Over-the-counter h-2 blockers
+    type: boolean
+
+  pdei1c:
+    description: >
+      Phosphodiesterase inhibitors
+    type: boolean
+
+  ppi1c:
+    description: >
+      Proton pump inhibitors
+    type: boolean
+
+  prgstn1c:
+    description: >
+      Progestins
+    type: boolean
+
+  prknsn1c:
+    description: >
+      Drugs used to treat parkinson's
+    type: boolean
+
+  prmrn1c:
+    description: >
+      Premarin (conjugated estrogens)
+    type: boolean
+
+  prob1c:
+    description: >
+      Probucol
+    type: boolean
+
+  pvdl1c:
+    description: >
+      Peripheral vasodilators, exclude dipyridamole
+    type: boolean
+
+  slf11c:
+    description: >
+      First generation sulfonylureas
+    type: boolean
+
+  slf21c:
+    description: >
+      Second generation surlfonylureas
+    type: boolean
+
+  sttn1c:
+    description: >
+      Hmg coa reductase inhibitors (statins)
+    type: boolean
+
+  sympth1c:
+    description: >
+      Sympathomimetics, oral and inhaled
+    type: boolean
+
+  tca1c:
+    description: >
+      Tricyclic anti-depressants
+    type: boolean
+
+  tcap1c:
+    description: >
+      Tricyclic anti-depressants plus anti-psychotics combinations
+    type: boolean
+
+  thry1c:
+    description: >
+      Thyroid agents
+    type: boolean
+
+  thzd1c:
+    description: >
+      Thiazolidinediones
+    type: boolean
+
+  urcos1c:
+    description: >
+      Uricosurics
+    type: boolean
+
+  uazqtd1c:
+    description: >
+      Uaz definite ecg qt interval-altering medication
+    type: boolean
+
+  uazqtp1c:
+    description: >
+      Uaz possible ecg qt interval-altering medication
+    type: boolean
+
+  vaso1c:
+    description: >
+      Vasodilators, a mixed group
+    type: boolean
+
+  vasod1c:
+    description: >
+      Vasodilators with diuretics, a mixed group
+    type: boolean
+
+  verir1c:
+    description: >
+      Immediate-release verapamil
+    type: boolean
+
+  versr1c:
+    description: >
+      Slow-release verapamil
+    type: boolean
+
+  warf1c:
+    description: >
+      Oral anticoagulants including warfarin, coumadin, and anisindione
+    type: boolean
+
+  wtls1c:
+    description: >
+      Weight loss drugs
+    type: boolean
+
+  xoi1c:
+    description: >
+      Xanthine oxidase inhibitors
+    type: boolean
+
+  diur1c:
+    description: >
+      Any diuretic
+    type: boolean
+
+  lipid1c:
+    description: >
+      Any lipid-lowering medication
+    type: boolean
+
+  dpp4i1c:
+    description: >
+      Dipeptidyl peptidase-4 inhibitor
+    type: number
+
+  sari1c:
+    description: >
+      Serotonin antagonist and reuptake inhibitor
+    type: number
+
+  ssri1c:
+    description: >
+      Selective serotonin reuptake inhibitors
+    type: number
+
+  ntca1c:
+    description: >
+      Non-tricyclic antidepressants other than maoi
+    type: boolean
+
+  ndri1c:
+    description: >
+      Norepinephrine-dopamine reuptake inhibitor
+    type: number
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"
