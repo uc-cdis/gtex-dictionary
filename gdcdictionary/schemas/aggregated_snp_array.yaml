@@ -22,12 +22,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: submitted_snp_array_files
-    backref: aggregated_snp_array_files
-    label: data_from
-    target_type: submitted_snp_array
-    multiplicity: many_to_many
+  - exclusive: true
     required: true
+    subgroup:
+       - name: submitted_snp_array_files
+         backref: aggregated_snp_array_files
+         label: data_from
+         target_type: submitted_snp_array
+         multiplicity: many_to_many
+         required: false
+       - name: aliquots
+         backref: aggregated_snp_array_files
+         label: data_from
+         target_type: aliquot
+         multiplicity: many_to_many
+         required: false
 
 required:
   - submitter_id
@@ -82,6 +91,7 @@ properties:
       - Illumina Infinium HumanExome BeadChip
       - Illumina OMNI 5M SNP Array
       - Illumina OMNI 2.5M SNP Array
+      - Affymetrix Genome-Wide Human SNP Array 6.0
 
   submitted_snp_array_files:
     $ref: "_definitions.yaml#/to_many"
