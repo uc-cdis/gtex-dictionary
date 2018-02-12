@@ -30,6 +30,21 @@ links:
     multiplicity: many_to_one
     required: false
 
+  - exclusive: true
+    required: true
+    subgroup:
+       - name: copy_number_workflows
+         backref: copy_number_variations
+         label: derived_from
+         target_type: copy_number_workflow
+         multiplicity: many_to_one
+         required: false
+       - name: submitted_cnv_arrays
+         backref: copy_number_variations
+         label: derived_from
+         target_type: submitted_cnv_array
+         multiplicity: many_to_one
+         required: false
 
 required:
   - submitter_id
@@ -78,7 +93,7 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - Genotyping Array
+      - CNV Genotyping Array
       - Targeted Sequencing
       - WGS
       - WXS
@@ -87,4 +102,7 @@ properties:
     $ref: "read_group.yaml#/properties/platform"
 
   copy_number_workflows:
+    $ref: "_definitions.yaml#/to_one"
+
+  submitted_cnv_arrays:
     $ref: "_definitions.yaml#/to_one"
