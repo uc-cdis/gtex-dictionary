@@ -23,13 +23,6 @@ systemProperties:
   - error_type
 
 links:
-  - name: copy_number_workflows
-    backref: copy_number_variations
-    label: derived_from
-    target_type: copy_number_workflow
-    multiplicity: many_to_one
-    required: false
-
   - exclusive: true
     required: true
     subgroup:
