@@ -67,6 +67,7 @@ properties:
       - IDAT
       - GTC
       - GCT
+      - CEL
 
   experimental_strategy:
     term:
