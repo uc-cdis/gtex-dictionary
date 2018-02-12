@@ -59,6 +59,7 @@ properties:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Aggregated SNP Alleles
+      - Individual SNP Alleles
 
   data_format:
     term:
@@ -66,6 +67,7 @@ properties:
     enum:
       - PED
       - VCF
+      - IND
 
   experimental_strategy:
     term:
