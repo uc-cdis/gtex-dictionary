@@ -96,5 +96,5 @@ properties:
   submitted_snp_array_files:
     $ref: "_definitions.yaml#/to_many"
 
-  aggregated_snp_array_files:
+  aliquots:
     $ref: "_definitions.yaml#/to_many"
