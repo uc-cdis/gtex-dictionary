@@ -93,7 +93,7 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - Genotyping Array
+      - CNV Genotyping Array
       - Targeted Sequencing
       - WGS
       - WXS

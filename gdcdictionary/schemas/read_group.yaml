@@ -64,6 +64,7 @@ properties:
       - Complete Genomics
       - PacBio
       - Other
+      - Affymetrix
 
   instrument_model:
     terms:
