@@ -38,6 +38,12 @@ links:
          target_type: submitted_cnv_array
          multiplicity: many_to_one
          required: false
+       - name: submitted_snp_array_files
+         backref: copy_number_variations
+         label: derived_from
+         target_type: submitted_snp_array
+         multiplicity: many_to_one
+         required: false
 
 required:
   - submitter_id
@@ -98,4 +104,7 @@ properties:
     $ref: "_definitions.yaml#/to_one"
 
   submitted_cnv_arrays:
+    $ref: "_definitions.yaml#/to_one"
+
+  submitted_snp_array_files:
     $ref: "_definitions.yaml#/to_one"

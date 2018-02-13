@@ -23,12 +23,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: germline_mutation_calling_workflows
-    backref: simple_germline_variations
-    label: data_from
-    target_type: germline_mutation_calling_workflow
-    multiplicity: many_to_one
+  - exclusive: true
     required: true
+    subgroup:
+      - name: germline_mutation_calling_workflows
+        backref: simple_germline_variations
+        label: data_from
+        target_type: germline_mutation_calling_workflow
+        multiplicity: many_to_one
+        required: false
+      - name: read_groups
+        backref: simple_germline_variations
+        label: data_from
+        target_type: read_group
+        multiplicity: many_to_many
+        required: false
 
 required:
   - submitter_id
@@ -71,3 +80,5 @@ properties:
       - Validation
   germline_mutation_calling_workflows:
     $ref: "_definitions.yaml#/to_one"
+  read_groups:
+    $ref: "_definitions.yaml#/to_many"
