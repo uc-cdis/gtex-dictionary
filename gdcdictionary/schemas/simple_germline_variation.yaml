@@ -48,7 +48,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - germline_mutation_calling_workflows
 
 uniqueKeys:
   - [ id ]
