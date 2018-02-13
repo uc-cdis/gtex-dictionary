@@ -105,3 +105,6 @@ properties:
 
   submitted_cnv_arrays:
     $ref: "_definitions.yaml#/to_one"
+
+  submitted_snp_array_files:
+    $ref: "_definitions.yaml#/to_one"
