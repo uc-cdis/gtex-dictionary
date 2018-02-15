@@ -88,7 +88,7 @@ properties:
   cvdhtt:
     description: >
       Time to hard CVD or Last Follow-up in days
-    type: boolean
+    type: integer
 
   cvda:
     description: >
