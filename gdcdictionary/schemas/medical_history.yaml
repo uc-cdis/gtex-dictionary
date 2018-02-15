@@ -60,6 +60,46 @@ properties:
       Cancer: self-report
     type: boolean
 
+  chdh:
+    description: >
+      Coronary Heart Disease (CHD) Hard
+    type: boolean
+
+  chdhtt:
+    description: >
+      Time to hard CHD or Last Follow-up in days
+    type: integer
+
+  chda:
+    description: >
+      Coronary Heart Disease (CHD), All
+    type: boolean
+
+  chdatt:
+    description: >
+      Time to all CHD or Lat Follow-up in days
+    type: integer
+
+  cvdh:
+    description: >
+      Cardiovascular disease (CVD), Hard
+    type: boolean
+
+  cvdhtt:
+    description: >
+      Time to hard CVD or Last Follow-up in days
+    type: boolean
+
+  cvda:	
+    description: >
+      Cardiovascular disease (CVD), All
+    type: boolean
+
+  cvdatt:
+    description: >
+      Time to all CVD or Last Follow-up in days
+    type: integer
+
   prostcn1:
     description: >
       Prostate cancer
