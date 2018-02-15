@@ -90,7 +90,7 @@ properties:
       Time to hard CVD or Last Follow-up in days
     type: boolean
 
-  cvda:	
+  cvda:
     description: >
       Cardiovascular disease (CVD), All
     type: boolean
