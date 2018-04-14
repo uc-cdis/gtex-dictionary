@@ -24,7 +24,7 @@ links:
   - name: projects
     backref: data_collections
     label: data_from
-    target_type: data_collection
+    target_type: project
     multiplicity: many_to_one
     required: true
 
