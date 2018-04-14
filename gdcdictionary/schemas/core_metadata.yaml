@@ -24,7 +24,7 @@ links:
   - name: data_collections
     backref: core_metadata_records
     label: data_from
-    target_type: core_metadata
+    target_type: data_collection
     multiplicity: many_to_one
     required: true
 
