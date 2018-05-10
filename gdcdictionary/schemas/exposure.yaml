@@ -251,12 +251,12 @@ properties:
       # drinks per week when drinking (former drinkers)
     type: number
 
-  former_years_drinking:
+  years_drinking:
     description: >
       # years drinking alcohol (current and former drinkers)
     type: number
 
-  former_drinks_per_week:
+  drinks_per_week:
     description: >
       # drinks per week (current and former drinkers)
     type: number
