@@ -56,8 +56,7 @@ properties:
     type: string
 
   date:
-    term:
-      $ref: "_definitions.yaml#/datetime"
+    $ref: "_definitions.yaml#/datetime"
 
   description:
     description: >
