@@ -117,3 +117,6 @@ properties:
 
   projects:
     $ref: "_definitions.yaml#/to_one"
+
+  parent_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"
