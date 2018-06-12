@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "core_data_collection"
-title: Core Data Collection
+id: "core_metadata_collection"
+title: Core Metadata Collection
 type: object
 namespace: https://dcp.bionimbus.org/
 category: administrative
@@ -22,11 +22,18 @@ systemProperties:
 
 links:
   - name: projects
-    backref: core_data_collections
+    backref: core_metadata_collections
     label: data_from
     target_type: project
     multiplicity: many_to_one
     required: true
+  - name: parent_metadata_collections
+    backref: child_metadata_collections
+    label: data_from
+    target_type: core_metadata_collection
+    multiplicity: many_to_many
+    required: false
+
 
 uniqueKeys:
   - [id]
