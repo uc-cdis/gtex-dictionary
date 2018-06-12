@@ -37,10 +37,10 @@ links:
         target_type: aligned_reads
         multiplicity: one_to_one
         required: false
-  - name: core_metadata_records
+  - name: core_data_collections
     backref: aligned_reads_indexes 
     label: data_from
-    target_type: core_metadata
+    target_type: core_data_collection
     multiplicity: one_to_one
     required: false
 
@@ -83,5 +83,5 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
-  core_metadata_records:
+  core_data_collection:
     $ref: "_definitions.yaml#/to_one"
