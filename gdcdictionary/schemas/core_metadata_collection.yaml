@@ -27,13 +27,6 @@ links:
     target_type: project
     multiplicity: many_to_one
     required: true
-  - name: parent_metadata_collections
-    backref: child_metadata_collections
-    label: data_from
-    target_type: core_metadata_collection
-    multiplicity: many_to_many
-    required: false
-
 
 uniqueKeys:
   - [id]
@@ -118,5 +111,3 @@ properties:
   projects:
     $ref: "_definitions.yaml#/to_one"
 
-  parent_metadata_collections:
-    $ref: "_definitions.yaml#/to_many"
