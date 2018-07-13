@@ -29,6 +29,10 @@ adapter_sequence: # TOREVIEW
   description: >
     Base sequence of the sequencing adapter.
 
+age_at_event_days:
+  description: >
+    Age at the time an event occurs.
+
 age_at_diagnosis:
   description: >
     Age at the time of diagnosis expressed in number of days since birth.

@@ -40,10 +40,15 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  alcohol_current_status:
+  air_pollution_no2:
     description: >
-      Alcohol: current use
-    type: boolean
+      No2 Air Pollution measurement, lifetime average.
+    type: number
+
+  air_pollution_pm25:
+    description: >
+      PM25 Air Pollution measurement, lifetime average.
+    type: number
 
   alcohol_status:
     description: >
@@ -363,6 +368,11 @@ properties:
       - "MISSING"
       - "SELF-ADMINISTERED"
       - "INTERVIEWER-ADMINISTERED"
+
+  smoking_current_status:
+    description: >
+      Smoking: current use
+    type: boolean
 
   snuff_status:
     description: >
