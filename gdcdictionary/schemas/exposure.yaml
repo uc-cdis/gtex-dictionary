@@ -364,6 +364,11 @@ properties:
       - "SELF-ADMINISTERED"
       - "INTERVIEWER-ADMINISTERED"
 
+  smoking_current_status:
+    description: >
+      Smoking: current use
+    type: boolean
+
   snuff_status:
     description: >
       Snuff use
