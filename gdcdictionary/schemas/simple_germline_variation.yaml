@@ -38,6 +38,18 @@ links:
         target_type: read_group
         multiplicity: many_to_many
         required: false
+      - name: submitted_aligned_reads_files
+        backref: simple_germline_variations
+        label: data_from
+        target_type: submitted_aligned_reads
+        multiplicity: many_to_many
+        required: false
+      - name: aligned_reads_files
+        backref: simple_germline_variations
+        label: data_from
+        target_type: aligned_reads
+        multiplicity: many_to_many
+        required: false
 
 required:
   - submitter_id
