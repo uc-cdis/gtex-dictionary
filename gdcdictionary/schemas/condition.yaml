@@ -1,0 +1,123 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "phenotype"
+title: Condition
+type: object
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Collection of conditions determined for each subject.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: conditions
+    label: describes
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - participants
+  - submitter_id
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+
+  asthma:
+    description: >
+      Harmonized asthma condition. Considered asthma condition if the participant 
+      has been hospitalized because of asthma in the last 12 months.
+    enum: 
+      - Yes
+      - No
+      - Not Reported
+      - Unknown
+
+  asthma:
+    description: >
+      Harmonized asthma condition. Considered asthma condition if the participant 
+      has been hospitalized because of asthma in the last 12 months.
+    enum:        
+      - Yes
+      - No
+      - Not Reported
+      - Unknown
+
+  diabetes:
+    description: >
+      Harmonized diabetes condition (any type).
+    enum:        
+      - Yes
+      - No
+      - Not Reported
+      - Unknown
+
+  diabetes_type1:
+    description: >
+      Harmonized Type 1 diabetes condition.                                  
+    enum:      
+      - Yes
+      - No
+      - Not Reported
+      - Unknown
+
+  diabetes_type2:
+    description: >
+      Harmonized Type 2 diabetes condition.
+    enum:      
+      - Yes
+      - No
+      - Not Reported
+      - Unknown
+
+  hypertension:
+    description: >
+      Harmonized hypertension.
+    enum:      
+      - Yes
+      - No
+      - Not Reported
+      - Unknown
+
+  stroke:
+    description: >
+      Harmonized Stroke condition.
+    enum:      
+      - Yes
+      - No
+      - Not Reported
+      - Unknown
+
+  coronary_artery_disease:
+    description: >
+      Harmonized Coronary Artery Disease condition.
+    enum:      
+      - Yes
+      - No
+      - Not Reported
+      - Unknown
+
+  age_at_event_days:
+    term:
+      $ref: "_terms.yaml#/age_at_event_days"
+    type:
+      - integer
+      - "null"
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"
