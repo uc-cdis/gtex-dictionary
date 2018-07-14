@@ -28,7 +28,7 @@ links:
     required: true
 
 required:
-  - participants
+  - cases
   - submitter_id
 
 uniqueKeys:
@@ -43,16 +43,6 @@ properties:
       Harmonized asthma condition. Considered asthma condition if the participant 
       has been hospitalized because of asthma in the last 12 months.
     enum: 
-      - Yes
-      - No
-      - Not Reported
-      - Unknown
-
-  asthma:
-    description: >
-      Harmonized asthma condition. Considered asthma condition if the participant 
-      has been hospitalized because of asthma in the last 12 months.
-    enum:        
       - Yes
       - No
       - Not Reported
