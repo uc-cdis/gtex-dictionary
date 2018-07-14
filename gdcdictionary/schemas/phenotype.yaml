@@ -28,7 +28,7 @@ links:
     required: true
 
 required:
-  - cases
+  - participants
   - phenotype
   - observed
   - submitter_id
