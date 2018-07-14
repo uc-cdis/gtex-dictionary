@@ -20,10 +20,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: participants
     backref: phenotypes
     label: describes
-    target_type: case
+    target_type: participant
     multiplicity: many_to_one
     required: true
 
@@ -72,5 +72,5 @@ properties:
       - integer
       - "null"
 
-  cases:
+  participants:
     $ref: "_definitions.yaml#/to_one"
