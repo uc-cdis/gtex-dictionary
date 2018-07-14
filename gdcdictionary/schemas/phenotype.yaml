@@ -53,7 +53,7 @@ properties:
     type: string
 
   phenotype:
-    description: "Name given to Phenotype by contributor"
+    description: "Name given to the phenotype by contributor"
     type: string
 
   observed:
