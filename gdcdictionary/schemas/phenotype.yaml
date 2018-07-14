@@ -7,7 +7,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Phenotype entity to describe the phenotype name given by contributor.
+  Entity to describe the phenotype name given by contributor.
 additionalProperties: false
 submittable: true
 validators: null
@@ -28,13 +28,12 @@ links:
     required: true
 
 required:
-  - participants
+  - cases
   - phenotype
   - observed
   - submitter_id
 
 uniqueKeys:
-  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
@@ -54,7 +53,7 @@ properties:
     type: string
 
   phenotype:
-    description: "Name given to Phenotype by contributor"
+    description: "Name given to the phenotype by contributor"
     type: string
 
   observed:
