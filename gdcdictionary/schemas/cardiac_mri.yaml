@@ -46,7 +46,6 @@ properties:
       RV Cardiac output (l/min) (HARMONIZED)
     type: number
 
-
 # OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
   oardis1:
     description: >

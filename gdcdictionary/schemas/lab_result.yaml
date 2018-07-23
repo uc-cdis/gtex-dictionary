@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "lab_result"
 title: Laboratory Results
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: http://dcp.bionimbus.org
 category: clinical
 program: '*'
 project: '*'
