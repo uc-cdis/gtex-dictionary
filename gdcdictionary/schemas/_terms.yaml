@@ -655,7 +655,7 @@ estrogen_receptor_result_ihc:
 ethnicity:
   description: >
     An individual's self-described social and cultural grouping, specifically whether an individual
-    describes themselves as Hispanic or Latino. The provided values are based on the categories
+    describes themselves as Hispanic or Latino (HARMONIZED). The provided values are based on the categories
     defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
   termDef:
     term: Ethnic Group Category Text
@@ -760,7 +760,7 @@ freezing_method:
 
 gender:
   description: >
-    Text designations that identify gender. Gender is described as the assemblage of properties that
+    Text designations that identify gender (HARMONIZED). Gender is described as the assemblage of properties that
     distinguish people on the basis of their societal roles. [Explanatory Comment 1: Identification
     of gender is based upon self-report and may come from a form, questionnaire, interview, etc.]
   termDef:
@@ -1361,7 +1361,7 @@ qc_metric_state:
 
 race:
   description: >
-    An arbitrary classification of a taxonomic group that is a division of a species. It usually
+    An arbitrary classification of a taxonomic group that is a division of a species (HARMONIZED). It usually
     arises as a consequence of geographical isolation within a species and is characterized by
     shared heredity, physical attributes and behavior, and in the case of humans, by common history,
     nationality, or geographic distribution. The provided values are based on the categories defined
