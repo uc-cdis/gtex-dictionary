@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "exposure"
 title: Exposure
 type: object
-namespace: https://www.gtexportal.org/
+namespace: http://dcp.bionimbus.org/
 category: clinical
 program: '*'
 project: '*'
@@ -39,6 +39,22 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
+
+# HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
+  smoking_status:
+    description: >
+      Smoking condition (HARMONIZED)
+    enum:
+      - "NEVER"
+      - "FORMER"
+      - "CURRENT"
+
+  years_smoked:
+    term:
+      $ref: "_terms.yaml#/years_smoked"
+    type: number
+
+# OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
 
   air_pollution_no2:
     description: >
@@ -426,11 +442,6 @@ properties:
     description: >
       Weight, protocol modification
     type: boolean
-
-  years_smoked:
-    term:
-      $ref: "_terms.yaml#/years_smoked"
-    type: number
 
   cases:
     $ref: "_definitions.yaml#/to_one"

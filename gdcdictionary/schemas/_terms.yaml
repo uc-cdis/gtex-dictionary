@@ -1836,7 +1836,7 @@ year_of_death:
 
 years_smoked:
   description: >
-    Numeric value (or unknown) to represent the number of years a person has been smoking.
+    Numeric value (or unknown) to represent the number of years a person has been smoking (HARMONIZED).
   termDef:
     term: Person Smoking Duration Year Count
     source: caDSR
