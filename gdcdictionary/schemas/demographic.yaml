@@ -41,6 +41,11 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+  age_at_index:
+    descriptiont: >
+      The subject's age (in years) on the reference or anchor date used during date obfuscation.
+    type: number
+
   age_range:
     description: >
         Range of ages for the subject
