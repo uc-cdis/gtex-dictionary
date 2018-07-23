@@ -40,6 +40,18 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+# HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
+  diastolic_blood_pressure:
+    description: >
+      Measured diastolic blood pressure (mmhg) (HARMONIZED)
+    type: number
+
+  systolic_blood_pressure:
+    description: >
+      Measured systolic blood pressure (mmhg) (HARMONIZED)
+    type: number
+
+# OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
   rbrach1:
     description: >
       Right brachial bp (mmhg)
@@ -269,16 +281,6 @@ properties:
   rmtempf1:
     description: >
       Room temperature (fahrenheit), seated bp
-    type: number
-
-  sbp1c:
-    description: >
-      Seated systolic blood pressure (mmhg)
-    type: number
-
-  dbp1c:
-    description: >
-      Seated diastolic blood pressure (mmhg)
     type: number
 
   spp1c:
