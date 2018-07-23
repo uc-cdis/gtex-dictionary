@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "cardiac_mri"
 title: Cardiac Magnetic Resonance Image
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: http://dcp.bionimbus.org/
 category: clinical
 program: '*'
 project: '*'
@@ -40,6 +40,14 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+# HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
+  cardiac_output:
+    description: >
+      RV Cardiac output (l/min) (HARMONIZED)
+    type: number
+
+
+# OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
   oardis1:
     description: >
       Flow parameter: aortic distensibility
@@ -83,11 +91,6 @@ properties:
   aad1c:
     description: >
       Average aortic diameter (mm)
-    type: number
-
-  crdout1c:
-    description: >
-      Cardiac output (l/min)
     type: number
 
   odapa1:
