@@ -327,7 +327,7 @@ biospecimen_anatomic_site:
 
 bmi:
   description: >
-    The body mass divided by the square of the body height expressed in units of kg/m^2.
+    The body mass divided by the square of the body height expressed in units of kg/m^2 (HARMONIZED).
   termDef:
     term: Body Mass Index (BMI)
     source: caDSR
@@ -772,7 +772,7 @@ gender:
 
 height:
   description: >
-    The height of the patient in centimeters.
+    The height of the patient in centimeters (HARMONIZED).
   termDef:
     term: Patient Height Measurement
     source: caDSR
@@ -1781,7 +1781,7 @@ vital_status:
 
 weight:
   description: >
-    The weight of the patient measured in lbs.
+    The weight of the patient measured in lbs (HARMONIZED).
   termDef:
     term: Patient Weight Measurement
     source: caDSR

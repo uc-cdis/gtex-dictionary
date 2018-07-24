@@ -94,25 +94,6 @@ properties:
       Comments, anthro protocol modification
     type: boolean
 
-  bmi:
-    term:
-      $ref: "_terms.yaml#/bmi"
-    type: number
-
-  bmi_category:
-    description: >
-      Body mass index, who categories
-    enum:
-      - "NORMAL"
-      - "GRADE 1 OVERWEIGHT"
-      - "GRADE 2 OVERWEIGHT"
-      - "GRADE 3 OVERWEIGHT"
-
-  bsa:
-    description: >
-      Body surface area
-    type: number
-
   chewing_smoked_20_lifetime:
     description: >
       Chewed tobacco at least 20 times in lifetime
@@ -292,26 +273,6 @@ properties:
       Form completed at clinic
     type: boolean
 
-  girth_protocol_modification:
-    description: >
-      Girth, protocol modification
-    type: boolean
-
-  height:
-    term:
-      $ref: "_terms.yaml#/height"
-    type: number
-
-  height_protocol_modification:
-    description: >
-      Height, protocol modification
-    type: boolean
-
-  hip_circumference:
-    description: >
-      Hip circumference (cm)
-    type: number
-
   hours_smoke_exposed_per_week:
     description: >
       Exposure to second-hand smoke, hours per week
@@ -422,21 +383,6 @@ properties:
     description: >
       Snuff: average # uses per day
     type: number
-
-  waist:
-    description: >
-      Waist circumference (cm)
-    type: number
-
-  weight:
-    term:
-      $ref: "_terms.yaml#/weight"
-    type: number
-
-  weight_protocol_modification:
-    description: >
-      Weight, protocol modification
-    type: boolean
 
   cases:
     $ref: "_definitions.yaml#/to_one"

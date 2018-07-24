@@ -82,6 +82,21 @@ properties:
       - not reported
       - not allowed to collect
 
+  weight:
+    term:
+      $ref: "_terms.yaml#/weight"
+    type: number
+
+  bmi:
+    term:
+      $ref: "_terms.yaml#/bmi"
+    type: number
+
+  height:
+    term:
+      $ref: "_terms.yaml#/height"
+    type: number
+
 # OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
   age_range:
     description: >
@@ -98,6 +113,46 @@ properties:
   year_of_death:
     term:
       $ref: "_terms.yaml#/year_of_death"
+    type: number
+
+
+  weight_protocol_modification:
+    description: >
+      Weight, protocol modification
+    type: boolean
+
+  height_protocol_modification:
+    description: >
+      Height, protocol modification
+    type: boolean
+
+  girth_protocol_modification:
+    description: >
+      Girth, protocol modification
+    type: boolean
+
+  hip_circumference:
+    description: >
+      Hip circumference (cm)
+    type: number
+
+  bmi_category:
+    description: >
+      Body mass index, who categories
+    enum:
+      - "NORMAL"
+      - "GRADE 1 OVERWEIGHT"
+      - "GRADE 2 OVERWEIGHT"
+      - "GRADE 3 OVERWEIGHT"
+
+  bsa:
+    description: >
+      Body surface area
+    type: number
+
+  waist:
+    description: >
+      Waist circumference (cm)
     type: number
 
   cases:
