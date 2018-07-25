@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "demographic"
 title: Demographic
 type: object
-namespace: https://www.gtexportal.org/
+namespace: https://dcp.bionimbus.org/
 category: clinical
 program: '*'
 project: '*'
@@ -41,10 +41,11 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  age_range:
-    description: >
-        Range of ages for the subject
-    type: string
+# HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
+  age_at_index:
+    descriptiont: >
+      The subject's age (in years) on the reference or anchor date used during date obfuscation (HARMONIZED)
+    type: number
 
   gender:
     term:
@@ -81,6 +82,27 @@ properties:
       - not reported
       - not allowed to collect
 
+  weight:
+    term:
+      $ref: "_terms.yaml#/weight"
+    type: number
+
+  bmi:
+    term:
+      $ref: "_terms.yaml#/bmi"
+    type: number
+
+  height:
+    term:
+      $ref: "_terms.yaml#/height"
+    type: number
+
+# OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
+  age_range:
+    description: >
+        Range of ages for the subject
+    type: string
+
   year_of_birth:
     term:
       $ref: "_terms.yaml#/year_of_birth"
@@ -91,6 +113,46 @@ properties:
   year_of_death:
     term:
       $ref: "_terms.yaml#/year_of_death"
+    type: number
+
+
+  weight_protocol_modification:
+    description: >
+      Weight, protocol modification
+    type: boolean
+
+  height_protocol_modification:
+    description: >
+      Height, protocol modification
+    type: boolean
+
+  girth_protocol_modification:
+    description: >
+      Girth, protocol modification
+    type: boolean
+
+  hip_circumference:
+    description: >
+      Hip circumference (cm)
+    type: number
+
+  bmi_category:
+    description: >
+      Body mass index, who categories
+    enum:
+      - "NORMAL"
+      - "GRADE 1 OVERWEIGHT"
+      - "GRADE 2 OVERWEIGHT"
+      - "GRADE 3 OVERWEIGHT"
+
+  bsa:
+    description: >
+      Body surface area
+    type: number
+
+  waist:
+    description: >
+      Waist circumference (cm)
     type: number
 
   cases:

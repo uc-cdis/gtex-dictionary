@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "germline_mutation_calling_workflow"
 title: Germline Mutation Calling Workflow
 type: object
-namespace: https://www.gtexportal.org/
+namespace: https://dcp.bionimbus.org/
 category: analysis
 program: '*'
 project: '*'

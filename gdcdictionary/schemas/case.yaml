@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "case"
 title: Case
 type: object
-namespace: https://www.gtexportal.org/
+namespace: https://dcp.bionimbus.org/
 category: administrative
 program: '*'
 project: '*'
@@ -75,6 +75,9 @@ properties:
       - Actual Death
       - Presumed Death
       - Cross Clamp
+      - Study Enrollment 
+      - Diagnosis
+      - First Patient Visit
 
   transplanted_organ:
     description: >

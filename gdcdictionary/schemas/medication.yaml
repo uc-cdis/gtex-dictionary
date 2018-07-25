@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "medication"
 title: Medication Use Record
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: http://dcp.bionimbus.org/
 category: clinical
 program: '*'
 project: '*'
@@ -40,6 +40,13 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+# HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
+  hypertension_meds:
+    description: >
+      Take medication for hypertension (HARMONIZED)
+    type: boolean
+
+# OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
   diabins1:
     description: >
       Insulin or oral hypoglycemics for diabetes?
@@ -53,11 +60,6 @@ properties:
   cholmed1:
     description: >
       Taking meds for high cholesterol
-    type: boolean
-
-  bpmed1:
-    description: >
-      Taking meds for hypertension
     type: boolean
 
   bphxage1:

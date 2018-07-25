@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "acknowledgement"
 title: Acknowledgement 
 type: object
-namespace: https://www.gtexportal.org/
+namespace: https://dcp.bionimbus.org/
 category: administrative
 program: '*'
 project: '*'

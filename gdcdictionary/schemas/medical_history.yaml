@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "medical_history"
 title: Medical History
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: http://dcp.bionimbus.org/
 category: clinical
 program: '*'
 project: '*'
@@ -40,22 +40,150 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  emphys1:
-    description: >
-      Emphysema: self-report
-    type: boolean
 
-  asthma1:
+# HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
+  asthma:
     description: >
-      Asthma: self-report
-    type: boolean
+      Reported Asthma condition in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
 
-  arthrit1:
+  diabetes:
+    description: >
+      Reported Diabetes in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  type1_diabetes:
+    description: >
+      Reported Type-1 Diabetes in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  type2_diabetes:
+    description: >
+      Reported Type-2 Diabetes in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  hypertension:
+    description: >
+      Reported Hypertension condition in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  hyperlipidemia:
+    description: >
+      Reported Hypertension condition in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  cerebrovascular_disease:
+    description: >
+      Reported Cerebrovascular disease in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  stroke:
+    description: >
+      Reported Stroke in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  copd:
+    description: >
+      Reported Chronic Obstructive Pulmonary Disease (COPD) in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  emphysema:
+    description: >
+      Reported Emphysema in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  chronic_respiratory_disease:
+    description: >
+      Reported Chronic Respiratory disease in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  coronary_artery_disease:
+    description: >
+      Reported Coronary Artery disease in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  heart_failure:
+    description: >
+      Reported Heart failure in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  myocardial_infarction:
+    description: >
+      Reported Myocardial Infarction in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+  cabg_presence:
+    description: >
+      Reported presence of coronary artery bypass graft (CABG) in the participant (HARMONIZED)
+    enum: 
+        - Yes
+        - No
+        - Not reported
+        - Unknown
+
+# OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
+  arthritis:
     description: >
       Arthritis: self-report
     type: boolean
 
-  cancer1:
+  cancer:
     description: >
       Cancer: self-report
     type: boolean
@@ -65,7 +193,7 @@ properties:
       Coronary Heart Disease (CHD) Hard
     type: boolean
 
-  chdhtt:
+  chdh_time:
     description: >
       Time to hard CHD or Last Follow-up in days
     type: integer
@@ -75,7 +203,7 @@ properties:
       Coronary Heart Disease (CHD), All
     type: boolean
 
-  chdatt:
+  chda_time:
     description: >
       Time to all CHD or Lat Follow-up in days
     type: integer
@@ -85,7 +213,7 @@ properties:
       Cardiovascular disease (CVD), Hard
     type: boolean
 
-  cvdhtt:
+  cvdh_time:
     description: >
       Time to hard CVD or Last Follow-up in days
     type: integer
@@ -95,438 +223,362 @@ properties:
       Cardiovascular disease (CVD), All
     type: boolean
 
-  cvdatt:
+  cvda_time:
     description: >
       Time to all CVD or Last Follow-up in days
     type: integer
 
-  prostcn1:
+  prostate_cancer:
     description: >
       Prostate cancer
     type: boolean
 
-  brstcn1:
+  breast_cancer:
     description: >
       Breast cancer
     type: boolean
 
-  lungcn1:
+  lung_cancer:
     description: >
       Lung cancer
     type: boolean
 
-  coloncn1:
+  colon_cancer:
     description: >
       Colon cancer
     type: boolean
 
-  nmskncn1:
+  non_melanoma_skin_cancer:
     description: >
       Non-melanoma skin cancer
     type: boolean
 
-  bloodcn1:
+  blood_cancer:
     description: >
       Blood cancer
     type: boolean
 
-  othcn1:
+  other_cancer:
     description: >
       Other cancer
     type: boolean
 
-  rheuhv1:
+  rheumatic_heart_disease:
     description: >
       Rheumatic heart disease: self-report
     type: boolean
 
-  bldclot1:
+  blood_clots:
     description: >
       Blood clots in legs/lungs: self-report
     type: boolean
 
-  liverd1:
+  liver_disease:
     description: >
       Liver disease: self-report
     type: boolean
 
-  cirrh1:
+  cirrhosis:
     description: >
       Cirrhosis: self-report
     type: boolean
 
-  hepat1:
+  hepatitis:
     description: >
       Hepatitis: self-report
     type: boolean
 
-  heptpa1:
+  typea_hepatitis:
     description: >
       Hepatitis, type a
     type: boolean
 
-  heptpb1:
+  typeb_hepatitis:
     description: >
       Hepatitis, type b
     type: boolean
 
-  heptpc1:
+  typec_hepatitis:
     description: >
       Hepatitis, type c
     type: boolean
 
-  heptpd1:
+  typed_hepatitis:
     description: >
       Hepatitis, type d
     type: boolean
 
-  heptpe1:
+  typee_hepatitis:
     description: >
       Hepatitis, type e
     type: boolean
 
-  heptpu1:
+  unknown_type_hepatitis:
     description: >
       Hepatitis, unknown type
     enum:
       - "NO HEPATITIS OR TYPE KNOWN"
       - "TYPE UNKNOWN"
 
-  kdnydis1:
+  kidney_disease:
     description: >
       Kidney disease: self-report
     type: boolean
 
-  highbp1:
-    description: >
-      Hypertension: self-report
-    type: boolean
-
-  hghchol1:
-    description: >
-      High cholesterol: self-report
-    type: boolean
-
-  diabet1:
-    description: >
-      Diabetes: self-report
-    type: boolean
-
-  dbpreg1:
+  pregnancy_diabetes:
     description: >
       Women: diabetes occur only during pregnancy
     type: boolean
 
-  hwt3ylb1:
+  highest_weight_3years:
     description: >
       Highest weight in last 3 years (lbs)
     type: number
 
-  wt20lb1:
+  weight_at_20age:
     description: >
       Weight at age 20 (lbs)
     type: number
 
-  wt40lb1:
+  weight_at_40age:
     description: >
       Weight at age 40 (lbs)
     type: number
 
-  preg1:
+  ever_pregnant:
     description: >
       Ever been pregnant
     type: boolean
 
-  pregn1:
+  pregnancies_number:
     description: >
       # of pregnancies
     type: number
 
-  birthn1:
+  births_number:
     description: >
       # of live births
     type: number
 
-  agebrth1:
+  first_birth_age:
     description: >
       Age at first live birth
     type: number
 
-  hystrct1:
+  hysterectomy:
     description: >
       Hysterectomy
     type: boolean
 
-  hystage1:
+  hysterectomy_age:
     description: >
       Age at hysterectomy
     type: number
 
-  ovarem1:
+  ovaries_surgery:
     description: >
       Surgery to remove ovaries
     type: boolean
 
-  ovaage1:
+  ovaries_removal_age:
     description: >
       Age when ovaries removed
     type: number
 
-  ovaremn1:
+  removed_ovaries_number:
     description: >
       # of ovaries removed
     enum:
       - "1 OVARY REMOVED"
       - "2 OVARIES REMOVED"
 
-  mnpause1:
+  menopause:
     description: >
       Gone through menopause
     type: boolean
 
-  menop1:
+  current_menopause:
     description: >
       Currently going through menopause
     type: boolean
 
-  mnspmo1:
+  last_menstrual_month:
     description: >
       Month of last menstrual period
     type: number
 
-  mnspyr1:
+  last_menstrual_year:
     description: >
       Year of last menstrual period
     type: number
 
-  prdsnum1:
+  menstrual_number:
     description: >
       # of menstrual periods in past 12 months
     type: number
 
-  menoage1:
+  menopause_age:
     description: >
       Age went through menopause
     type: number
 
-  hrmqage1:
+  hormone_therapy_stop_year:
     description: >
       Hormone replacement therapy, age stopped use
     type: number
 
-  hrmtyp1:
+  hormone_therapy_type:
     description: >
       Type of hormone replacement therapy
     enum:
       - "ESTROGEN ALONE"
       - "ESTROGEN WITH PROGESTIN"
 
-  legpain1:
-    description: >
-      Pain in leg or buttock while walking
-    type: boolean
-
-  lprest1:
-    description: >
-      Leg pain begin when standing or sitting
-    type: boolean
-
-  lpcalf1:
-    description: >
-      Pain occurs in what portion of leg
-    enum:
-      - "PAIN INCLUDES CALF"
-      - "PAIN DOES NOT INCLUDE CALF"
-
-  lpuphl1:
-    description: >
-      Leg pain if walk uphill or hurry
-    type: boolean
-
-  lpnorm1:
-    description: >
-      Leg pain if walk at ordinary pace on the level
-    type: boolean
-
-  lpdis1:
-    description: >
-      Leg pain ever disappear while walking
-    type: boolean
-
-  lpstop1:
-    description: >
-      Stop walking during leg pain
-    enum:
-      - "STOP OR SLOW DOWN"
-      - "CONTINUE ON"
-
-  lpstnd1:
-    description: >
-      What happens to leg pain if stand still
-    enum:
-      - "RELIEVED"
-      - "NOT RELIEVED"
-
-  lprelv1:
-    description: >
-      How soon is leg pain relieved when still
-    enum:
-      - "MORE THAN 10 MINUTES"
-      - "10 MINUTES OR LESS"
-
-  lploc1:
-    description: >
-      On what side is leg pain predominant
-    enum:
-      - "RIGHT SIDE"
-      - "LEFT SIDE"
-      - "BOTH LEGS"
-
-  swllft1:
+  feet_swelling:
     description: >
       Swelling of feet or ankles
     type: boolean
 
-  swllday1:
+  day_feet_swelling:
     description: >
       Feet swelling during day, diminished overnight
     type: boolean
 
-  slppllw1:
+  pillows_sleep:
     description: >
       Sleep on two or more pillows to help breathe
     type: boolean
 
-  wakebr1:
+  night_breath_trouble:
     description: >
       Awakened at night by trouble breathing
     type: boolean
 
-  fever1:
+  fever_2weeks:
     description: >
       Fever, past two weeks
     type: boolean
 
-  coldflu1:
+  cold_2weeks:
     description: >
       Cold or flu, past two weeks
     type: boolean
 
-  urininf1:
+  urinary_infection_2weeks:
     description: >
       Urinary infection, past two weeks
     type: boolean
 
-  allrgy1:
+  allergy_2weeks:
     description: >
       Seasonal allergy, past two weeks
     type: boolean
 
-  bronch1:
+  bronchitis_2weeks:
     description: >
       Bronchitis, past two weeks
     type: boolean
 
-  sinuinf1:
+  sinus_infection_2weeks:
     description: >
       Sinus infection, past two weeks
     type: boolean
 
-  pneumo1:
+  pneumonia_2weeks:
     description: >
       Pneumonia, past two weeks
     type: boolean
 
-  bldgums1:
+  bleeding_gums_2weeks:
     description: >
       Bleeding gums, past two weeks
     type: boolean
 
-  tthinf1:
+  tooth_infection_2weeks:
     description: >
       Tooth infection, past two weeks
     type: boolean
 
-  gout1:
+  gout_2weeks:
     description: >
       Gout flare-up, past two weeks
     type: boolean
 
-  arth2wk1:
+  arthritis_2weeks:
     description: >
       Arthritis flare-up, past two weeks
     type: boolean
 
-  abnum1:
+  antibiotics_treatment_number_last_year:
     description: >
       # of times treated w/ antibiotics, past year
     type: number
 
-  noab1:
+  antibiotics_treatment_unknown_last_year:
     description: >
       # of times treated w/ antibiotics (past year) unknown
     enum:
       - "# TIMES UNKNOWN"
 
-  ab5ynum1:
+  antibiotics_treatment_number_5years:
     description: >
       # of times treated w/ antibiotics, last five years
     type: number
 
-  noab5y1:
+  antibiotics_treatment_unknown_5years:
     description: >
       # of times treated w/ antibiotics (past 5 years) unknown
     enum:
       - "# TIMES UNKNOWN"
 
-  gumdis1:
+  periodontitis:
     description: >
       Periodontitis or gum disease
     type: boolean
 
-  losttth1:
+  periodontitis_teeth_lost:
     description: >
       Lost teeth due to gum disease
     type: boolean
 
-  tthnum1:
+  periodontitis_teeth_lost_number:
     description: >
       # teeth lost due to gum disease
     type: number
 
-  mhxadm1:
+  questionnaire_administrator:
     description: >
       Questionnaire administrator - medical history
     enum:
       - "SELF-ADMIN"
       - "INTERVIEWER-ADMIN"
 
-  frncep1c:
+  ncep_chd_risk_10years:
     description: >
       10 yr hard chd risk--ncep version
     type: number
 
-  frjama1c:
+  jama_chd_risk_10years:
     description: >
       10yr hard chd risk per jama 2001 paper
     type: number
 
-  frcirc1c:
+  circ_chd_risk_10years:
     description: >
       10yr hard chd risk per circ 1998 paper
     type: number
 
-  frci081c:
+  framingham_global_cvd_risk:
     description: >
       Framingham global cvd risk per circ 2008 paper
     type: number
 
-  egfr1c:
+  glomerular_filtration_rate:
     description: >
       Estimated glomerular filtration rate by simplified mdrd equation
     type: number
 
-  cepgfr1c:
+  calibrated_cr:
     description: >
       Exam 1 (calibrated cr) egfr using ckd-epi equation
     type: number

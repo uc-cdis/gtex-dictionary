@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "electrocardiogram_test"
 title: Electrocardiogram
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: http://dcp.bionimbus.org
 category: clinical
 program: '*'
 project: '*'
@@ -40,6 +40,30 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+# HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
+
+  pr_duration:
+    description: >
+      PR interval (msec) (HARMONIZED)
+    type: number
+
+  qrs_duration:
+    description: >
+      QRS interval (msec) (HARMONIZED)
+    type: number
+
+  qt_duration:
+    description: >
+      QT interval (msec) (HARMONIZED)
+    type: number
+
+  gtc_duration:
+    description: >
+      QTC interval (msec) (HARMONIZED)
+    type: number
+
+# OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
+
   ecglvh1c:
     description: >
       Left ventricular hypertrophy by novacode
@@ -53,26 +77,6 @@ properties:
   epicare1:
     description: >
       Epicare sequence number
-    type: number
-
-  prdur1:
-    description: >
-      Pr interval (msec)
-    type: number
-
-  qrsdur1:
-    description: >
-      Qrs interval (msec)
-    type: number
-
-  qtdur1:
-    description: >
-      Qt interval (msec)
-    type: number
-
-  qtcdur1:
-    description: >
-      Qtc interval (msec)
     type: number
 
   paxis1:

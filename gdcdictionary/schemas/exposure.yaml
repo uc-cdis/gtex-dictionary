@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "exposure"
 title: Exposure
 type: object
-namespace: https://www.gtexportal.org/
+namespace: http://dcp.bionimbus.org/
 category: clinical
 program: '*'
 project: '*'
@@ -39,6 +39,22 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
+
+# HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
+  smoking_status:
+    description: >
+      Smoking condition (HARMONIZED)
+    enum:
+      - "NEVER"
+      - "FORMER"
+      - "CURRENT"
+
+  years_smoked:
+    term:
+      $ref: "_terms.yaml#/years_smoked"
+    type: number
+
+# OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
 
   air_pollution_no2:
     description: >
@@ -77,25 +93,6 @@ properties:
     description: >
       Comments, anthro protocol modification
     type: boolean
-
-  bmi:
-    term:
-      $ref: "_terms.yaml#/bmi"
-    type: number
-
-  bmi_category:
-    description: >
-      Body mass index, who categories
-    enum:
-      - "NORMAL"
-      - "GRADE 1 OVERWEIGHT"
-      - "GRADE 2 OVERWEIGHT"
-      - "GRADE 3 OVERWEIGHT"
-
-  bsa:
-    description: >
-      Body surface area
-    type: number
 
   chewing_smoked_20_lifetime:
     description: >
@@ -276,26 +273,6 @@ properties:
       Form completed at clinic
     type: boolean
 
-  girth_protocol_modification:
-    description: >
-      Girth, protocol modification
-    type: boolean
-
-  height:
-    term:
-      $ref: "_terms.yaml#/height"
-    type: number
-
-  height_protocol_modification:
-    description: >
-      Height, protocol modification
-    type: boolean
-
-  hip_circumference:
-    description: >
-      Hip circumference (cm)
-    type: number
-
   hours_smoke_exposed_per_week:
     description: >
       Exposure to second-hand smoke, hours per week
@@ -369,11 +346,6 @@ properties:
       - "SELF-ADMINISTERED"
       - "INTERVIEWER-ADMINISTERED"
 
-  smoking_current_status:
-    description: >
-      Smoking: current use
-    type: boolean
-
   snuff_status:
     description: >
       Snuff use
@@ -410,26 +382,6 @@ properties:
   snuff_per_day:
     description: >
       Snuff: average # uses per day
-    type: number
-
-  waist:
-    description: >
-      Waist circumference (cm)
-    type: number
-
-  weight:
-    term:
-      $ref: "_terms.yaml#/weight"
-    type: number
-
-  weight_protocol_modification:
-    description: >
-      Weight, protocol modification
-    type: boolean
-
-  years_smoked:
-    term:
-      $ref: "_terms.yaml#/years_smoked"
     type: number
 
   cases:
