@@ -46,136 +46,136 @@ properties:
     description: >
       Reported Asthma condition in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   diabetes:
     description: >
       Reported Diabetes in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   type1_diabetes:
     description: >
       Reported Type-1 Diabetes in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   type2_diabetes:
     description: >
       Reported Type-2 Diabetes in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   hypertension:
     description: >
       Reported Hypertension condition in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   hyperlipidemia:
     description: >
       Reported Hypertension condition in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   cerebrovascular_disease:
     description: >
       Reported Cerebrovascular disease in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   stroke:
     description: >
       Reported Stroke in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   copd:
     description: >
       Reported Chronic Obstructive Pulmonary Disease (COPD) in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   emphysema:
     description: >
       Reported Emphysema in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   chronic_respiratory_disease:
     description: >
       Reported Chronic Respiratory disease in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   coronary_artery_disease:
     description: >
       Reported Coronary Artery disease in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   heart_failure:
     description: >
       Reported Heart failure in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   myocardial_infarction:
     description: >
       Reported Myocardial Infarction in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
   cabg_presence:
     description: >
       Reported presence of coronary artery bypass graft (CABG) in the participant (HARMONIZED)
     enum: 
-        - Yes
-        - No
-        - Not reported
-        - Unknown
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
 
 # OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
   arthritis:
