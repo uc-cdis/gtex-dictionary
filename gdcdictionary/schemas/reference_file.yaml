@@ -81,8 +81,6 @@ properties:
       - TAR
       - VCF
       - TBI
-  read_groups:
-    $ref: "_definitions.yaml#/to_many"
 
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
