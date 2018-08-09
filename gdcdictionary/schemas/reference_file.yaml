@@ -43,7 +43,7 @@ required:
   - data_category
   - data_type
   - data_format
-  - read_groups
+  - core_metadata_collections
 
 uniqueKeys:
   - [ id ]
