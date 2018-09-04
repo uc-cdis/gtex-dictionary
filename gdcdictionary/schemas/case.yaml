@@ -69,20 +69,27 @@ properties:
 
   index_date:
     description: >
-      Indicates whether the time point reference begins at the donor's actual death, presumed death, 
-      or when the cross clamp was applied in the case of surgical donors.
+      "Indicates whether the time point reference begins at the donor's actual death, presumed death, 
+      or when the cross clamp was applied in the case of surgical donors."
     enum:
       - Actual Death
       - Presumed Death
       - Cross Clamp
-      - Study Enrollment 
+      - Study Enrollment
       - Diagnosis
       - First Patient Visit
 
   transplanted_organ:
     description: >
-      If the Donor was an Organ Donor, which Organs were donated.  
+      If the Donor was an Organ Donor, which Organs were donated.
     type: string
+
+  consent_codes:
+    description: >
+      Consent codes that are used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used.
+    type: array
+    items:
+      type: string
 
   studies:
     $ref: "_definitions.yaml#/to_many"
