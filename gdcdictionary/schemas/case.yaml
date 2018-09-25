@@ -86,7 +86,13 @@ properties:
 
   consent_codes:
     description: >
-      Consent codes that are used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. GRU - For general research use for any research purpose. Example of usage: This includes but is not limited to: health/medical/biomedical purposes, fundamental biology research, the study of population origins or ancestry, statistical methods and algorithms development, and social-sciences research. HMB - Use of the data is limited to health/medical/biomedical purposes; does not include the study of population origins or ancestry. DS-X - Use of the data must be related to [disease]. NPU - Use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use. IRB - Requestor must provide documentation of local IRB/REC approval.
+        Data Use Restrictions that are used to indicate  permissions/restrictions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. \n
+        Based on the Data Use Ontology : see http://www.obofoundry.org/ontology/duo.html \n
+        GRU - For general research use for any research purpose. Example of usage: This includes but is not limited to: health/medical/biomedical purposes, fundamental biology research, the study of population origins or ancestry, statistical methods and algorithms development, and social-sciences research. \n
+        HMB - Use of the data is limited to health/medical/biomedical purposes; does not include the study of population origins or ancestry. \n
+        DS-X - Use of the data must be related to [disease]. \n
+        NPU - Use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use. \n
+        IRB - Requestor must provide documentation of local IRB/REC approval.
     type: array
     items:
       type: string
