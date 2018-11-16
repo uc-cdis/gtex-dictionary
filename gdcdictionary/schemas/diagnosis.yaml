@@ -56,6 +56,13 @@ properties:
     maximum: 32872
     minimum: 0
 
+  age_at_diagnosis_gt89:
+    term:
+      $ref: "_terms.yaml#/age_at_diagnosis_gt89"
+    enum:
+      - "Yes"
+      - "No"
+
   days_to_birth:
     term:
       $ref: "_terms.yaml#/days_to_birth"
