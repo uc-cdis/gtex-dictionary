@@ -43,9 +43,18 @@ properties:
 
 # HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
   age_at_index:
-    descriptiont: >
-      The subject's age (in years) on the reference or anchor date used during date obfuscation (HARMONIZED)
+    description: >
+      The subject's age (in years) on the reference or anchor date used during date obfuscation (HARMONIZED). If age is greater than 89 years, see 'age_at_index_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  age_at_index_gt89:
+    description: >
+      Indicate whether the subject's age (in years) on the reference or anchor date used during date obfuscation (HARMONIZED) is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   gender:
     term:
@@ -100,7 +109,7 @@ properties:
 # OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
   age_range:
     description: >
-        Range of ages for the subject
+        Range of ages for the subject. The range should not include ages over 89 years.
     type: string
 
   year_of_birth:

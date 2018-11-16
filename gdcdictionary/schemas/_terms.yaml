@@ -31,11 +31,25 @@ adapter_sequence: # TOREVIEW
 
 age_at_event_days:
   description: >
-    Age at the time an event occurs.
+    Age at the time an event occurs expressed in the number of days since birth. If the age at event is greater than 32872 days (89 years), then see 'age_at_event_gt89'.
+
+age_at_event_days_gt89:
+  description: >
+    Indicate whether the 'Age at the time an event occurs expressed in the number of days since birth' is greater than 32872 days (89 years).
 
 age_at_diagnosis:
   description: >
-    Age at the time of diagnosis expressed in number of days since birth.
+    Age at the time of diagnosis expressed in number of days since birth. If the age at diagnosis is greater than 32872 days (89 years), then see 'age_at_diagnosis_gt89'.
+  termDef:
+    term: Patient Diagnosis Age Day Value
+    source: caDSR
+    cde_id: 3225640
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3225640&version=2.0"
+
+age_at_diagnosis_gt89:
+  description: >
+    Indicate whether the age at the time of diagnosis expressed in number of days since birth is greater than 32872 days (89 years).
   termDef:
     term: Patient Diagnosis Age Day Value
     source: caDSR
@@ -292,7 +306,7 @@ biomarker_name:
     term: Biomarker Name
     source: caDSR
     cde_id: 5473
-    cde_version: 11.0 
+    cde_version: 11.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5473&version=2.31"
 
 biomarker_result:
@@ -622,7 +636,7 @@ dlco_ref_predictive_percent:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2180255&version=1.0"
 
-encoding: 
+encoding:
   description: >
     Version of ASCII encoding of quality values found in the file.
   termDef:
@@ -1836,7 +1850,17 @@ year_of_death:
 
 years_smoked:
   description: >
-    Numeric value (or unknown) to represent the number of years a person has been smoking (HARMONIZED).
+    Numeric value (or unknown) to represent the number of years a person has been smoking (HARMONIZED). If the number of years is greater than 89, see 'years_smoked_gt89'.
+  termDef:
+    term: Person Smoking Duration Year Count
+    source: caDSR
+    cde_id: 3137957
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3137957&version=1.0"
+
+years_smoked_gt89:
+  description: >
+    Indicate whether the numeric value to represent the number of years a person has been smoking (HARMONIZED) is greater than 89 years.
   termDef:
     term: Person Smoking Duration Year Count
     source: caDSR

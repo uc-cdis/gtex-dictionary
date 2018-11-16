@@ -64,8 +64,17 @@ properties:
 
   bphxage1:
     description: >
-      Hypertension meds, age started use
+      Hypertension meds, age started use. If age is greater than 89 years, see 'bphxage1_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  bphxage1_gt89:
+    description: >
+      Indicate whether Hypertension meds, age started use is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   bpmageu1:
     description: >
@@ -75,8 +84,17 @@ properties:
 
   cholage1:
     description: >
-      Cholesterol meds, age started use
+      Cholesterol meds, age started use. If age is greater than 89 years, see 'cholage1_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  cholage1_gt89:
+    description: >
+      Indicate whether Cholesterol meds, age started use is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   chlageu1:
     description: >
@@ -93,8 +111,17 @@ properties:
 
   dbage1:
     description: >
-      Diabetes meds, age started use
+      Diabetes meds, age started use. If age is greater than 89 years, see 'dbage1_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  dbage1_gt89:
+    description: >
+      Indicate whether Diabetes meds, age started use is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   dbageu1:
     description: >
@@ -129,18 +156,45 @@ properties:
 
   hrmrage1:
     description: >
-      Hormone replacement therapy, age started use (current user)
+      Hormone replacement therapy, age started use (current user). If age is greater than 89 years, see 'hrmrage1_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  hrmrage1_gt89:
+    description: >
+      Indicate whether Hormone replacement therapy, age started use (current user) is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   hrmsage1:
     description: >
-      Hormone replacement therapy, age started use (former user)
+      Hormone replacement therapy, age started use (former user). If age is greater than 89 years, see 'hrmsage1_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  hrmsage1_gt89:
+    description: >
+      Indicate whether Hormone replacement therapy, age started use (former user) is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   hrmage1c:
     description: >
-      Age started hrt use, current and former users
+      Age started hrt use, current and former users. If age is greater than 89 years, see 'hrmage1c_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  hrmage1c_gt89:
+    description: >
+      Indicate whether Age started hrt use, current and former users is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   aspirin1:
     description: >
@@ -149,8 +203,17 @@ properties:
 
   aspsage1:
     description: >
-      Aspirin: age started regular use
+      Aspirin: age started regular use. If age is greater than 89 years, see 'aspsage1_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  aspsage1_gt89:
+    description: >
+      Indicate whether 'Aspirin: age started regular use' is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   aspnow1:
     description: >
@@ -164,8 +227,17 @@ properties:
 
   aspeage1:
     description: >
-      Aspirin: age stopped using regularly
+      Aspirin: age stopped using regularly. If age is greater than 89 years, see 'aspeage1_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  aspeage1_gt89:
+    description: >
+      Indicate whether 'Aspirin: age stopped using regularly' is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   asacat1c:
     description: >

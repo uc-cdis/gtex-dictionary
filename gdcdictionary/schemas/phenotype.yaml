@@ -42,13 +42,13 @@ properties:
 
   hpo_id:
     description: |
-      The ID of the term from Human Phenotype Ontology 
+      The ID of the term from Human Phenotype Ontology
       which represents a harmonized phenotype
     type: string
 
   snomed_id_phenotype:
     description: |
-      The ID of the term from Systematized Nomenclature of Medicine - Clinical Terms 
+      The ID of the term from Systematized Nomenclature of Medicine - Clinical Terms
       which encodes clinical terminology
     type: string
 
@@ -58,7 +58,7 @@ properties:
 
   observed:
     description: "Whether phenotype is negative or positive"
-    enum: 
+    enum:
       - Positive
       - Negative
       - Not Reported
@@ -71,6 +71,15 @@ properties:
     type:
       - integer
       - "null"
+    maximum: 32872
+    minimum: 0
+
+  age_at_event_days_gt89:
+    term:
+      $ref: "_terms.yaml#/age_at_event_days_gt89"
+    enum:
+      - "Yes"
+      - "No"
 
   cases:
     $ref: "_definitions.yaml#/to_one"

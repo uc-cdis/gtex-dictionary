@@ -29,7 +29,7 @@ links:
     required: true
 
 preferred:
-  - cigarettes_per_day 
+  - cigarettes_per_day
   - years_smoked
 
 uniqueKeys:
@@ -53,6 +53,15 @@ properties:
     term:
       $ref: "_terms.yaml#/years_smoked"
     type: number
+    maximum: 89
+    minimum: 0
+
+  years_smoked_gt89:
+    term:
+      $ref: "_terms.yaml#/years_smoked_gt89"
+    enum:
+      - "Yes"
+      - "No"
 
 # OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
 
@@ -86,8 +95,17 @@ properties:
 
   alcohol_start_age:
     description: >
-      Alcohol: age started drinking
+      Alcohol: age in years started drinking. If age is greater than 89 years, see 'alcohol_start_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  alcohol_start_age_gt89:
+    description: >
+      Indicate whether Alcohol: age in years started drinking is greater than 89.
+    enum:
+      - "Yes"
+      - "No"
 
   anthro_protocol_modification:
     description: >
@@ -101,8 +119,17 @@ properties:
 
   chewing_smoking_start_age:
     description: >
-      Chewing tobacco: age started use
+      Chewing tobacco: age in years started use. If age is greater than 89 years, see 'chewing_smoking_start_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  chewing_smoking_start_age_gt89:
+    description: >
+      Indicate whether Chewing tobacco: age in years started use is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   chewing_smoking_last_month:
     description: >
@@ -111,8 +138,17 @@ properties:
 
   chewing_smoking_quit_age:
     description: >
-      Chewing tobacco: age quit use
+      Chewing tobacco: age in years quit use. If age is greater than 89 years, see 'chewing_smoking_quit_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  chewing_smoking_quit_age_gt89:
+    description: >
+      Indicate whether Chewing tobacco: age in years quit use is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   chewing_per_day:
     description: >
@@ -152,8 +188,17 @@ properties:
 
   cigarettes_smoking_start_age:
     description: >
-      Cigarettes: age started smoking
+      Cigarettes: age in years started smoking. If age is greater than 89 years, see 'cigarettes_smoking_start_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  cigarettes_smoking_start_age_gt89:
+    description: >
+      Indicate whether Cigarettes: age in years started smoking is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   cigarettes_smoking_last_month:
     description: >
@@ -162,8 +207,17 @@ properties:
 
   cigarettes_smoking_quit_age:
     description: >
-      Cigarettes: age quit smoking
+      Cigarettes: age in years quit smoking. If the age is greater than 89 years, see 'cigarettes_smoking_quit_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  cigarettes_smoking_quit_age_gt89:
+    description: >
+      Indicate whether Cigarettes: age in years quit smoking is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   cigars_smoked_20_lifetime:
     description: >
@@ -172,8 +226,17 @@ properties:
 
   cigars_smoking_start_age:
     description: >
-      Cigars: age started smoking
+      Cigars: age in years started smoking. If age is greater than 89 years, see 'cigars_smoking_start_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  cigars_smoking_start_age_gt89:
+    description: >
+      Indicate whether Cigars: age in years started smoking is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   cigars_smoking_last_month:
     description: >
@@ -182,8 +245,17 @@ properties:
 
   cigars_smoking_quit_age:
     description: >
-      Cigars: age quit smoking
+      Cigars: age in years quit smoking. If age is greater than 89 years, see 'cigars_smoking_quit_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  cigars_smoking_quit_age_gt89:
+    description: >
+      Indicate whether Cigars: age in years quit smoking is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   cigars_per_day:
     description: >
@@ -215,8 +287,17 @@ properties:
 
   current_years_drinking:
     description: >
-      # years drinking alcohol (current drinkers)
+      The number of years drinking alcohol (current drinkers). If the number of years is greater than 89, see 'current_years_drinking_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  current_years_drinking_gt89:
+    description: >
+      Indicate whether the number of years drinking alcohol (current drinkers) is greater than 89.
+    enum:
+      - "Yes"
+      - "No"
 
   drinks_past_24h:
     description: >
@@ -225,8 +306,17 @@ properties:
 
   former_drinker_years:
     description: >
-      # years drinking alcohol (former drinkers)
+      The number of years drinking alcohol (former drinkers). If the number of years is greater than 89, see 'former_drinker_years_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  former_drinker_years_gt89:
+    description: >
+      Indicate whether the number of years drinking alcohol (former drinkers) is greater than 89.
+    enum:
+      - "Yes"
+      - "No"
 
   former_wine_drinker:
     description: >
@@ -255,8 +345,17 @@ properties:
 
   years_drinking:
     description: >
-      # years drinking alcohol (current and former drinkers)
+      The number of years drinking alcohol (current and former drinkers). If number of years is over 89 years, see 'years_drinking_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  years_drinking_gt89:
+    description: >
+      Indicate whether the number of years drinking alcohol (current and former drinkers) is over 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   drinks_per_week:
     description: >
@@ -300,8 +399,17 @@ properties:
 
   pipe_smoking_start_age:
     description: >
-      Pipe: age started smoking
+      Pipe: age in years started smoking. If age is greater than 89 years, see 'pipe_smoking_start_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  pipe_smoking_start_age_gt89:
+    description: >
+      Indicate whether Pipe: age in years started smoking is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   pipe_smoking_last_month:
     description: >
@@ -310,8 +418,17 @@ properties:
 
   pipe_smoking_quit_age:
     description: >
-      Pipe: age quit smoking
+      Pipe: age in years quit smoking. If age is greater than 89 years, see 'pipe_smoking_quit_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  pipe_smoking_quit_age_gt89:
+    description: >
+      Indicate whether Pipe: age in years quit smoking is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   pipe_per_day:
     description: >
@@ -366,8 +483,17 @@ properties:
 
   snuff_smoking_start_age:
     description: >
-      Snuff: age started use
+      Snuff: age in years started use. If age is greater than 89 years, see 'snuff_smoking_start_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  snuff_smoking_start_age_gt89:
+    description: >
+      Indicate whether Snuff: age in years started use is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   snuff_smoking_last_month:
     description: >
@@ -376,8 +502,17 @@ properties:
 
   snuff_smoking_quit_age:
     description: >
-      Snuff: age quit use
+      Snuff: age in years quit use. If age is greater than 89 years, see 'snuff_smoking_quit_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  snuff_smoking_quit_age_gt89:
+    description: >
+      Indicate whether Snuff: age in years quit use is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   snuff_per_day:
     description: >

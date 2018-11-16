@@ -165,13 +165,31 @@ properties:
 
   nhdmo1:
     description: >
-      Number of months lived in neighborhood
+      Number of months lived in neighborhood. If the number of months is greater than 1068 (89 years), see 'nhdmo1_gt1068'.
     type: number
+    maximum: 1068
+    minimum: 0
+
+  nhdmo1_gt1068:
+    description: >
+      Indicate whether the 'Number of months lived in neighborhood' is greater than 1068 (89 years).
+    enum:
+      - "Yes"
+      - "No"
 
   nhdyrs1:
     description: >
-      Number of years lived in neighborhood
+      Number of years lived in neighborhood. If the number of years is greater than 89, see 'nhdyrs1_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  nhdyrs1_gt89:
+    description: >
+      Indicate whether the 'Number of years lived in neighborhood' is greater than 89.
+    enum:
+      - "Yes"
+      - "No"
 
   nhdblks1:
     description: >
@@ -190,8 +208,17 @@ properties:
 
   nhdtim1c:
     description: >
-      How long lived in neighborhood (yrs)
+      How long lived in neighborhood (yrs). If the number is greater than 89 years, see 'nhdtim1c_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  nhdtim1c_gt89:
+    description: >
+      Indicate whether 'How long lived in neighborhood (yrs)' is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   nhdadm1:
     description: >
@@ -202,8 +229,17 @@ properties:
 
   yrsus1:
     description: >
-      # years lived in u.s.a
+      The number of years lived in U.S.A.  If the number is greater than 89 years, see 'yrsus1_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  yrsus1_gt89:
+    description: >
+      Indicate whether 'The number of years lived in U.S.A.' is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   langhm1:
     description: >
