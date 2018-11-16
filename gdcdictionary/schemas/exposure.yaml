@@ -102,7 +102,7 @@ properties:
 
   alcohol_start_age_gt89:
     description: >
-      Indicate whether Alcohol: age in years started drinking is greater than 89
+      Indicate whether Alcohol: age in years started drinking is greater than 89.
     enum:
       - "Yes"
       - "No"
@@ -306,8 +306,17 @@ properties:
 
   former_drinker_years:
     description: >
-      # years drinking alcohol (former drinkers)
+      The number of years drinking alcohol (former drinkers). If the number of years is greater than 89, see 'former_drinker_years_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  former_drinker_years_gt89:
+    description: >
+      Indicate whether the number of years drinking alcohol (former drinkers) is greater than 89.
+    enum:
+      - "Yes"
+      - "No"
 
   former_wine_drinker:
     description: >

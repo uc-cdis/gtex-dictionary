@@ -31,7 +31,11 @@ adapter_sequence: # TOREVIEW
 
 age_at_event_days:
   description: >
-    Age at the time an event occurs.
+    Age at the time an event occurs expressed in the number of days since birth. If the age at event is greater than 32872 days (89 years), then see 'age_at_event_gt89'.
+
+age_at_event_days_gt89:
+  description: >
+    Indicate whether the 'Age at the time an event occurs expressed in the number of days since birth' is greater than 32872 days (89 years).
 
 age_at_diagnosis:
   description: >
@@ -1846,7 +1850,7 @@ year_of_death:
 
 years_smoked:
   description: >
-    Numeric value (or unknown) to represent the number of years a person has been smoking (HARMONIZED).
+    Numeric value (or unknown) to represent the number of years a person has been smoking (HARMONIZED). If the number of years is greater than 89, see 'years_smoked_gt89'.
   termDef:
     term: Person Smoking Duration Year Count
     source: caDSR

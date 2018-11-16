@@ -45,7 +45,7 @@ properties:
   asthma:
     description: >
       Reported Asthma condition in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -54,7 +54,7 @@ properties:
   diabetes:
     description: >
       Reported Diabetes in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -63,7 +63,7 @@ properties:
   type1_diabetes:
     description: >
       Reported Type-1 Diabetes in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -72,7 +72,7 @@ properties:
   type2_diabetes:
     description: >
       Reported Type-2 Diabetes in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -81,7 +81,7 @@ properties:
   hypertension:
     description: >
       Reported Hypertension condition in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -90,7 +90,7 @@ properties:
   hyperlipidemia:
     description: >
       Reported Hypertension condition in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -99,7 +99,7 @@ properties:
   cerebrovascular_disease:
     description: >
       Reported Cerebrovascular disease in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -108,7 +108,7 @@ properties:
   stroke:
     description: >
       Reported Stroke in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -117,7 +117,7 @@ properties:
   copd:
     description: >
       Reported Chronic Obstructive Pulmonary Disease (COPD) in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -126,7 +126,7 @@ properties:
   emphysema:
     description: >
       Reported Emphysema in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -135,7 +135,7 @@ properties:
   chronic_respiratory_disease:
     description: >
       Reported Chronic Respiratory disease in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -144,7 +144,7 @@ properties:
   coronary_artery_disease:
     description: >
       Reported Coronary Artery disease in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -153,7 +153,7 @@ properties:
   heart_failure:
     description: >
       Reported Heart failure in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -162,7 +162,7 @@ properties:
   myocardial_infarction:
     description: >
       Reported Myocardial Infarction in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -171,7 +171,7 @@ properties:
   cabg_presence:
     description: >
       Reported presence of coronary artery bypass graft (CABG) in the participant (HARMONIZED)
-    enum: 
+    enum:
         - "Yes"
         - "No"
         - "Not reported"
@@ -372,8 +372,17 @@ properties:
 
   hysterectomy_age:
     description: >
-      Age at hysterectomy
+      Age at hysterectomy in years. If age is greater than 89, see 'hysterectomy_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  hysterectomy_age_gt89:
+    description: >
+      Indicate whether Age at hysterectomy in years is greater than 89.
+    enum:
+      - "Yes"
+      - "No"
 
   ovaries_surgery:
     description: >
@@ -382,8 +391,17 @@ properties:
 
   ovaries_removal_age:
     description: >
-      Age when ovaries removed
+      Age when ovaries removed. If age is greater than 89, see 'ovaries_removal_age_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  ovaries_removal_age_gt89:
+    description: >
+      Indicate whether the Age when ovaries removed is greater than 89.
+    enum:
+      - "Yes"
+      - "No"
 
   removed_ovaries_number:
     description: >
@@ -424,8 +442,17 @@ properties:
 
   hormone_therapy_stop_year:
     description: >
-      Hormone replacement therapy, age stopped use
+      Hormone replacement therapy, age stopped use. If age is greater than 89, see 'hormone_therapy_stop_year_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  hormone_therapy_stop_year_gt89:
+    description: >
+      Indicate whether age stopped Hormone replacement therapy is greater than 89.
+    enum:
+      - "Yes"
+      - "No"
 
   hormone_therapy_type:
     description: >
