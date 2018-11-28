@@ -52,7 +52,9 @@ properties:
   years_smoked:
     term:
       $ref: "_terms.yaml#/years_smoked"
-    type: number
+    type:
+      - number
+      - "null"
     maximum: 89
     minimum: 0
 
