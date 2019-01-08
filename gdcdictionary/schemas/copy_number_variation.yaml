@@ -32,25 +32,24 @@ links:
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-       - name: copy_number_workflows
-         backref: copy_number_variations
-         label: derived_from
-         target_type: copy_number_workflow
-         multiplicity: many_to_one
-         required: false
-       - name: submitted_cnv_arrays
-         backref: copy_number_variations
-         label: derived_from
-         target_type: submitted_cnv_array
-         multiplicity: many_to_one
-         required: false
-       - name: submitted_snp_array_files
-         backref: copy_number_variations
-         label: derived_from
-         target_type: submitted_snp_array
-         multiplicity: many_to_one
-         required: false
-
+      - name: copy_number_workflows
+        backref: copy_number_variations
+        label: derived_from
+        target_type: copy_number_workflow
+        multiplicity: many_to_one
+        required: false
+      - name: submitted_cnv_arrays
+        backref: copy_number_variations
+        label: derived_from
+        target_type: submitted_cnv_array
+        multiplicity: many_to_one
+        required: false
+      - name: submitted_snp_array_files
+        backref: copy_number_variations
+        label: derived_from
+        target_type: submitted_snp_array
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
