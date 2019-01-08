@@ -23,12 +23,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: rna_expression_workflows
-    backref: gene_expressions
-    label: data_from
-    target_type: rna_expression_workflow
-    multiplicity: many_to_one
+  - exclusive: false
     required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: gene_expressions
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: rna_expression_workflows
+        backref: gene_expressions
+        label: data_from
+        target_type: rna_expression_workflow
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
@@ -39,7 +48,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - rna_expression_workflows
 
 uniqueKeys:
   - [ id ]
@@ -47,16 +55,17 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "gene_expression" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Transcriptome Profiling" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Gene Expression Quantification" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -65,11 +74,15 @@ properties:
       - TSV
       - CSV
       - GCT
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - RNA-Seq
       - Total RNA-Seq
+
   rna_expression_workflows:
     $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"

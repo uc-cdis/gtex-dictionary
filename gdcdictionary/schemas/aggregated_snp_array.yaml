@@ -22,9 +22,15 @@ systemProperties:
   - error_type
 
 links:
-  - exclusive: true
+  - exclusive: false
     required: true
     subgroup:
+       - name: core_metadata_collections
+         backref: aggregated_snp_array_files
+         label: data_from
+         target_type: core_metadata_collection
+         multiplicity: many_to_one
+         required: false
        - name: submitted_snp_array_files
          backref: aggregated_snp_array_files
          label: data_from
@@ -40,12 +46,10 @@ links:
 
 required:
   - submitter_id
-  - type
   - file_name
   - data_category
   - data_type
   - data_format
-  - submitted_snp_array_files
 
 uniqueKeys:
   - [ id ]
@@ -53,9 +57,6 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-
-  type:
-    enum: [ "submitted_snp_array" ]
 
   data_category:
     term:
@@ -93,8 +94,9 @@ properties:
       - Illumina OMNI 2.5M SNP Array
       - Affymetrix Genome-Wide Human SNP Array 6.0
 
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"
   submitted_snp_array_files:
     $ref: "_definitions.yaml#/to_many"
-
   aliquots:
     $ref: "_definitions.yaml#/to_many"

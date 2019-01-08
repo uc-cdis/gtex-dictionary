@@ -23,12 +23,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: aliquots
-    backref: submitted_cnv_arrays
-    label: derived_from
-    target_type: aliquot
-    multiplicity: one_to_one
+  - exclusive: false
     required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: submitted_cnv_arrays
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: aliquots
+        backref: submitted_cnv_arrays
+        label: derived_from
+        target_type: aliquot
+        multiplicity: one_to_one
+        required: false
 
 required:
   - submitter_id
@@ -39,7 +48,6 @@ required:
   - data_category
   - data_type
   - experimental_strategy
-  - aliquots
 
 uniqueKeys:
   - [ id ]
@@ -47,28 +55,31 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "submitted_tangent_copy_number" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Copy Number Variation
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Copy Number Estimate
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - TXT
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - CNV Genotyping Array
+
   platform:
     term:
       $ref: "_terms.yaml#/platform"
@@ -77,3 +88,5 @@ properties:
 
   aliquots:
     $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"

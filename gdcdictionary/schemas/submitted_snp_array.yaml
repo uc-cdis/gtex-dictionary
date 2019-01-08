@@ -22,21 +22,28 @@ systemProperties:
   - error_type
 
 links:
-  - name: aliquots
-    backref: submitted_snp_array_files
-    label: data_from
-    target_type: aliquot
-    multiplicity: one_to_one
+  - exclusive: false
     required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: submitted_snp_array_files
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: aliquots
+        backref: submitted_snp_array_files
+        label: data_from
+        target_type: aliquot
+        multiplicity: one_to_one
+        required: false
 
 required:
   - submitter_id
-  - type
   - file_name
   - data_category
   - data_type
   - data_format
-  - aliquots
 
 uniqueKeys:
   - [ id ]
@@ -44,9 +51,6 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-
-  type:
-    enum: [ "submitted_snp_array" ]
 
   data_category:
     term:
@@ -86,3 +90,5 @@ properties:
 
   aliquots:
     $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"

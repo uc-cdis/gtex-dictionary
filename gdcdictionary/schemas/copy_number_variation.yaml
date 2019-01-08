@@ -23,27 +23,33 @@ systemProperties:
   - error_type
 
 links:
-  - exclusive: true
+  - exclusive: false
     required: true
     subgroup:
-       - name: copy_number_workflows
-         backref: copy_number_variations
-         label: derived_from
-         target_type: copy_number_workflow
-         multiplicity: many_to_one
-         required: false
-       - name: submitted_cnv_arrays
-         backref: copy_number_variations
-         label: derived_from
-         target_type: submitted_cnv_array
-         multiplicity: many_to_one
-         required: false
-       - name: submitted_snp_array_files
-         backref: copy_number_variations
-         label: derived_from
-         target_type: submitted_snp_array
-         multiplicity: many_to_one
-         required: false
+      - name: core_metadata_collections
+        backref: copy_number_variations
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: copy_number_workflows
+        backref: copy_number_variations
+        label: derived_from
+        target_type: copy_number_workflow
+        multiplicity: many_to_one
+        required: false
+      - name: submitted_cnv_arrays
+        backref: copy_number_variations
+        label: derived_from
+        target_type: submitted_cnv_array
+        multiplicity: many_to_one
+        required: false
+      - name: submitted_snp_array_files
+        backref: copy_number_variations
+        label: derived_from
+        target_type: submitted_snp_array
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
@@ -62,9 +68,6 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-
-  type:
-    enum: [ "copy_number_segment" ]
 
   data_category:
     term:
@@ -102,9 +105,9 @@ properties:
 
   copy_number_workflows:
     $ref: "_definitions.yaml#/to_one"
-
   submitted_cnv_arrays:
     $ref: "_definitions.yaml#/to_one"
-
   submitted_snp_array_files:
     $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"

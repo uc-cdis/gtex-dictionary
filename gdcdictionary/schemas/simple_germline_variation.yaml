@@ -23,9 +23,15 @@ systemProperties:
   - error_type
 
 links:
-  - exclusive: true
+  - exclusive: false
     required: true
     subgroup:
+      - name: core_metadata_collections
+        backref: simple_germline_variations
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
       - name: germline_mutation_calling_workflows
         backref: simple_germline_variations
         label: data_from
@@ -67,20 +73,22 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "simple_germline_variation" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Simple Nucleotide Variation" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Simple Germline Variation" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: [ "VCF" ]
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -89,6 +97,7 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
+
   germline_mutation_calling_workflows:
     $ref: "_definitions.yaml#/to_one"
   read_groups:
@@ -96,4 +105,6 @@ properties:
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
   submitted_aligned_reads_files:
+    $ref: "_definitions.yaml#/to_many"
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
