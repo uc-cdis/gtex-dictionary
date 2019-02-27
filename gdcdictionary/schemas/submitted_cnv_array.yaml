@@ -23,21 +23,18 @@ systemProperties:
   - error_type
 
 links:
-  - exclusive: false
+  - name: core_metadata_collections
+    backref: submitted_cnv_arrays
+    label: data_from
+    target_type: core_metadata_collection
+    multiplicity: many_to_one
+    required: false
+  - name: aliquots
+    backref: submitted_cnv_arrays
+    label: derived_from
+    target_type: aliquot
+    multiplicity: one_to_one
     required: true
-    subgroup:
-      - name: core_metadata_collections
-        backref: submitted_cnv_arrays
-        label: data_from
-        target_type: core_metadata_collection
-        multiplicity: many_to_one
-        required: false
-      - name: aliquots
-        backref: submitted_cnv_arrays
-        label: derived_from
-        target_type: aliquot
-        multiplicity: one_to_one
-        required: true
 
 required:
   - submitter_id

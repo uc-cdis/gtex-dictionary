@@ -23,39 +23,36 @@ systemProperties:
   - error_type
 
 links:
-  - exclusive: false
+  - name: core_metadata_collections
+    backref: simple_germline_variations
+    label: data_from
+    target_type: core_metadata_collection
+    multiplicity: many_to_one
+    required: false
+  - name: germline_mutation_calling_workflows
+    backref: simple_germline_variations
+    label: data_from
+    target_type: germline_mutation_calling_workflow
+    multiplicity: many_to_one
+    required: false
+  - name: read_groups
+    backref: simple_germline_variations
+    label: data_from
+    target_type: read_group
+    multiplicity: many_to_many
     required: true
-    subgroup:
-      - name: core_metadata_collections
-        backref: simple_germline_variations
-        label: data_from
-        target_type: core_metadata_collection
-        multiplicity: many_to_one
-        required: false
-      - name: germline_mutation_calling_workflows
-        backref: simple_germline_variations
-        label: data_from
-        target_type: germline_mutation_calling_workflow
-        multiplicity: many_to_one
-        required: false
-      - name: read_groups
-        backref: simple_germline_variations
-        label: data_from
-        target_type: read_group
-        multiplicity: many_to_many
-        required: true
-      - name: submitted_aligned_reads_files
-        backref: simple_germline_variations
-        label: data_from
-        target_type: submitted_aligned_reads
-        multiplicity: many_to_many
-        required: true
-      - name: aligned_reads_files
-        backref: simple_germline_variations
-        label: data_from
-        target_type: aligned_reads
-        multiplicity: many_to_many
-        required: false
+  - name: submitted_aligned_reads_files
+    backref: simple_germline_variations
+    label: data_from
+    target_type: submitted_aligned_reads
+    multiplicity: many_to_many
+    required: true
+  - name: aligned_reads_files
+    backref: simple_germline_variations
+    label: data_from
+    target_type: aligned_reads
+    multiplicity: many_to_many
+    required: false
 
 required:
   - submitter_id
