@@ -37,7 +37,7 @@ links:
         label: data_from
         target_type: read_group
         multiplicity: one_to_many
-        required: false
+        required: true
 
 required:
   - submitter_id
@@ -48,6 +48,7 @@ required:
   - data_category
   - data_type
   - experimental_strategy
+  - read_groups
 
 uniqueKeys:
   - [ id ]

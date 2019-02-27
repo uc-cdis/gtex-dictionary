@@ -37,7 +37,7 @@ links:
         label: data_from
         target_type: rna_expression_workflow
         multiplicity: many_to_one
-        required: false
+        required: true
 
 required:
   - submitter_id
@@ -48,6 +48,7 @@ required:
   - data_type
   - data_format
   - experimental_strategy
+  - rna_expression_workflows
 
 uniqueKeys:
   - [ id ]

@@ -43,13 +43,13 @@ links:
         label: derived_from
         target_type: submitted_cnv_array
         multiplicity: many_to_one
-        required: false
+        required: true
       - name: submitted_snp_array_files
         backref: copy_number_variations
         label: derived_from
         target_type: submitted_snp_array
         multiplicity: many_to_one
-        required: false
+        required: true
 
 required:
   - submitter_id
@@ -61,6 +61,8 @@ required:
   - data_type
   - experimental_strategy
   - platform
+  - submitted_cnv_arrays
+  - submitted_snp_array_files
 
 uniqueKeys:
   - [ id ]

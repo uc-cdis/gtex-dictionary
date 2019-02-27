@@ -30,7 +30,7 @@ links:
         label: data_from
         target_type: read_group
         multiplicity: one_to_many
-        required: false
+        required: true
       - name: core_metadata_collections
         backref: submitted_unaligned_reads_files
         label: data_from
@@ -47,6 +47,7 @@ required:
   - data_type
   - data_format
   - experimental_strategy
+  - read_groups
 
 uniqueKeys:
   - [ id ]

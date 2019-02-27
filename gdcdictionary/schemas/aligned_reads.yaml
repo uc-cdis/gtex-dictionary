@@ -55,7 +55,7 @@ links:
         label: matched_to
         target_type: submitted_aligned_reads
         multiplicity: one_to_one
-        required: false
+        required: true
 
 required:
   - submitter_id
@@ -67,6 +67,7 @@ required:
   - data_format
   - experimental_strategy
   - platform
+  - submitted_aligned_reads_files
 
 uniqueKeys:
   - [ id ]

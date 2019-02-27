@@ -37,7 +37,7 @@ links:
         label: derived_from
         target_type: aliquot
         multiplicity: one_to_one
-        required: false
+        required: true
 
 required:
   - submitter_id
@@ -48,6 +48,7 @@ required:
   - data_category
   - data_type
   - experimental_strategy
+  - aliquots
 
 uniqueKeys:
   - [ id ]

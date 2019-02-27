@@ -36,7 +36,7 @@ links:
         label: data_from
         target_type: aliquot
         multiplicity: one_to_one
-        required: false
+        required: true
 
 required:
   - submitter_id
@@ -44,6 +44,7 @@ required:
   - data_category
   - data_type
   - data_format
+  - aliquots
 
 uniqueKeys:
   - [ id ]

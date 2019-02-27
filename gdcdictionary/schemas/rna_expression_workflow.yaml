@@ -42,12 +42,13 @@ links:
         label: performed_on
         target_type: submitted_unaligned_reads
         multiplicity: many_to_many #to one?
-        required: false
+        required: true
 
 required:
   - submitter_id
   - workflow_link
   - workflow_type
+  - submitted_unaligned_reads_files
 
 uniqueKeys:
   - [ id ]
