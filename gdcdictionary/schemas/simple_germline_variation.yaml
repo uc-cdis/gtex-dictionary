@@ -63,7 +63,7 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - submitted_aligned_reads_files
+  - read_groups
 
 uniqueKeys:
   - [ id ]

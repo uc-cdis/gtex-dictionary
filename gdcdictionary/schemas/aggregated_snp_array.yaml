@@ -47,7 +47,6 @@ required:
   - data_category
   - data_type
   - data_format
-  - aliquots
   - submitted_snp_array_files
 
 uniqueKeys:

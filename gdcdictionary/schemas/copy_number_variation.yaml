@@ -58,7 +58,6 @@ required:
   - data_type
   - experimental_strategy
   - platform
-  - submitted_cnv_arrays
   - submitted_snp_array_files
 
 uniqueKeys:
