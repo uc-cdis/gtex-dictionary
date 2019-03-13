@@ -40,7 +40,7 @@ links:
     label: derived_from
     target_type: submitted_cnv_array
     multiplicity: many_to_one
-    required: true
+    required: false
   - name: submitted_snp_array_files
     backref: copy_number_variations
     label: derived_from

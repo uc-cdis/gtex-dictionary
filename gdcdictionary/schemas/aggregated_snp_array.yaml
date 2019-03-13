@@ -39,7 +39,7 @@ links:
     label: data_from
     target_type: aliquot
     multiplicity: many_to_many
-    required: true
+    required: false
 
 required:
   - submitter_id
