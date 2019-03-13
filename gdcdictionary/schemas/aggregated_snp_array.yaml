@@ -39,7 +39,7 @@ links:
     label: data_from
     target_type: aliquot
     multiplicity: many_to_many
-    required: true
+    required: false
 
 required:
   - submitter_id
@@ -47,7 +47,6 @@ required:
   - data_category
   - data_type
   - data_format
-  - aliquots
   - submitted_snp_array_files
 
 uniqueKeys:
