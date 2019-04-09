@@ -55,19 +55,19 @@ properties:
   phenotype:
     description: "Name given to the phenotype by contributor"
     enum:
-      - asthma
-      - abnormal PR interval
-      - abnormal QT interval
-      - atrial fibrillation
-      - cerebral hemorrhage
-      - chronic obstructive pulmonary disease
-      - coronary artery calcification
-      - hypertension
-      - ischemic stroke
-      - left ventricular hypertrophy
-      - myocardial infarction
-      - severity
-      - sleep apnea
+      - "asthma"
+      - "abnormal PR interval"
+      - "abnormal QT interval"
+      - "atrial fibrillation"
+      - "cerebral hemorrhage"
+      - "chronic obstructive pulmonary disease"
+      - "coronary artery calcification"
+      - "hypertension"
+      - "ischemic stroke"
+      - "left ventricular hypertrophy"
+      - "myocardial infarction"
+      - "severity"
+      - "sleep apnea"
     enumDef:
       - enumeration: asthma
         source: hp
