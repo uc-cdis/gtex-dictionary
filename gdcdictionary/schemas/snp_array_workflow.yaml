@@ -28,6 +28,7 @@ links:
     required: true
 
 required:
+  - type
   - submitter_id
   - workflow_type
   - aggregated_snp_array_files
