@@ -46,6 +46,7 @@ links:
 
 
 required:
+  - type
   - submitter_id
   - file_name
   - file_size
