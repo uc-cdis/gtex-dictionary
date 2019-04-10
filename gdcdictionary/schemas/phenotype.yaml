@@ -28,6 +28,7 @@ links:
     required: true
 
 required:
+  - type
   - cases
   - phenotype
   - observed
