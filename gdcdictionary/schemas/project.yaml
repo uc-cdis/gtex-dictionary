@@ -21,7 +21,6 @@ systemProperties:
   - intended_release_date
 
 required:
-  - type
   - code 
   - name 
   - programs
