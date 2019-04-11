@@ -60,5 +60,3 @@ properties:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
-  projects:
-    $ref: "_definitions.yaml#/to_one_project"
