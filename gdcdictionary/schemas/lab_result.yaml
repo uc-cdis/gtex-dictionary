@@ -35,7 +35,6 @@ uniqueKeys:
 required:
   - type
   - submitter_id
-  - type
   - cases
 
 properties:
