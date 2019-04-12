@@ -33,7 +33,6 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 required:
-  - type
   - submitter_id
   - type
   - cases

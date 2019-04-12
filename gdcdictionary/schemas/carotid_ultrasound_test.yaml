@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  High-resolution B-mode ultrasonography will be used for noninvasive measurement of intima-media thickness (IMT) of the carotid arteries and plaque characterization. 
+  High-resolution B-mode ultrasonography will be used for noninvasive measurement of intima-media thickness (IMT) of the carotid arteries and plaque characterization.
 additionalProperties: false
 submittable: true
 validators: null
@@ -33,7 +33,6 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 required:
-  - type
   - submitter_id
   - type
   - cases
