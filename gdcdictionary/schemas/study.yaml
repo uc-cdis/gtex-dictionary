@@ -25,7 +25,7 @@ links:
   - name: projects
     backref: studies
     label: performed_for
-    target_type: project 
+    target_type: project
     multiplicity: many_to_one
     required: true
 
@@ -64,4 +64,4 @@ properties:
       - Raw/Processed
 
   projects:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one_project"
