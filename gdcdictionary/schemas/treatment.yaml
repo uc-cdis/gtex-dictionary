@@ -29,7 +29,10 @@ links:
     multiplicity: many_to_one
     required: true
 
-
+required:
+  - type
+  - diagnoses
+  - submitter_id
 
 uniqueKeys:
   #unclear if want submitter ID for clinical

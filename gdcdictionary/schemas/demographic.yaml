@@ -30,6 +30,7 @@ links:
     required: true
 
 required:
+  - type
   - submitter_id
   - cases
 

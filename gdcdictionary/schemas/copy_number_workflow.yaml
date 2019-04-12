@@ -38,6 +38,7 @@ links:
         required: false
 
 required:
+  - type
   - submitter_id
   - workflow_link
   - workflow_type

@@ -1,13 +1,13 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "keyword"
-title: Keyword
+id: "publication"
+title: Publication
 type: object
 namespace: https://dcp.bionimbus.org/
 category: administrative
 program: '*'
 project: '*'
-description: "A keyword for a project."
+description: "Publication for a project."
 additionalProperties: false
 submittable: true
 validators: null
@@ -21,8 +21,8 @@ systemProperties:
 
 links:
   - name: projects
-    backref: keywords
-    label: describe
+    backref: publications
+    label: refers_to
     target_type: project
     multiplicity: many_to_many
     required: true
@@ -34,11 +34,11 @@ required:
 
 uniqueKeys:
   - [ id ]
-  - [ project_id, submitter_id ]
+  - [ project_id, submitter_id ] 
 
 properties:
   type:
-    enum: [ "keyword" ]
+    enum: [ "publication" ] 
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
@@ -48,8 +48,9 @@ properties:
     type:
       - string
       - "null"
-  keyword_name:
-    description: "The name of the keyword."
+  pmid:
+    type: string
+  doi:
     type: string
   projects:
     $ref: "_definitions.yaml#/to_many_project"

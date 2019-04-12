@@ -39,6 +39,7 @@ links:
         required: false
 
 required:
+  - type
   - submitter_id
   - file_name
   - file_size
@@ -88,4 +89,4 @@ properties:
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
   projects:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many_project"

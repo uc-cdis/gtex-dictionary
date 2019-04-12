@@ -28,6 +28,11 @@ links:
     multiplicity: many_to_one
     required: true
 
+required:
+  - type
+  - submitter_id
+  - cases
+
 preferred:
   - cigarettes_per_day
   - years_smoked
