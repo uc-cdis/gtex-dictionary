@@ -50,7 +50,34 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
-
+    termDef:
+       - term: asthma
+         source: NCI Thesaurus
+         term_id: C28397
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: asthma
+         source: hp
+         term_id: HP:0002099
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
+    
   diabetes:
     description: >
       Reported Diabetes in the participant (HARMONIZED)
@@ -59,6 +86,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: diabetes
+         source: NCI Thesaurus
+         term_id: C2985
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: diabetes
+         source: hp
+         term_id: HP:0000819
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   type1_diabetes:
     description: >
@@ -68,6 +122,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: type1_diabetes
+         source: NCI Thesaurus
+         term_id: C2986
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: type1_diabetes
+         source: hp
+         term_id: HP:0100651
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   type2_diabetes:
     description: >
@@ -77,6 +158,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: type2_diabetes
+         source: NCI Thesaurus
+         term_id: C26747
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: type2_diabetes
+         source: hp
+         term_id: HP:0005978
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   hypertension:
     description: >
@@ -86,6 +194,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: hypertension
+         source: NCI Thesaurus
+         term_id: C3117
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: hypertension
+         source: hp
+         term_id: HP:0000822
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   hyperlipidemia:
     description: >
@@ -95,6 +230,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: hyperlipidemia
+         source: NCI Thesaurus
+         term_id: C34707
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: hyperlipidemia
+         source: hp
+         term_id: HP:0003077
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   cerebrovascular_disease:
     description: >
@@ -104,6 +266,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: cerebrovascular_disease
+         source: NCI Thesaurus
+         term_id: C2938
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: cerebrovascular_disease
+         source: hp
+         term_id: 
+         term_version:
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   stroke:
     description: >
@@ -113,7 +302,34 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
-
+    termDef:
+       - term: stroke
+         source: NCI Thesaurus
+         term_id: C3390
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: stroke
+         source: hp
+         term_id: HP:0001297
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
+    
   copd:
     description: >
       Reported Chronic Obstructive Pulmonary Disease (COPD) in the participant (HARMONIZED)
@@ -122,6 +338,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: copd
+         source: NCI Thesaurus
+         term_id: C3199
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: copd
+         source: hp
+         term_id: HP:0006510
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   emphysema:
     description: >
@@ -131,6 +374,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: emphysema
+         source: NCI Thesaurus
+         term_id: C3348
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: emphysema
+         source: hp
+         term_id: HP:0002097
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   chronic_respiratory_disease:
     description: >
@@ -140,6 +410,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: chronic_respiratory_disease
+         source: NCI Thesaurus
+         term_id: C157816
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: chronic_respiratory_disease
+         source: hp
+         term_id: 
+         term_version:
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   coronary_artery_disease:
     description: >
@@ -149,6 +446,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: coronary_artery_disease
+         source: NCI Thesaurus
+         term_id: C26732
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: coronary_artery_disease
+         source: hp
+         term_id: HP:0001677
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   heart_failure:
     description: >
@@ -158,6 +482,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: heart_failure
+         source: NCI Thesaurus
+         term_id: C50577
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: heart_failure
+         source: hp
+         term_id: 
+         term_version: 
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   myocardial_infarction:
     description: >
@@ -167,6 +518,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: myocardial_infarction
+         source: NCI Thesaurus
+         term_id: C27996
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: myocardial_infarction
+         source: hp
+         term_id: HP:0001658
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
   cabg_presence:
     description: >
@@ -176,6 +554,33 @@ properties:
         - "No"
         - "Not reported"
         - "Unknown"
+    termDef:
+       - term: coronary_artery_disease
+         source: NCI Thesaurus
+         term_id: C26732
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: coronary_artery_disease
+         source: hp
+         term_id: HP:0001677
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
 
 # OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
   arthritis:
