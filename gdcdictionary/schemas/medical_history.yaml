@@ -490,8 +490,8 @@ properties:
     termDef:
        - term: heart_failure
          source: hp
-         term_id: 
-         term_version: 
+         term_id: HP:0001635
+         term_version: "2019-04-15"
     enumDef:
        - enumeration: Yes
          source: NCI Thesaurus
