@@ -68,6 +68,7 @@ properties:
     enum:
       - "Actual Death"
       - "Presumed Death"
+      - "Cross Clamp Applied"
 
   available_death_certificate:
     description: >
