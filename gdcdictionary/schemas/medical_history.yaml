@@ -224,7 +224,7 @@ properties:
 
   hyperlipidemia:
     description: >
-      Reported Hypertension condition in the participant (HARMONIZED)
+      Reported Hyperlipidemia condition in the participant (HARMONIZED)
     enum:
         - "Yes"
         - "No"
