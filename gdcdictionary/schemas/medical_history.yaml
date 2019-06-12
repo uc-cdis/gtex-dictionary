@@ -1048,7 +1048,9 @@ properties:
   EF_ever_50:
     description: >
       EF ever <50%
-    type: number
+    enum:
+      - "Yes"
+      - "No"
 
   cases:
     $ref: "_definitions.yaml#/to_one"
