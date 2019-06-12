@@ -1014,6 +1014,43 @@ properties:
     description: >
       Exam 1 (calibrated cr) egfr using ckd-epi equation
     type: number
+    
+    
+  valvular_heart_disease:
+    description: >
+      Valvular heart disease at enrollment
+    enum:
+      - "Yes"
+      - "No"
+      - "Missing"
+    
+  valvular_heart_disease_specify:
+    description: >
+      Valvular heart disease specify
+    enum:
+      - "NA"
+      - "Mitral regurgitation"
+      - "Mitral stenosis"
+      - "Tricuspid regurgitation"
+      - "Mitral regurgitation, Mitral stenosis"
+      - "Aortic stenosis"
+      
+  LA_size_echo:
+    description: >
+      LA size by echo (closest to enrollment)
+    type: number
+  
+  LVEF_echo:
+    description: >
+      LVEF by echo (closet to enrollment)
+    type: number
+  
+  EF_ever_50:
+    description: >
+      EF ever <50%
+    enum:
+      - "Yes"
+      - "No"
 
   cases:
     $ref: "_definitions.yaml#/to_one"
