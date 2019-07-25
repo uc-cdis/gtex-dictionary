@@ -582,6 +582,78 @@ properties:
          term_id: C17998
          version_date: 19.03d (Release date:2019-03-25)
 
+  chronic_bronchitis:
+    description: >
+      Reported chronic bronchitis condition in the participant (HARMONIZED)
+    enum:
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
+    termDef:
+       - term: chronic bronchitis
+         source: NCI Thesaurus
+         term_id: C26722
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: chronic bronchitis
+         source: hp
+         term_id: HP:0004469
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
+
+  atrial_fibrillation:
+    description: >
+      Reported atrial fibrillation condition in the participant (HARMONIZED)
+    enum:
+        - "Yes"
+        - "No"
+        - "Not reported"
+        - "Unknown"
+    termDef:
+       - term: atrial fibrillation
+         source: NCI Thesaurus
+         term_id: C50466
+         term_version: 19.03d (Release date:2019-03-25)
+    termDef:
+       - term: atrial fibrillation
+         source: hp
+         term_id: HP:0005110
+         term_version: "2019-04-15"
+    enumDef:
+       - enumeration: Yes
+         source: NCI Thesaurus
+         term_id: C49488
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: No
+         source: NCI Thesaurus
+         term_id: C49487
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Not reported
+         source: NCI Thesaurus
+         term_id: C43234
+         version_date: 19.03d (Release date:2019-03-25)
+       - enumeration: Unknown
+         source: NCI Thesaurus
+         term_id: C17998
+         version_date: 19.03d (Release date:2019-03-25)
+
 # OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
   arthritis:
     description: >
