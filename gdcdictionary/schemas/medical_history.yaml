@@ -1107,17 +1107,17 @@ properties:
       - "Mitral regurgitation, Mitral stenosis"
       - "Aortic stenosis"
       
-  LA_size_echo:
+  la_size_echo:
     description: >
       LA size by echo (closest to enrollment)
     type: number
   
-  LVEF_echo:
+  lvef_echo:
     description: >
       LVEF by echo (closet to enrollment)
     type: number
   
-  EF_ever_50:
+  ef_ever_50:
     description: >
       EF ever <50%
     enum:
