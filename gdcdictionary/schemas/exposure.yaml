@@ -526,5 +526,10 @@ properties:
       Snuff: average # uses per day
     type: number
 
+  age_at_current_smoker_baseline:
+    description: >
+      age at measurement of current_smoker_baseline (years)
+    type: number
+
   cases:
     $ref: "_definitions.yaml#/to_one"

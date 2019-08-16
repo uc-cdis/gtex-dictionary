@@ -1116,13 +1116,153 @@ properties:
     description: >
       LVEF by echo (closet to enrollment)
     type: number
-  
+
   ef_ever_50:
     description: >
       EF ever <50%
     enum:
       - "Yes"
       - "No"
+  
+  vte_followup_start_age:
+    description: >
+      Age of subject at the start of the follow up period during which venousthromboembolism (VTE) events were reviewed and adjudicated. (years)
+    type: number
+
+  unit_vte_followup_start_age:
+    description: >
+      harmonization unit for vte_followup_start_age
+    type: string
+
+  vte_prior_history:
+    description: >
+      An indicator of whether a subject had a venous thromboembolism (VTE)event prior to the start of the medical review process (includingself-reported events).
+    type: boolean
+  
+  age_at_vte_prior_history:
+    description: >
+      age at measurement of vte_prior_history (years)
+    type: number
+
+  unit_vte_prior_history:
+    description: >
+      harmonization unit for vte_prior_history
+    type: string
+
+  vte_case_status:
+    description: >
+      An indicator of whether a subject experienced a venous thromboembolismevent (VTE) that was verified by adjudication or by medical professionals.
+    enum:
+      - "Not known to ever have a VTE event, either self-reported or from medical records"
+      - "Experienced a VTE event as verified by adjudication or by medical professionals"
+
+  age_at_vte_case_status:
+    description: >
+      age at measurement of vte_case_status
+    type: number
+
+  unit_vte_case_status:
+    description: >
+      harmonization unit for vte_case_status
+    type: string
+
+  cac_volume:
+    description: >
+      Coronary artery calcium volume using CT scan(s) of coronary arteries
+    type: number
+
+  age_at_cac_volume:
+    description: >
+      age at measurement of cac_volume (years)
+    type: number
+
+  unit_cac_volume:
+    description: >
+      harmonization unit for cac_volume
+    type: string
+
+  cac_score:
+    description: >
+      Coronary artery calcification (CAC) score using Agatston scoring of CT scan(s) of coronary arteries decimal
+    type: number
+
+  age_at_cac_score:
+    description: >
+      age at measurement of cac_score (years)
+    type: number
+
+  unit_cac_score:
+    description: >
+      harmonization unit for cac_score
+    type: string
+
+  cimt_1:
+    description: >
+      Common carotid intima-media thickness, calculated as the mean of two values: mean of multiple thickness estimates from the left far wall and from the right far wall.
+    type: number
+  
+  age_at_cimt_1:
+    description: >
+      age at measurement of cimt_1 (years)
+    type: number
+
+  unit_cimt_1:
+    description: >
+      harmonization unit for cimt_1
+    type: string
+
+  cimt_2:
+    description: >
+      Common carotid intima-media thickness, calculated as the mean of four values: maximum of multiple thickness estimates from the left far wall, left near wall, right far wall, and right near wall. (mm)
+    type: number
+
+  age_at_cimt_2:
+    description: >
+      age at measurement of cimt_2 (years)
+    type: number
+
+  unit_cimt_2:
+    description: >
+      harmonization unit for cimt_2
+    type: string
+
+  carotid_stenosis:
+    description: >
+      Extent of narrowing of the carotid artery.
+    enum:
+      - "None"
+      - "1%-24%"
+      - "25%-49%"
+      - "50%-74%"
+      - "75%-99%"
+      - "100%"
+
+  age_at_carotid_stenosis:
+    description: >
+      age at measurement of carotid_stenosis (years)
+    type: number
+
+  unit_carotid_stenosis:
+    description: >
+      harmonization unit for carotid_stenosis
+    type: string
+
+  unit_carotid_stenosis:
+    description: >
+      Presence or absence of carotid plaque.
+    enum:
+      - "Plaque not present"
+      - "Plaque not present Plaque present"
+
+  age_at_carotid_plaque:
+    description: >
+      age at measurement of carotid_plaque (years)
+    type: number
+
+  unit_carotid_plaque:
+    description: >
+      harmonization unit for carotid_plaque
+    type: string
 
   cases:
     $ref: "_definitions.yaml#/to_one"
