@@ -1116,6 +1116,13 @@ properties:
     description: >
       LVEF by echo (closet to enrollment)
     type: number
+
+  ef_ever_50:
+    description: >
+      EF ever <50%
+    enum:
+      - "Yes"
+      - "No"
   
   vte_followup_start_age:
     description: >
@@ -1130,9 +1137,7 @@ properties:
   vte_prior_history:
     description: >
       An indicator of whether a subject had a venous thromboembolism (VTE)event prior to the start of the medical review process (includingself-reported events).
-    enum:
-      - "did not have prior VTE event"
-      - "had prior VTE event"
+    type: boolean
   
   age_at_vte_prior_history:
     description: >
