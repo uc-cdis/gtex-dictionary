@@ -908,5 +908,75 @@ properties:
       Tumor necrosis factor-a soluble receptors (pg/ml)
     type: number
 
+  hemoglobin_mcnc_bld:
+    description: >
+      Measurement of mass per volume, or mass concentration (mcnc), of hemoglobin in the blood (bld). (g / dL = grams per deciliter)
+    type: number
+
+  age_at_hemoglobin_mcnc_bld:
+    description: >
+      age at measurement of hemoglobin_mcnc_bld. (years)
+    type: number
+  
+  unit_hemoglobin_mcnc_bld:
+    description: >
+      Measurement of hematocrit, the fraction of volume (vfr) of blood (bld) that is composed of red blood cells. (percentage)
+    type: number
+
+  hematocrit_vfr_bld:
+    description: >
+      Measurement of hematocrit, the fraction of volume (vfr) of blood (bld) that is composed of red blood cells. (percentage)
+    type: number
+
+  age_at_hematocrit_vfr_bld:
+    description: >
+      Measurement of hematocrit, the fraction of volume (vfr) of blood (bld) that is composed of red blood cells. (years)
+    type: number
+
+  unit_hematocrit_vfr_bld:
+    description: >
+      harmonization unit for hematocrit_vfr_bld.
+    type: string
+
+  age_at_total_chol1:
+    description: >
+      age at measurement of total_chol1 (years)
+    type: number
+
+  unit_total_chol1:
+    description: >
+      harmonization unit for total_chol1
+    type: string
+
+  age_at_triglycerides1:
+    description: >
+      age at measurement of triglycerides1 (years)
+    type: number
+
+  unit_triglycerides1:
+    description: >
+      harmonization unit for triglycerides1
+    type: string
+
+  age_at_hdl1:
+    description: >
+      age at measurement of hdl1 (years)
+    type: number
+
+  unit_hdl1:
+    description: >
+      harmonization unit for hdl1
+    type: string
+
+  age_at_ldl1:
+    description: >
+      age at measurement of ldl1 (years)
+    type: number
+  :
+  unit_ldl1:
+    description: >
+      harmonization unit for ldl1
+    type: string
+
   cases:
     $ref: "_definitions.yaml#/to_one"

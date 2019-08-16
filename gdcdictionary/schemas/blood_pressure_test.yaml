@@ -297,6 +297,26 @@ properties:
     description: >
       Youngs modulus
     type: number
+  
+  age_at_bp_systolic:
+    description: >
+      age at measurement of bp_systolic (years)
+    type: number
+
+  unit_bp_systolic:
+    description: >
+      harmonization unit for bp_systolic
+    type: string
+
+  bp_diastolic:
+    description: >
+      Resting diastolic blood pressure from the upper arm in a clinical setting.
+    type: number
+
+  age_at_bp_diastolic:
+    description: >
+      age at measurement of bp_diastolic (years)
+    type: number
 
   cases:
     $ref: "_definitions.yaml#/to_one"

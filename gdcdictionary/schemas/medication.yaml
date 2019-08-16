@@ -694,5 +694,30 @@ properties:
       Norepinephrine-dopamine reuptake inhibitor
     type: number
 
+  age_at_lipid1c:
+    description: >
+      age at measurement of age_at_lipid1c (years)
+    type: number
+  
+  unit_lipid1c:
+    description: >
+      harmonization unit for unit_lipid1c
+    type: string
+
+  fasting_lipids:
+    description: >
+      Indicates whether participant fasted for at least eight hours prior to blood draw to measure lipids phenotypes.
+    type: boolean
+
+  age_at_fasting_lipids:
+    description: >
+      age at measurement of fasting_lipids (years)
+    type: number
+
+  unit_fasting_lipids:
+    description: >
+      harmonization unit for fasting_lipids
+    type: string
+  
   cases:
     $ref: "_definitions.yaml#/to_one"

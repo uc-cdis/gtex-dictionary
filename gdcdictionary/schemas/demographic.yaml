@@ -86,11 +86,12 @@ properties:
     term:
       $ref: "_terms.yaml#/ethnicity"
     enum:
-      - hispanic or latino
-      - not hispanic or latino
-      - Unknown
-      - not reported
-      - not allowed to collect
+      - "hispanic or latino"
+      - "inconsistent/contradictory"
+      - "not hispanic or latino"
+      - "Unknown"
+      - "not reported"
+      - "not allowed to collect"
 
   weight:
     term:
@@ -164,6 +165,43 @@ properties:
     description: >
       Waist circumference (cm)
     type: number
+
+  age_at_height_baseline:
+    description: >
+      age at measurement of height_baseline (years)
+    type: number
+
+  unit_height_baseline:
+    description: >
+      harmonization unit for height_baseline
+    type: string
+
+  unit_race:
+    description: >
+      harmonization unit for race
+    type: string
+
+  unit_ethnicity:
+    description: >
+      harmonization unit for ethnicity
+    type: string
+  
+  hispanic_subgroup:
+    description: >
+      classification of Hispanic/Latino background for Hispanic/Latino subjects where country or region of origin information is available
+    enum:
+      - "CentralAmerican"
+      - "CostaRican"
+      - "Cuban"
+      - "Dominican"
+      - "Mexican"
+      - "PuertoRican"
+      - "SouthAmerican"
+
+  unit_hispanic_subgroup:
+    description: >
+      harmonization unit for hispanic_subgroup
+    type: string
 
   cases:
     $ref: "_definitions.yaml#/to_one"
