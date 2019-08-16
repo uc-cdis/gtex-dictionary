@@ -972,7 +972,7 @@ properties:
     description: >
       age at measurement of ldl1 (years)
     type: number
-  :
+
   unit_ldl1:
     description: >
       harmonization unit for ldl1
