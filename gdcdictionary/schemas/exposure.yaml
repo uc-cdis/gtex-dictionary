@@ -525,6 +525,11 @@ properties:
     description: >
       Snuff: average # uses per day
     type: number
+  
+  current_smoker_baseline:
+    description: >
+      Indicates whether subject currently smokes cigarettes.
+    type: boolean
 
   age_at_current_smoker_baseline:
     description: >
