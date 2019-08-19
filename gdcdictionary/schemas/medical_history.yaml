@@ -1152,9 +1152,7 @@ properties:
   vte_case_status:
     description: >
       An indicator of whether a subject experienced a venous thromboembolismevent (VTE) that was verified by adjudication or by medical professionals.
-    enum:
-      - "Not known to ever have a VTE event, either self-reported or from medical records"
-      - "Experienced a VTE event as verified by adjudication or by medical professionals"
+    type: boolean
 
   age_at_vte_case_status:
     description: >
@@ -1253,6 +1251,13 @@ properties:
     enum:
       - "Plaque not present"
       - "Plaque not present Plaque present"
+
+  carotid_plaque:
+    description: >
+      Presence or absence of carotid plaque.
+    enum:
+      - "Plaque not present"
+      - "Plaque present"
 
   age_at_carotid_plaque:
     description: >
