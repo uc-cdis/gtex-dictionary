@@ -318,5 +318,10 @@ properties:
       age at measurement of bp_diastolic (years)
     type: number
 
+  unit_bp_diastolic:
+    description: >
+      harmonization unit for bp_diastolic
+    type: string
+
   cases:
     $ref: "_definitions.yaml#/to_one"

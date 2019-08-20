@@ -203,5 +203,74 @@ properties:
       harmonization unit for hispanic_subgroup
     type: string
 
+  age_at_bmi:
+    description: >
+      age at measurement of bmi (years)
+    type: number
+
+  age_at_weight_baseline:
+    description: >
+      age at measurement of weight_baseline (years)
+    type: number
+
+  subcohort:
+    description: >
+      A distinct subgroup within a study, generally indicating subjects who share similar characteristics due to study design. Subjects may belong to only one subcohort.
+    type: enum
+      - "Amish_HAPI"
+      - "Amish_Longevity"
+      - "Amish_Wellness"
+      - "ARIC_NoSubcohortStructure"
+      - "CARDIA_NoSubcohortStructure"
+      - "CFS_NoSubcohortStructure"
+      - "CHS_AfricanAmerican"
+      - "CHS_Original"
+      - "COPDGene_NoSubcohortStructure"
+      - "CRA_NoSubcohortStructure"
+      - "FHS_Gen3"
+      - "FHS_NewOffspringSpouse"
+      - "FHS_Offspring"
+      - "FHS_Omni1"
+      - "FHS_Omni2"
+      - "FHS_Original"
+      - "GENOA_AfricanAmerican"
+      - "GENOA_EuropeanAmerican"
+      - "GOLDN_NoSubcohortStructure"
+      - "HCHS_SOL_NoSubcohortStructure"
+      - "HVH_NoSubcohortStructure"
+      - "JHS_NoSubcohortStructure"
+      - "Mayo_VTE_GENEVA"
+      - "MESA_AirNR"
+      - "MESA_Classic"
+      - "MESA_Family"
+      - "SAS_NoSubcohortStructure"
+      - "WHI_ClinicalTrial"
+      - "WHI_ObservationalStudy"
+
+  unit_annotated_gender:
+    description: >
+      harmonization unit for annotated_gender
+    type: string
+
+  unit_bmi_baseline:
+    description: >
+      harmonization unit for bmi_baseline
+    type: string
+
+  unit_subcohort:
+    description: >
+      harmonization unit for subcohort
+    type: string
+
+  unit_weight_baseline:
+    description: >
+      harmonization unit for weight_baseline
+    type: string
+
+  weight_baseline:
+    description: >
+      Body weight at baseline. (kg)
+    type: number
+
   cases:
     $ref: "_definitions.yaml#/to_one"
