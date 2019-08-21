@@ -978,5 +978,195 @@ properties:
       harmonization unit for ldl1
     type: string
 
+  age_at_eosinophil_ncnc_bld:
+    description: >
+      age at measurement of eosinophil_ncnc_bld (years)
+    type: number
+
+  age_at_lymphocyte_ncnc_bld:
+    description: >
+      age at measurement of lymphocyte_ncnc_bld (years)
+    type: number
+
+  age_at_mch_entmass_rbc:
+    description: >
+      age at measurement of mch_entmass_rbc (years)
+    type: number
+
+  age_at_mchc_mcnc_rbc:
+    description: >
+      age at measurement of mchc_mcnc_rbc (years)
+    type: number
+
+  age_at_mcv_entvol_rbc:
+    description: >
+      age at measurement of mcv_entvol_rbc (years)
+    type: number
+
+  age_at_monocyte_ncnc_bld:
+    description: >
+      age at measurement of monocyte_ncnc_bld (years)
+    type: number
+
+  age_at_neutrophil_ncnc_bld:
+    description: >
+      age at measurement of neutrophil_ncnc_bld (years)
+    type: number
+
+  age_at_platelet_ncnc_bld:
+    description: >
+      age at measurement of platelet_ncnc_bld (years)
+    type: number
+
+  age_at_pmv_entvol_bld:
+    description: >
+      age at measurement of pmv_entvol_bld (years)
+    type: number
+
+  age_at_rbc_ncnc_bld:
+    description: >
+      age at measurement of rbc_ncnc_bld (years)
+    type: number
+
+  age_at_rdw_ratio_rbc:
+    description: >
+      age at measurement of rdw_ratio_rbc (years)
+    type: number
+
+  age_at_wbc_ncnc_bld:
+    description: >
+      age at measurement of wbc_ncnc_bld (years)
+    type: number
+
+  basophil_ncnc_bld:
+    description: >
+      Count by volume, or number concentration (ncnc), of basophils in the blood (bld). (thousands / microliter)
+    type: number
+
+  eosinophil_ncnc_bld:
+    description: >
+      Count by volume, or number concentration (ncnc), of eosinophils in the blood (bld). (thousands / microliter)
+    type: number
+
+  lymphocyte_ncnc_bld:
+    description: >
+      Count by volume, or number concentration (ncnc), of lymphocytes in the blood (bld). (thousands / microliter)
+    type: number
+
+  mch_entmass_rbc:
+    description: >
+      Measurement of the average mass (entmass) of hemoglobin per red blood cell(rbc), known as mean corpuscular hemoglobin (MCH). (pg = picogram)
+    type: number
+
+  mchc_mcnc_rbc:
+    description: >
+      Measurement of the mass concentration (mcnc) of hemoglobin in a given volume of packed red blood cells (rbc), known as mean corpuscular hemoglobin concentration (MCHC). (g /dL = grams per deciliter)
+    type: number
+
+  mcv_entvol_rbc:
+    description: >
+      Measurement of the mass concentration (mcnc) of hemoglobin in a given volume of packed red blood cells (rbc), known as mean corpuscular hemoglobin concentration (MCHC). (g /dL = grams per deciliter)
+    type: number
+
+  monocyte_ncnc_bld:
+    description: >
+      Count by volume, or number concentration (ncnc), of monocytes in the blood (bld).
+    type: number
+
+  neutrophil_ncnc_bld:
+    description: >
+      Count by volume, or number concentration (ncnc), of neutrophils in the blood (bld).
+    type: number
+
+  platelet_ncnc_bld:
+    description: >
+      Count by volume, or number concentration (ncnc), of platelets in the blood (bld). (thousands / microliter)
+    type: number
+  
+  pmv_entvol_bld:
+    description: >
+      Measurement of the mean volume (entvol) of platelets in the blood (bld), known as mean platelet volume (MPV or PMV). (fL = femtoliter)
+    type: number
+
+  rbc_ncnc_bld:
+    description: >
+      Count by volume, or number concentration (ncnc), of red blood cells in the blood (bld). (millions / microliter)
+    type: number
+
+  rdw_ratio_rbc:
+    description: >
+      Measurement of the ratio of variation in width to the mean width of the red blood cell (rbc) volume distribution curve taken at +/- 1 CV, known as red cell distribution width (RDW). (percentage)
+    type: number
+
+  unit_basophil_ncnc_bld:
+    description: >
+      harmonization unit for basophil_ncnc_bld
+    type: string
+
+  unit_eosinophil_ncnc_bld:
+    description: >
+      harmonization unit for eosinophil_ncnc_bld
+    type: string
+
+  unit_lymphocyte_ncnc_bld:
+    description: >
+      harmonization unit for lymphocyte_ncnc_bld
+    type: string
+
+  unit_mch_entmass_rbc:
+    description: >
+      harmonization unit for mch_entmass_rbc
+    type: string
+
+  unit_mchc_mcnc_rbc:
+    description: >
+      harmonization unit for mchc_mcnc_rbc
+    type: string
+
+  unit_monocyte_ncnc_bld:
+    description: >
+      harmonization unit for monocyte_ncnc_bld
+    type: string
+
+  unit_neutrophil_ncnc_bld:
+    description: >
+      harmonization unit for neutrophil_ncnc_bld
+    type: string
+
+  unit_platelet_ncnc_bld:
+    description: >
+      harmonization unit for platelet_ncnc_bld
+    type: string
+
+  unit_pmv_entvol_bld:
+    description: >
+      harmonization unit for pmv_entvol_bld
+    type: string
+
+  unit_rbc_ncnc_bld:
+    description: >
+      harmonization unit for rbc_ncnc_bld
+    type: string
+  
+  unit_rdw_ratio_rbc:
+    description: >
+      harmonization unit for rdw_ratio_rbc
+    type: string
+
+  unit_wbc_ncnc_bld:
+    description: >
+      harmonization unit for wbc_ncnc_bld
+    type: string
+
+  wbc_ncnc_bld:
+    description: >
+      Count by volume, or number concentration (ncnc), of white blood cells in the blood (bld). (thousands / microliter)
+    type: number
+
+  age_at_basophil_ncnc_bld:
+    description: >
+      age at measurement of basophil_ncnc_bld (years)
+    type: number
+
   cases:
     $ref: "_definitions.yaml#/to_one"

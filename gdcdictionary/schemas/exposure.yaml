@@ -536,5 +536,27 @@ properties:
       age at measurement of current_smoker_baseline (years)
     type: number
 
+  age_at_ever_smoker_baseline:
+    description: >
+      age at measurement of ever_smoker_baseline (years)
+    type: number
+
+  ever_smoker_baseline:
+    description: >
+      Indicates whether subject ever regularly smoked cigarettes.
+    enum:
+      - "Never a cigarette smoker"
+      - "Current or former cigarette smoker"
+
+  unit_current_smoker_baseline:
+    description: >
+      harmonization unit for current_smoker_baseline
+    type: string
+
+  unit_ever_smoker_baseline:
+    description: >
+      harmonization unit for ever_smoker_baseline
+    type: string
+
   cases:
     $ref: "_definitions.yaml#/to_one"
