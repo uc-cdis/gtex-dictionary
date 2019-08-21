@@ -921,7 +921,7 @@ properties:
   unit_hemoglobin_mcnc_bld:
     description: >
       Measurement of hematocrit, the fraction of volume (vfr) of blood (bld) that is composed of red blood cells. (percentage)
-    type: number
+    type: string
 
   hematocrit_vfr_bld:
     description: >
@@ -1167,6 +1167,11 @@ properties:
     description: >
       age at measurement of basophil_ncnc_bld (years)
     type: number
+
+  unit_mcv_entvol_rbc:
+    description: >
+      harmonization unit for mcv_entvol_rbc
+    type: string
 
   cases:
     $ref: "_definitions.yaml#/to_one"
