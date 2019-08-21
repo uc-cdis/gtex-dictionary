@@ -728,7 +728,7 @@ properties:
   antihypertensive_meds:
     description: >
       Indicator for use of antihypertensive medication at the time of blood pressure measurement.
-    type: enum
+    enum:
       - "Not taking antihypertensive medication"
       - "Taking antihypertensive medication"
 
