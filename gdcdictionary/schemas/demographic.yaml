@@ -126,7 +126,6 @@ properties:
       $ref: "_terms.yaml#/year_of_death"
     type: number
 
-
   weight_protocol_modification:
     description: >
       Weight, protocol modification
@@ -216,7 +215,7 @@ properties:
   subcohort:
     description: >
       A distinct subgroup within a study, generally indicating subjects who share similar characteristics due to study design. Subjects may belong to only one subcohort.
-    type: enum
+    enum:
       - "Amish_HAPI"
       - "Amish_Longevity"
       - "Amish_Wellness"
