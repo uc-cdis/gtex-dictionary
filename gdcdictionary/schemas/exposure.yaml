@@ -544,7 +544,7 @@ properties:
   ever_smoker_baseline:
     description: >
       Indicates whether subject ever regularly smoked cigarettes.
-    type: enum
+    enum:
       - "Never a cigarette smoker"
       - "Current or former cigarette smoker"
 
