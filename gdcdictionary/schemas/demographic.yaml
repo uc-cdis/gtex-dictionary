@@ -71,16 +71,17 @@ properties:
     term:
       $ref: "_terms.yaml#/race"
     enum:
-      - white
-      - american indian or alaska native
-      - black or african american
-      - asian
-      - native hawaiian or other pacific islander
-      - hispanic
-      - other
-      - Unknown
-      - not reported
-      - not allowed to collect
+      - "white"
+      - "american indian or alaska native"
+      - "black or african american"
+      - "asian"
+      - "native hawaiian or other pacific islander"
+      - "hispanic"
+      - "multiple"
+      - "other"
+      - "Unknown"
+      - "not reported"
+      - "not allowed to collect"
 
   ethnicity:
     term:
