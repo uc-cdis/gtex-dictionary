@@ -73,7 +73,7 @@ properties:
     enum:
       - "white"
       - "american indian or alaska native"
-      - "black or afr"ican american"
+      - "black or african american"
       - "asian"
       - "native hawaiian or other pacific islander"
       - "hispanic"
