@@ -665,7 +665,7 @@ properties:
       Any diuretic
     type: boolean
 
-  lipid1c:
+  lipid_lowering_medication:
     description: >
       Any lipid-lowering medication
     type: boolean
@@ -695,12 +695,12 @@ properties:
       Norepinephrine-dopamine reuptake inhibitor
     type: number
 
-  age_at_lipid1c:
+  age_at_lipid_lowering_medication:
     description: >
       age at measurement of age_at_lipid1c (years)
     type: number
   
-  unit_lipid1c:
+  unit_lipid_lowering_medication:
     description: >
       harmonization unit for unit_lipid1c
     type: string
