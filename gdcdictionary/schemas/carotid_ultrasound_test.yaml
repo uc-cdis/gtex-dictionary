@@ -993,5 +993,5 @@ properties:
       Mean of mean far wall imt for internal carotid artery
     type: number
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
