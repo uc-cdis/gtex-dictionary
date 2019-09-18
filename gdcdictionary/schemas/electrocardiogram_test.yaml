@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: subjects
     backref: electrocardiogram_tests
     label: describes
-    target_type: case
+    target_type: subject
     multiplicity: one_to_one
     required: true
 
@@ -35,7 +35,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - cases
+  - subjects
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -745,5 +745,5 @@ properties:
       - "MINOR (MINOR WITH NO MAJOR)"
       - "MAJOR (MAJOR WITH POSSIBLE MINOR ABNORMALITIES)"
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
