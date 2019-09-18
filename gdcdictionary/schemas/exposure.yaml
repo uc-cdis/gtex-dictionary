@@ -21,17 +21,17 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: subjects
     backref: exposures
     label: describes
-    target_type: case
+    target_type: subject
     multiplicity: many_to_one
     required: true
 
 required:
   - type
   - submitter_id
-  - cases
+  - subjects
 
 preferred:
   - cigarettes_per_day
@@ -558,5 +558,5 @@ properties:
       harmonization unit for ever_smoker_baseline
     type: string
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
