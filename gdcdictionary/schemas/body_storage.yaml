@@ -86,5 +86,5 @@ properties:
       The period of time during which body was refrigerated (hours)  
     type: integer
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
