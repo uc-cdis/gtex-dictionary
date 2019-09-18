@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: subjects
     backref: physical_activity_questionnaires
     label: describes
-    target_type: case
+    target_type: subject
     multiplicity: one_to_one
     required: true
 
@@ -35,7 +35,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - cases
+  - subjects
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -435,5 +435,5 @@ properties:
       Moderate and vigorous physical activity total (met-min/wk m-su)
     type: number
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
