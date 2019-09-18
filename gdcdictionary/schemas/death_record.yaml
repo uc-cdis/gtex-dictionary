@@ -155,5 +155,5 @@ properties:
       Whether the death was observed by a witness.  
     type: boolean
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
