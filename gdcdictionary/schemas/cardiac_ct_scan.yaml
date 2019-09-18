@@ -200,5 +200,5 @@ properties:
       - "SENSATION CARDIAC 64"
       - "VOLUME ZOOM"
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
