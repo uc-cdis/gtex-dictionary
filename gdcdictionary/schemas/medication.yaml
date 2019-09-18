@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: subjects
     backref: medication_records
     label: describes
-    target_type: case
+    target_type: subject
     multiplicity: one_to_one
     required: true
 
@@ -35,7 +35,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - cases
+  - subjects
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -737,5 +737,5 @@ properties:
       harmonization unit for antihypertensive_meds
     type: string
 
-  cases:
+  subject:
     $ref: "_definitions.yaml#/to_one"
