@@ -47,7 +47,7 @@ properties:
       If amputated, the amputation type for leg, above the knee or below the knee.   
     type: string
 
-  site:
+  geographic_site:
     description: >
       "Site where the case was recruted.
       ARIC_A=field center A representing one of four anonymized centers (Forsyth County, NC, USA; Jackson, MS, USA; the northwest suburbs of Minneapolis, MN, USA; and Washington County, MD, USA) where baseline exam was conducted for ARIC (Atherosclerosis Risk in Communities),
@@ -167,7 +167,7 @@ properties:
       If the Donor was an Organ Donor, which Organs were donated.
     type: string
 
-  unit_site:
+  unit_geographic_site:
     description: >
       harmonization unit for site
     type: string

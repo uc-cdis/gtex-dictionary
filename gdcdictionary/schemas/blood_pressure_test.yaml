@@ -46,7 +46,7 @@ properties:
       Measured diastolic blood pressure (mmhg) (HARMONIZED)
     type: number
 
-  systolic_blood_pressure:
+  bp_systolic:
     description: >
       Measured systolic blood pressure (mmhg) (HARMONIZED)
     type: number

@@ -57,7 +57,7 @@ properties:
       - "Yes"
       - "No"
 
-  gender:
+  annotated_sex:
     term:
       $ref: "_terms.yaml#/gender"
     enum:
@@ -99,12 +99,12 @@ properties:
       $ref: "_terms.yaml#/weight"
     type: number
 
-  bmi:
+  bmi_baseline:
     term:
       $ref: "_terms.yaml#/bmi"
     type: number
 
-  height:
+  height_baseline:
     term:
       $ref: "_terms.yaml#/height"
     type: number
@@ -203,7 +203,7 @@ properties:
       harmonization unit for hispanic_subgroup
     type: string
 
-  age_at_bmi:
+  age_at_bmi_baseline:
     description: >
       age at measurement of bmi (years)
     type: number
@@ -247,7 +247,7 @@ properties:
       - "WHI_ClinicalTrial"
       - "WHI_ObservationalStudy"
 
-  unit_annotated_gender:
+  unit_annotated_sex:
     description: >
       harmonization unit for annotated_gender
     type: string
