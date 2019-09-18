@@ -649,5 +649,5 @@ properties:
       Mean lv wall thickness, end-diastole (mm)
     type: number
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
