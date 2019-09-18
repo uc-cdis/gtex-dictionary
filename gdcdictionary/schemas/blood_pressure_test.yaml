@@ -323,5 +323,5 @@ properties:
       harmonization unit for bp_diastolic
     type: string
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
