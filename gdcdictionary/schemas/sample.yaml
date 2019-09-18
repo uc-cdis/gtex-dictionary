@@ -27,17 +27,17 @@ systemProperties:
 required:
   - type
   - submitter_id
-  - cases
+  - subjects
 
 uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
 links:
-  - name: cases
+  - name: subjects
     backref: samples
     label: derived_from
-    target_type: case
+    target_type: subject
     multiplicity: many_to_one
     required: true
 
@@ -610,5 +610,5 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
