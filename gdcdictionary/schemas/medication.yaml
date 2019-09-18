@@ -737,5 +737,5 @@ properties:
       harmonization unit for antihypertensive_meds
     type: string
 
-  subject:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
