@@ -22,17 +22,17 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: subjects
     backref: demographics
     label: describes
-    target_type: case
+    target_type: subject
     multiplicity: one_to_one
     required: true
 
 required:
   - type
   - submitter_id
-  - cases
+  - subjects
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
@@ -272,5 +272,5 @@ properties:
       Body weight at baseline. (kg)
     type: number
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
