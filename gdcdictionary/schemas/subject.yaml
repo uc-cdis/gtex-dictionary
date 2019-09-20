@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "case"
-title: Case
+id: "subject"
+title: Subject
 type: object
 namespace: https://dcp.bionimbus.org/
 category: administrative
@@ -23,7 +23,7 @@ systemProperties:
 
 links:
   - name: studies 
-    backref: cases
+    backref: subjects
     label: member_of
     target_type: study
     multiplicity: many_to_many
@@ -38,7 +38,7 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-# Case properties
+# Subject properties
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
@@ -47,9 +47,9 @@ properties:
       If amputated, the amputation type for leg, above the knee or below the knee.   
     type: string
 
-  site:
+  geographic_site:
     description: >
-      "Site where the case was recruted.
+      "Site where the subject was recruted.
       ARIC_A=field center A representing one of four anonymized centers (Forsyth County, NC, USA; Jackson, MS, USA; the northwest suburbs of Minneapolis, MN, USA; and Washington County, MD, USA) where baseline exam was conducted for ARIC (Atherosclerosis Risk in Communities),
       ARIC_B=field center B representing one of four anonymized centers (Forsyth County, NC, USA; Jackson, MS, USA; the northwest suburbs of Minneapolis, MN, USA; and Washington County, MD, USA) where baseline exam was conducted for ARIC (Atherosclerosis Risk in Communities),
       ARIC_C=field center C representing one of four anonymized centers (Forsyth County, NC, USA; Jackson, MS, USA; the northwest suburbs of Minneapolis, MN, USA; and Washington County, MD, USA) where baseline exam was conducted for ARIC (Atherosclerosis Risk in Communities),
@@ -167,7 +167,7 @@ properties:
       If the Donor was an Organ Donor, which Organs were donated.
     type: string
 
-  unit_site:
+  unit_geographic_site:
     description: >
       harmonization unit for site
     type: string

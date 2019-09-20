@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: subjects
     backref: lab_results
     label: describes
-    target_type: case
+    target_type: subject
     multiplicity: one_to_one
     required: true
 
@@ -35,7 +35,7 @@ uniqueKeys:
 required:
   - type
   - submitter_id
-  - cases
+  - subjects
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -68,7 +68,7 @@ properties:
       Cystatin c (mg/l)
     type: number
 
-  trig1:
+  triglycerides:
     description: >
       Triglycerides (mg/dl)
     type: number
@@ -88,7 +88,7 @@ properties:
       Ldl cholesterol (mg/dl)
     type: number
 
-  hdl1:
+  hdl:
     description: >
       Hdl cholesterol (mg/dl)
     type: number
@@ -98,7 +98,7 @@ properties:
       Creatinine (mg/dl)
     type: number
 
-  chol1:
+  total_cholesterol:
     description: >
       Total cholesterol (mg/dl)
     type: number
@@ -938,14 +938,14 @@ properties:
       harmonization unit for hematocrit_vfr_bld.
     type: string
 
-  age_at_total_chol1:
+  age_at_total_cholesterol:
     description: >
-      age at measurement of total_chol1 (years)
+      age at measurement of total_cholesterol (years)
     type: number
 
-  unit_total_chol1:
+  unit_total_cholesterol:
     description: >
-      harmonization unit for total_chol1
+      harmonization unit for total_cholesterol
     type: string
 
   age_at_triglycerides1:
@@ -1173,5 +1173,5 @@ properties:
       harmonization unit for mcv_entvol_rbc
     type: string
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
