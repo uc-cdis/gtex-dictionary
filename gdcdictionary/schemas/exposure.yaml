@@ -550,12 +550,12 @@ properties:
 
   unit_current_smoker_baseline:
     description: >
-      harmonization unit for current_smoker_baseline
+      harmonization unit for current_smoker_baseline (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   unit_ever_smoker_baseline:
     description: >
-      harmonization unit for ever_smoker_baseline
+      harmonization unit for ever_smoker_baseline (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   subjects:
