@@ -169,7 +169,7 @@ properties:
 
   unit_geographic_site:
     description: >
-      harmonization unit for site
+      harmonization unit for site (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   studies:
