@@ -305,7 +305,7 @@ properties:
 
   unit_bp_systolic:
     description: >
-      harmonization unit for bp_systolic (A "harmonization unit' is a defined group of subjects whose phenotypes can be similarly processed.)
+      harmonization unit for bp_systolic (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   bp_diastolic:
@@ -320,7 +320,7 @@ properties:
 
   unit_bp_diastolic:
     description: >
-      harmonization unit for bp_diastolic (A "harmonization unit' is a defined group of subjects whose phenotypes can be similarly processed.)
+      harmonization unit for bp_diastolic (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   subjects:
