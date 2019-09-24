@@ -173,17 +173,17 @@ properties:
 
   unit_height_baseline:
     description: >
-      harmonization unit for height_baseline
+      harmonization unit for height_baseline (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   unit_race:
     description: >
-      harmonization unit for race
+      harmonization unit for race (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   unit_ethnicity:
     description: >
-      harmonization unit for ethnicity
+      harmonization unit for ethnicity (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
   
   hispanic_subgroup:
@@ -200,7 +200,7 @@ properties:
 
   unit_hispanic_subgroup:
     description: >
-      harmonization unit for hispanic_subgroup
+      harmonization unit for hispanic_subgroup (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   age_at_bmi_baseline:
@@ -249,22 +249,22 @@ properties:
 
   unit_annotated_sex:
     description: >
-      harmonization unit for annotated_gender
+      harmonization unit for annotated_gender (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   unit_bmi_baseline:
     description: >
-      harmonization unit for bmi_baseline
+      harmonization unit for bmi_baseline (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   unit_subcohort:
     description: >
-      harmonization unit for subcohort
+      harmonization unit for subcohort (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   unit_weight_baseline:
     description: >
-      harmonization unit for weight_baseline
+      harmonization unit for weight_baseline (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   weight_baseline:

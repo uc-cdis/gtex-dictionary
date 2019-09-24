@@ -702,7 +702,7 @@ properties:
   
   unit_lipid_lowering_medication:
     description: >
-      harmonization unit for unit_lipid1c
+      harmonization unit for unit_lipid1c (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   fasting_lipids:
@@ -717,7 +717,7 @@ properties:
 
   unit_fasting_lipids:
     description: >
-      harmonization unit for fasting_lipids
+      harmonization unit for fasting_lipids (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
   
   age_at_antihypertensive_meds:
@@ -734,7 +734,7 @@ properties:
 
   unit_antihypertensive_meds:
     description: >
-      harmonization unit for antihypertensive_meds
+      harmonization unit for antihypertensive_meds (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   subjects:
