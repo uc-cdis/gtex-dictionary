@@ -1131,7 +1131,7 @@ properties:
 
   unit_vte_followup_start_age:
     description: >
-      harmonization unit for vte_followup_start_age
+      harmonization unit for vte_followup_start_age (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   vte_prior_history:
@@ -1146,7 +1146,7 @@ properties:
 
   unit_vte_prior_history:
     description: >
-      harmonization unit for vte_prior_history
+      harmonization unit for vte_prior_history (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   vte_case_status:
@@ -1161,7 +1161,7 @@ properties:
 
   unit_vte_case_status:
     description: >
-      harmonization unit for vte_case_status
+      harmonization unit for vte_case_status (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   cac_volume:
@@ -1176,7 +1176,7 @@ properties:
 
   unit_cac_volume:
     description: >
-      harmonization unit for cac_volume
+      harmonization unit for cac_volume (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   cac_score:
@@ -1191,7 +1191,7 @@ properties:
 
   unit_cac_score:
     description: >
-      harmonization unit for cac_score
+      harmonization unit for cac_score (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   cimt_1:
@@ -1206,7 +1206,7 @@ properties:
 
   unit_cimt_1:
     description: >
-      harmonization unit for cimt_1
+      harmonization unit for cimt_1 (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   cimt_2:
@@ -1221,7 +1221,7 @@ properties:
 
   unit_cimt_2:
     description: >
-      harmonization unit for cimt_2
+      harmonization unit for cimt_2 (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   carotid_stenosis:
@@ -1242,7 +1242,7 @@ properties:
 
   unit_carotid_stenosis:
     description: >
-      harmonization unit for carotid_stenosis
+      harmonization unit for carotid_stenosis (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   unit_carotid_stenosis:
@@ -1266,7 +1266,7 @@ properties:
 
   unit_carotid_plaque:
     description: >
-      harmonization unit for carotid_plaque
+      harmonization unit for carotid_plaque (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   subjects:
