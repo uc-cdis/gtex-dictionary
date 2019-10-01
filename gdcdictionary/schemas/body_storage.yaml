@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Collection of information related to circunstances and special characteristics about how body was maintanined and storage after death.
+  Collection of information related to circumstances and special characteristics about how body was maintanined and storage after death.
 additionalProperties: false
 submittable: true
 validators: null

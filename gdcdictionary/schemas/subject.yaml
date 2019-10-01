@@ -113,7 +113,7 @@ properties:
       WHI_Midwest=recruitment from Midwest region of the USA for WHI (Womens Health Initiative),
       WHI_Northeast=recruitment from Northeast region of the USA for WHI (Womens Health Initiative),
       WHI_South=recruitment from South region of the USA for WHI (Womens Health Initiative),
-      WHI_West=recruitment from West region of the USA for WHI (Womens Health Initiative)"
+      WHI_West=recruitment from West region of the USA for WHI (Womens Health Initiative)" (HARMONIZED)
     type: string
 
   cohort_id:
@@ -169,7 +169,7 @@ properties:
 
   unit_geographic_site:
     description: >
-      harmonization unit for site (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
+      harmonization unit for site (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   studies:

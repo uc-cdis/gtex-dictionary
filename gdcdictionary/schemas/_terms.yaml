@@ -341,7 +341,7 @@ biospecimen_anatomic_site:
 
 bmi:
   description: >
-    The body mass divided by the square of the body height expressed in units of kg/m^2 (HARMONIZED).
+    Body mass index calculated at baseline. (kg/m^2) (HARMONIZED)
   termDef:
     term: Body Mass Index (BMI)
     source: caDSR
@@ -774,9 +774,7 @@ freezing_method:
 
 gender:
   description: >
-    Text designations that identify gender (HARMONIZED). Gender is described as the assemblage of properties that
-    distinguish people on the basis of their societal roles. [Explanatory Comment 1: Identification
-    of gender is based upon self-report and may come from a form, questionnaire, interview, etc.]
+    Subject sex, as recorded by the study. (HARMONIZED)
   termDef:
     term: Person Gender Text Type
     source: caDSR
@@ -786,7 +784,7 @@ gender:
 
 height:
   description: >
-    The height of the patient in centimeters (HARMONIZED).
+    Body height at baseline. (cm) (HARMONIZED)
   termDef:
     term: Patient Height Measurement
     source: caDSR
@@ -1375,11 +1373,7 @@ qc_metric_state:
 
 race:
   description: >
-    An arbitrary classification of a taxonomic group that is a division of a species (HARMONIZED). It usually
-    arises as a consequence of geographical isolation within a species and is characterized by
-    shared heredity, physical attributes and behavior, and in the case of humans, by common history,
-    nationality, or geographic distribution. The provided values are based on the categories defined
-    by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
+    Harmonized race category of participant. (HARMONIZED)
   termDef:
     term: Race Category Text
     source: caDSR
@@ -1795,7 +1789,7 @@ vital_status:
 
 weight:
   description: >
-    The weight of the patient measured in lbs (HARMONIZED).
+    Body weight at baseline. (kg) (HARMONIZED).
   termDef:
     term: Patient Weight Measurement
     source: caDSR

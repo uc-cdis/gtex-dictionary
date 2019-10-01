@@ -528,34 +528,34 @@ properties:
   
   current_smoker_baseline:
     description: >
-      Indicates whether subject currently smokes cigarettes.
+      Indicates whether subject currently smokes cigarettes. (HARMONIZED)
     type: boolean
 
   age_at_current_smoker_baseline:
     description: >
-      age at measurement of current_smoker_baseline (years)
+      age at measurement of current_smoker_baseline (years) (HARMONIZED)
     type: number
 
   age_at_ever_smoker_baseline:
     description: >
-      age at measurement of ever_smoker_baseline (years)
+      age at measurement of ever_smoker_baseline (years) (HARMONIZED)
     type: number
 
   ever_smoker_baseline:
     description: >
-      Indicates whether subject ever regularly smoked cigarettes.
+      Indicates whether subject ever regularly smoked cigarettes. (HARMONIZED)
     enum:
       - "Never a cigarette smoker"
       - "Current or former cigarette smoker"
 
   unit_current_smoker_baseline:
     description: >
-      harmonization unit for current_smoker_baseline (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
+      harmonization unit for current_smoker_baseline (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   unit_ever_smoker_baseline:
     description: >
-      harmonization unit for ever_smoker_baseline (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
+      harmonization unit for ever_smoker_baseline (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   subjects:
