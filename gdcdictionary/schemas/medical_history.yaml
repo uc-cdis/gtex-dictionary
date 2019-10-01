@@ -1126,107 +1126,107 @@ properties:
   
   vte_followup_start_age:
     description: >
-      Age of subject at the start of the follow up period during which venousthromboembolism (VTE) events were reviewed and adjudicated. (years)
+      Age of subject at the start of the follow up period during which venousthromboembolism (VTE) events were reviewed and adjudicated. (years) (HARMONIZED)
     type: number
 
   unit_vte_followup_start_age:
     description: >
-      harmonization unit for vte_followup_start_age
+      harmonization unit for vte_followup_start_age (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   vte_prior_history:
     description: >
-      An indicator of whether a subject had a venous thromboembolism (VTE)event prior to the start of the medical review process (includingself-reported events).
+      An indicator of whether a subject had a venous thromboembolism (VTE)event prior to the start of the medical review process (includingself-reported events). (HARMONIZED)
     type: boolean
   
   age_at_vte_prior_history:
     description: >
-      age at measurement of vte_prior_history (years)
+      age at measurement of vte_prior_history (years) (HARMONIZED)
     type: number
 
   unit_vte_prior_history:
     description: >
-      harmonization unit for vte_prior_history
+      harmonization unit for vte_prior_history (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   vte_case_status:
     description: >
-      An indicator of whether a subject experienced a venous thromboembolismevent (VTE) that was verified by adjudication or by medical professionals.
+      An indicator of whether a subject experienced a venous thromboembolismevent (VTE) that was verified by adjudication or by medical professionals. (HARMONIZED)
     type: boolean
 
   age_at_vte_case_status:
     description: >
-      age at measurement of vte_case_status
+      age at measurement of vte_case_status (HARMONIZED)
     type: number
 
   unit_vte_case_status:
     description: >
-      harmonization unit for vte_case_status
+      harmonization unit for vte_case_status (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   cac_volume:
     description: >
-      Coronary artery calcium volume using CT scan(s) of coronary arteries
+      Coronary artery calcium volume using CT scan(s) of coronary arteries (HARMONIZED)
     type: number
 
   age_at_cac_volume:
     description: >
-      age at measurement of cac_volume (years)
+      age at measurement of cac_volume (years) (HARMONIZED)
     type: number
 
   unit_cac_volume:
     description: >
-      harmonization unit for cac_volume
+      harmonization unit for cac_volume (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   cac_score:
     description: >
-      Coronary artery calcification (CAC) score using Agatston scoring of CT scan(s) of coronary arteries decimal
+      Coronary artery calcification (CAC) score using Agatston scoring of CT scan(s) of coronary arteries decimal (HARMONIZED)
     type: number
 
   age_at_cac_score:
     description: >
-      age at measurement of cac_score (years)
+      age at measurement of cac_score (years) (HARMONIZED)
     type: number
 
   unit_cac_score:
     description: >
-      harmonization unit for cac_score
+      harmonization unit for cac_score (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   cimt_1:
     description: >
-      Common carotid intima-media thickness, calculated as the mean of two values: mean of multiple thickness estimates from the left far wall and from the right far wall.
+      Common carotid intima-media thickness, calculated as the mean of two values: mean of multiple thickness estimates from the left far wall and from the right far wall. (HARMONIZED)
     type: number
   
   age_at_cimt_1:
     description: >
-      age at measurement of cimt_1 (years)
+      age at measurement of cimt_1 (years) (HARMONIZED)
     type: number
 
   unit_cimt_1:
     description: >
-      harmonization unit for cimt_1
+      harmonization unit for cimt_1 (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   cimt_2:
     description: >
-      Common carotid intima-media thickness, calculated as the mean of four values: maximum of multiple thickness estimates from the left far wall, left near wall, right far wall, and right near wall. (mm)
+      Common carotid intima-media thickness, calculated as the mean of four values: maximum of multiple thickness estimates from the left far wall, left near wall, right far wall, and right near wall. (mm) (HARMONIZED)
     type: number
 
   age_at_cimt_2:
     description: >
-      age at measurement of cimt_2 (years)
+      age at measurement of cimt_2 (years) (HARMONIZED)
     type: number
 
   unit_cimt_2:
     description: >
-      harmonization unit for cimt_2
+      harmonization unit for cimt_2 (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   carotid_stenosis:
     description: >
-      Extent of narrowing of the carotid artery.
+      Extent of narrowing of the carotid artery. (HARMONIZED)
     enum:
       - "None"
       - "1%-24%"
@@ -1237,36 +1237,36 @@ properties:
 
   age_at_carotid_stenosis:
     description: >
-      age at measurement of carotid_stenosis (years)
+      age at measurement of carotid_stenosis (years) (HARMONIZED)
     type: number
 
   unit_carotid_stenosis:
     description: >
-      harmonization unit for carotid_stenosis
+      harmonization unit for carotid_stenosis (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   unit_carotid_stenosis:
     description: >
-      Presence or absence of carotid plaque.
+      Presence or absence of carotid plaque. (HARMONIZED)
     enum:
       - "Plaque not present"
       - "Plaque not present Plaque present"
 
   carotid_plaque:
     description: >
-      Presence or absence of carotid plaque.
+      Presence or absence of carotid plaque. (HARMONIZED)
     enum:
       - "Plaque not present"
       - "Plaque present"
 
   age_at_carotid_plaque:
     description: >
-      age at measurement of carotid_plaque (years)
+      age at measurement of carotid_plaque (years) (HARMONIZED)
     type: number
 
   unit_carotid_plaque:
     description: >
-      harmonization unit for carotid_plaque
+      harmonization unit for carotid_plaque (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   subjects:

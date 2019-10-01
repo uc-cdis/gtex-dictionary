@@ -667,7 +667,7 @@ properties:
 
   lipid_lowering_medication:
     description: >
-      Any lipid-lowering medication
+      Any lipid-lowering medication (HARMONIZED)
     type: boolean
 
   dpp4i1c:
@@ -697,44 +697,44 @@ properties:
 
   age_at_lipid_lowering_medication:
     description: >
-      age at measurement of age_at_lipid1c (years)
+      age at measurement of age_at_lipid1c (years) (HARMONIZED)
     type: number
   
   unit_lipid_lowering_medication:
     description: >
-      harmonization unit for unit_lipid1c
+      harmonization unit for unit_lipid1c (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   fasting_lipids:
     description: >
-      Indicates whether participant fasted for at least eight hours prior to blood draw to measure lipids phenotypes.
+      Indicates whether participant fasted for at least eight hours prior to blood draw to measure lipids phenotypes. (HARMONIZED)
     type: boolean
 
   age_at_fasting_lipids:
     description: >
-      age at measurement of fasting_lipids (years)
+      age at measurement of fasting_lipids (years) (HARMONIZED)
     type: number
 
   unit_fasting_lipids:
     description: >
-      harmonization unit for fasting_lipids
+      harmonization unit for fasting_lipids (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
   
   age_at_antihypertensive_meds:
     description: >
-      age at measurement of antihypertensive_meds (years)
+      age at measurement of antihypertensive_meds (years) (HARMONIZED)
     type: number
 
   antihypertensive_meds:
     description: >
-      Indicator for use of antihypertensive medication at the time of blood pressure measurement.
+      Indicator for use of antihypertensive medication at the time of blood pressure measurement. (HARMONIZED)
     enum:
       - "Not taking antihypertensive medication"
       - "Taking antihypertensive medication"
 
   unit_antihypertensive_meds:
     description: >
-      harmonization unit for antihypertensive_meds
+      harmonization unit for antihypertensive_meds (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   subjects:

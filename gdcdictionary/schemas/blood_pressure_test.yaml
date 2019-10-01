@@ -43,12 +43,12 @@ properties:
 # HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
   diastolic_blood_pressure:
     description: >
-      Measured diastolic blood pressure (mmhg) (HARMONIZED)
+      Resting diastolic blood pressure from the upper arm in a clinical setting. (mmHg) (HARMONIZED)
     type: number
 
   bp_systolic:
     description: >
-      Measured systolic blood pressure (mmhg) (HARMONIZED)
+      Resting systolic blood pressure from the upper arm in a clinical setting. (mmHg) (HARMONIZED)
     type: number
 
 # OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
@@ -300,12 +300,12 @@ properties:
   
   age_at_bp_systolic:
     description: >
-      age at measurement of bp_systolic (years)
+      age at measurement of bp_systolic (years) (HARMONIZED)
     type: number
 
   unit_bp_systolic:
     description: >
-      harmonization unit for bp_systolic
+      harmonization unit for bp_systolic (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   bp_diastolic:
@@ -315,12 +315,12 @@ properties:
 
   age_at_bp_diastolic:
     description: >
-      age at measurement of bp_diastolic (years)
+      age at measurement of bp_diastolic (years) (HARMONIZED)
     type: number
 
   unit_bp_diastolic:
     description: >
-      harmonization unit for bp_diastolic
+      harmonization unit for bp_diastolic (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
     type: string
 
   subjects:
