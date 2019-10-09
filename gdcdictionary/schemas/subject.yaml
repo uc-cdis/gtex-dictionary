@@ -174,3 +174,4 @@ properties:
 
   studies:
     $ref: "_definitions.yaml#/to_many"
+
