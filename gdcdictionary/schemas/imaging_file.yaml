@@ -49,6 +49,7 @@ required:
   - data_format
   - md5sum
   - data_category
+  - data_type
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
