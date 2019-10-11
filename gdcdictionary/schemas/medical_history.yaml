@@ -1248,9 +1248,7 @@ properties:
   unit_carotid_stenosis:
     description: >
       Presence or absence of carotid plaque. (HARMONIZED)
-    enum:
-      - "Plaque not present"
-      - "Plaque not present Plaque present"
+    type: string
 
   carotid_plaque:
     description: >
