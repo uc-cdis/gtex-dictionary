@@ -66,9 +66,8 @@ properties:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Sequencing Reference
-      - Sequencing Reference Index
       - Variant Reference
-      - Variant Reference Index
+      - Kinship Matrix 
 
   data_format:
     term:
@@ -84,7 +83,11 @@ properties:
       - SA
       - TAR
       - VCF
+      - BCF
       - TBI
+      - GDS
+      - TXT
+      - RDATA
 
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
