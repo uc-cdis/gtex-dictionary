@@ -29,7 +29,7 @@ links:
         backref: reference_file_indexes
         label: derived_from
         target_type: reference_file
-        multiplicity: many_to_one
+        multiplicity: many_to_many
         required: false
       - name: core_metadata_collections
         backref: reference_file_indexes
@@ -81,6 +81,5 @@ data_format:
   
 reference_files:
     $ref: "_definitions.yaml#/to_one"
-  
 core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
