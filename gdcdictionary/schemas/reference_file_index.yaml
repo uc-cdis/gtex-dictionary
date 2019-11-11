@@ -65,12 +65,16 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Germline Variation Index" ]
+    enum: [ "Sequencing Reference Index"]
+    enum: [ "Variant Reference Index"]
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: 
       - TBI
       - CSI
+      - BCF.CSI
+      - VCF.CSI
   reference_files:
     $ref: "_definitions.yaml#/to_one"
   core_metadata_collections:
