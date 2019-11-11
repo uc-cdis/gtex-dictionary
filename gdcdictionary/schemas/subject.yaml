@@ -32,7 +32,8 @@ links:
 required:
   - type
   - submitter_id
-  - studies 
+  - studies
+  - consent_codes 
 
 uniqueKeys:
   - [id]
