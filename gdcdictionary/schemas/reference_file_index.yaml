@@ -56,22 +56,26 @@ properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "aligned_reads_index" ]
-  data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
-    enum:
-      - Simple Nucleotide Variation
-  data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
-    enum: [ "Germline Variation Index" ]
-  data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
-    enum: 
-      - TBI
-      - CSI
-  reference_files:
+  
+data_category:
+  term:
+    $ref: "_terms.yaml#/data_category"
+  enum:
+    - Simple Nucleotide Variation
+
+data_type:
+  term:
+    $ref: "_terms.yaml#/data_type"
+  enum: [ "Germline Variation Index" ]
+  
+data_format:
+  term:
+    $ref: "_terms.yaml#/data_format"
+  enum: 
+    - TBI
+    - CSI
+  
+reference_files:
     $ref: "_definitions.yaml#/to_one"
-  core_metadata_collections:
+core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
