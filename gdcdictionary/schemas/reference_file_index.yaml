@@ -1,0 +1,85 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "reference_file_index"
+title: Reference File Index
+type: object
+namespace: https://dcp.bionimbus.org
+category: index_file
+program: '*'
+project: '*'
+description: "Data file containing the index for a set of reference file."
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: reference_files
+        backref: reference_file_indexes
+        label: derived_from
+        target_type: reference_file
+        multiplicity: many_to_many
+        required: false
+      - name: core_metadata_collections
+        backref: reference_file_indexes
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_many
+        required: false
+
+required:
+  - type
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+  - data_format
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  type:
+    enum: [ "aligned_reads_index" ]
+  
+data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - Simple Nucleotide Variation
+  
+data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum: [ "Germline Variation Index" ]
+    enum: [ "Sequencing Reference Index"]
+    enum: [ "Variant Reference Index"]
+  
+data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum: 
+      - TBI
+      - CSI
+      - BCF.CSI
+      - VCF.CSI
+  
+reference_files:
+    $ref: "_definitions.yaml#/to_many"
+core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"
