@@ -25,12 +25,6 @@ links:
   - exclusive: false
     required: true
     subgroup:
-      - name: reference_files
-        backref: reference_file_indexes
-        label: derived_from
-        target_type: reference_file
-        multiplicity: many_to_many
-        required: false
       - name: core_metadata_collections
         backref: reference_file_indexes
         label: data_from
@@ -79,7 +73,5 @@ data_format:
       - BCF.CSI
       - VCF.CSI
   
-reference_files:
-    $ref: "_definitions.yaml#/to_many"
 core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
