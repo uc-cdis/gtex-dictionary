@@ -71,7 +71,7 @@ properties:
     enum: 
       - TBI
       - CSI
-  simple_germline_variations:
+  reference_files:
     $ref: "_definitions.yaml#/to_one"
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
