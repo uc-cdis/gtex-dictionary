@@ -60,14 +60,20 @@ properties:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Sequencing Reference
+      - Variant Calling Reference
+      - Familial Reference
+      - Clinical Data
+      - Other
 
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Sequencing Reference
-      - Variant Reference
-      - Kinship Matrix 
+      - Variant Call
+      - Kinship Matrix
+      - Unharmonized Clinical Data
+      - Other
 
   data_format:
     term:
