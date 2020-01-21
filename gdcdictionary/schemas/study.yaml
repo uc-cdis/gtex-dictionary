@@ -62,6 +62,10 @@ properties:
       - Raw
       - Processed
       - Raw/Processed
+      
+  exclude_from_aggregations:
+    description: "Should the study be excluded from aggregations (e.g., Counts of total numbers of studies or total numbers of subjects) for users who are not authorized to access this study?"
+    type: boolean
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"
