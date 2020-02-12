@@ -47,5 +47,5 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  subjects:
-    $ref: "_definitions.yaml#/to_one"
+subjects:
+  $ref: "_definitions.yaml#/to_one"
