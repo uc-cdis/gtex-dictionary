@@ -109,63 +109,6 @@ properties:
       $ref: "_terms.yaml#/height"
     type: number
 
-# OTHER NON HARMONIZED VARIABLES FROM GTEX AND TOPMED
-  age_range:
-    description: >
-        Range of ages for the subject. The range should not include ages over 89 years.
-    type: string
-
-  year_of_birth:
-    term:
-      $ref: "_terms.yaml#/year_of_birth"
-    type:
-      - number
-      - "null"
-
-  year_of_death:
-    term:
-      $ref: "_terms.yaml#/year_of_death"
-    type: number
-
-  weight_protocol_modification:
-    description: >
-      Weight, protocol modification
-    type: boolean
-
-  height_protocol_modification:
-    description: >
-      Height, protocol modification
-    type: boolean
-
-  girth_protocol_modification:
-    description: >
-      Girth, protocol modification
-    type: boolean
-
-  hip_circumference:
-    description: >
-      Hip circumference (cm)
-    type: number
-
-  bmi_category:
-    description: >
-      Body mass index, who categories
-    enum:
-      - "NORMAL"
-      - "GRADE 1 OVERWEIGHT"
-      - "GRADE 2 OVERWEIGHT"
-      - "GRADE 3 OVERWEIGHT"
-
-  bsa:
-    description: >
-      Body surface area
-    type: number
-
-  waist:
-    description: >
-      Waist circumference (cm)
-    type: number
-
   age_at_height_baseline:
     description: >
       age at measurement of height_baseline (years) (HARMONIZED)
@@ -271,41 +214,6 @@ properties:
     description: >
       Body weight at baseline. (kg) (HARMONIZED)
     type: number
-
-  population:
-    description: >
-      CHB Han Chinese in Beijing, China EAS; JPT Japanese in Tokyo, Japan EAS; CHS Southern Han Chinese EAS; CDX Chinese Dai in Xishuangbanna, China EAS; KHV Kinh in Ho Chi Minh City, Vietnam EAS; CEU Utah Residents (CEPH) with Northern and Western European Ancestry EUR; TSI Toscani in Italia EUR; FIN Finnish in Finland EUR; GBR British in England and Scotland EUR; IBS Iberian Population in Spain EUR; YRI Yoruba in Ibadan, Nigeria AFR; LWK Luhya in Webuye, Kenya AFR; GWD Gambian in Western Divisions in the Gambia AFR; MSL Mende in Sierra Leone AFR; ESN Esan in Nigeria AFR; ASW Americans of African Ancestry in SW USA AFR; ACB African Caribbeans in Barbados AFR; MXL Mexican Ancestry from Los Angeles USA AMR; PUR Puerto Ricans from Puerto Rico AMR; CLM Colombians from Medellin, Colombia AMR; PEL Peruvians from Lima, Peru AMR; GIH Gujarati Indian from Houston, Texas SAS; PJL Punjabi from Lahore, Pakistan SAS; BEB Bengali from Bangladesh SAS; STU Sri Lankan Tamil from the UK SAS; ITU Indian Telugu from the UK
-    enum:
-      - "CHB"
-      - "JPT"
-      - "CHS"
-      - "CDX"
-      - "KHV"
-      - "CEU"
-      - "TSI"
-      - "FIN"
-      - "GBR"
-      - "IBS"
-      - "YRI"
-      - "LWK"
-      - "GWD"
-      - "MSL"
-      - "ESN"
-      - "ASW"
-      - "ACB"
-      - "MXL"
-      - "PUR"
-      - "CLM"
-      - "PEL"
-      - "GIH"
-      - "PJL"
-      - "BEB"
-      - "STU"
-      - "ITU"
-      - "other"
-      - "Unknown"
-      - "not reported"
-      - "not allowed to collect"
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
