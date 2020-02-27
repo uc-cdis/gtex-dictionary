@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "cardiac_mri"
-title: Cardiac Magnetic Resonance Image
+id: "cardiac_ct_scan"
+title: Cardiac Topographic Scan
 type: object
-namespace: http://dcp.bionimbus.org/
+namespace: http://dcp.bionimbus.org
 category: clinical
 program: '*'
 project: '*'
 description: >
-  Cardiac MRI used to obtain measures of left ventricular mass, wall thickness, ejection fraction, cardiac output, aortic atherosclerosis, and aortic distensibility.
+  Coronary calcium information determined with electron-beam or helical CT.
 additionalProperties: false
 submittable: true
 validators: null
@@ -22,7 +22,7 @@ systemProperties:
 
 links:
   - name: subjects
-    backref: cardiac_mris
+    backref: cardiac_ct_scans
     label: describes
     target_type: subject
     multiplicity: one_to_one
@@ -40,11 +40,5 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-# HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
-  cardiac_output:
-    description: >
-      RV Cardiac output (l/min) (HARMONIZED)
-    type: number
-
-  subjects:
-    $ref: "_definitions.yaml#/to_one"
+subjects:
+  $ref: "_definitions.yaml#/to_one"
