@@ -52,8 +52,6 @@ properties:
     type: string
   doi:
     type: string
-  projects:
-    $ref: "_definitions.yaml#/to_many_project"
   project_id:
     type: string
   created_datetime:

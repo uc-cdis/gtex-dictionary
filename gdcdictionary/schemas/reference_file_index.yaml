@@ -64,9 +64,10 @@ properties:
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Germline Variation Index" ]
-    enum: [ "Sequencing Reference Index"]
-    enum: [ "Variant Reference Index"]
+    enum:
+      - "Germline Variation Index"
+      - "Sequencing Reference Index"
+      - "Variant Reference Index"
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
