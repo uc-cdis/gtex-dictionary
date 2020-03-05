@@ -163,11 +163,6 @@ properties:
     items:
       type: string
 
-  transplanted_organ:
-    description: >
-      If the Donor was an Organ Donor, which Organs were donated.
-    type: string
-
   unit_geographic_site:
     description: >
       harmonization unit for site (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)

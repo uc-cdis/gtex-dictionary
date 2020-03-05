@@ -775,11 +775,6 @@ properties:
       harmonization unit for carotid_stenosis (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
-  unit_carotid_stenosis:
-    description: >
-      Presence or absence of carotid plaque. (HARMONIZED)
-    type: string
-
   carotid_plaque:
     description: >
       Presence or absence of carotid plaque. (HARMONIZED)
