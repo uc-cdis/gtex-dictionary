@@ -41,7 +41,7 @@ properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
 # HARMONIZED VARIABLES ACROSS GTEX AND TOPMED PROJECTS
-  diastolic_blood_pressure:
+  bp_diastolic:
     description: >
       Resting diastolic blood pressure from the upper arm in a clinical setting. (mmHg) (HARMONIZED)
     type: number
