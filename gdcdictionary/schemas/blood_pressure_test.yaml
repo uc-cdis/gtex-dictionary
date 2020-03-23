@@ -66,5 +66,11 @@ properties:
       age at measurement of bp_diastolic (years) (HARMONIZED)
     type: number
 
+  unit_bp_diastolic:
+    description: >
+      harmonization unit for bp_diastolic (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.)
+    type: string
+
+
   subjects:
     $ref: "_definitions.yaml#/to_one"
