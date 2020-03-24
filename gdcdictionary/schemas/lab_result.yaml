@@ -195,6 +195,11 @@ properties:
       Count by volume, or number concentration (ncnc), of eosinophils in the blood (bld). (thousands / microliter) (HARMONIZED)
     type: number
 
+  hemoglobin_mcnc_bld:
+    description: >
+      Measurement of mass per volume, or mass concentration (mcnc), of hemoglobin in the blood (bld). (g / dL = grams per deciliter) (HARMONIZED)
+    type: number
+
   lymphocyte_ncnc_bld:
     description: >
       Count by volume, or number concentration (ncnc), of lymphocytes in the blood (bld). (thousands / microliter) (HARMONIZED)
