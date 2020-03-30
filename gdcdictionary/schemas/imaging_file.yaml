@@ -95,6 +95,11 @@ properties:
     description: >
       order number for this image or other content.
     type: integer
+    
+  phase:
+    description: >
+      The data phase of the imaging files.
+    type: integer 
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
