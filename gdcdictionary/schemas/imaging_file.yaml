@@ -96,9 +96,9 @@ properties:
       order number for this image or other content.
     type: integer
     
-  phase:
+  file_phase:
     description: >
-      The data phase of the imaging files.
+      The image file's data release Phase for a particular study. 
     type: integer 
 
   subjects:
