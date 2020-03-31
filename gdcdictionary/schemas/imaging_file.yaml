@@ -96,9 +96,9 @@ properties:
       order number for this image or other content.
     type: integer
     
-  phase:
+  file_phase:
     description: >
-      The data phase of the imaging files.
+      The file's recorded phase. (Used for studies that produce imaging files in mutlitple phases.)
     type: integer 
 
   subjects:
