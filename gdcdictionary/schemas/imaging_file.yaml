@@ -98,7 +98,7 @@ properties:
     
   file_phase:
     description: >
-      The file's recorded phase. (Used for studies that produce imaging files in mutlitple phases.)
+      The image file's data release Phase for a particular study. 
     type: integer 
 
   subjects:
