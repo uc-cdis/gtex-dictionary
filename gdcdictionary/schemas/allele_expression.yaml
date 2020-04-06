@@ -83,6 +83,11 @@ properties:
       - RNA-Seq
       - Total RNA-Seq
 
+  callset:
+    description: >
+      Periodically, the TOPMed Informatics Research Center (IRC) performs variant identification and genotype calling on all samples available at a given time and the resulting call set is referred to as a genotype "Freeze".
+    type: string
+
   rna_expression_workflows:
     $ref: "_definitions.yaml#/to_one"
   core_metadata_collections:
