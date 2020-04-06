@@ -80,6 +80,12 @@ properties:
     enum: 
       - BAI
       - CRAI
+      
+  callset:
+    description: >
+      Periodically, the TOPMed Informatics Research Center (IRC) performs variant identification and genotype calling on all samples available at a given time and the resulting call set is referred to as a genotype "Freeze".
+    type: string      
+      
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
   aligned_reads_files:
