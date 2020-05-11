@@ -22,33 +22,31 @@ systemProperties:
   - state
 
 links:
-  - exclusive: true
+  - name: aligned_reads_files
+    backref: rna_expression_workflows
+    label: performed_on
+    target_type: aligned_reads
+    multiplicity: many_to_many
+    required: false
+  - name: submitted_aligned_reads_files
+    backref: rna_expression_workflows
+    label: performed_on
+    target_type: submitted_aligned_reads
+    multiplicity: many_to_many
+    required: false
+  - name: submitted_unaligned_reads_files
+    backref: rna_expression_workflows
+    label: performed_on
+    target_type: submitted_unaligned_reads
+    multiplicity: many_to_many #to one?
     required: true
-    subgroup:
-      - name: aligned_reads_files
-        backref: rna_expression_workflows
-        label: performed_on
-        target_type: aligned_reads
-        multiplicity: many_to_many
-        required: false
-      - name: submitted_aligned_reads_files
-        backref: rna_expression_workflows
-        label: performed_on
-        target_type: submitted_aligned_reads
-        multiplicity: many_to_many
-        required: false
-      - name: submitted_unaligned_reads_files
-        backref: rna_expression_workflows
-        label: performed_on
-        target_type: submitted_unaligned_reads
-        multiplicity: many_to_many #to one?
-        required: false
 
 required:
   - type
   - submitter_id
   - workflow_link
   - workflow_type
+  - submitted_unaligned_reads_files
 
 uniqueKeys:
   - [ id ]
