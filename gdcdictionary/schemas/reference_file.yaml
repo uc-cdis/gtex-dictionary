@@ -105,7 +105,7 @@ properties:
     description: >
       The version of the study that was released by data source (e.g., dbGaP)
     type: number
-
+    
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
   projects:
