@@ -20,6 +20,7 @@ systemProperties:
   - state
   - file_state
   - error_type
+  - file_size
 
 links:
   - exclusive: false
