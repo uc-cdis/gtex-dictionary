@@ -114,12 +114,12 @@ properties:
       The version of the study that was released by data source (e.g., dbGaP)
     type: number
     
-  directory_level:
+  directory:
     description: >
       The directory levels of the file as it would be found in the AWS and/or GCP bucket.
     type: array
-      items: 
-        type: string
+    items: 
+      type: string
     
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
