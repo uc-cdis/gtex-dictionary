@@ -684,7 +684,7 @@ experiment_name: # TOREVIEW
 
 experimental_strategy: # TOREVIEW
   description: >
-    The sequencing strategy used to generate the data file.
+    The sequencing strategy used to generate the data file referred to by the ga4gh_drs_uri.
 
 fastq_name: # TOREVIEW
   description: >
