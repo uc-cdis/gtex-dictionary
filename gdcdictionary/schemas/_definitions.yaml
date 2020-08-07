@@ -96,7 +96,7 @@ file_format:
     term:
         $ref: "_terms.yaml#/file_format"
         
-ga4gh_drs_uri:	
+ga4gh_drs_uri:
     type: string
     term:
         $ref: "_terms.yaml#/ga4gh_drs_uri"
