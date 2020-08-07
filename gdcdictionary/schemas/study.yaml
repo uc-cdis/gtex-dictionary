@@ -66,6 +66,16 @@ properties:
   exclude_from_aggregations:
     description: "Should the study be excluded from aggregations (e.g., Counts of total numbers of studies or total numbers of subjects) for users who are not authorized to access this study?"
     type: boolean
+    
+  study_registration:
+    description: >
+      External source from which the identifier included in study_id originates.
+    type: string
+
+  study_id:
+    description: >
+      Unique identifier that can be used to retrieve more information for a study.
+    type: string
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"

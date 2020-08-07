@@ -102,7 +102,7 @@ properties:
 
   experimental_strategy:
     description: >
-      Type of genotype or expression batch
+      The sequencing strategy used to generate the data file referred to by the ga4gh_drs_uri.
     type: string
 
   samples:

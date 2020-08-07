@@ -610,5 +610,10 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  specimen_id:
+    description: >
+      Unique identifier that can be used to retrieve more information for a specimen.
+    type: string
+
   subjects:
     $ref: "_definitions.yaml#/to_one"
