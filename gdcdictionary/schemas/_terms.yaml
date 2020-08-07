@@ -772,6 +772,10 @@ freezing_method:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432607&version=1.0"
 
+ga4gh_drs_uri:
+  description: >
+    DRS URI as defined by GA4GH DRS spec for pointers to file objects.
+
 gender:
   description: >
     Subject sex, as recorded by the study. (HARMONIZED)
