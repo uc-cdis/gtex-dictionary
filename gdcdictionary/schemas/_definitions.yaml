@@ -95,6 +95,11 @@ file_format:
     type: string
     term:
         $ref: "_terms.yaml#/file_format"
+        
+ga4gh_drs_uri:	
+    type: string
+    term:
+        $ref: "_terms.yaml#/ga4gh_drs_uri"
 
 md5sum:
     type: string
@@ -207,8 +212,8 @@ data_file_properties:
     $ref: "#/file_state"
   error_type:
     $ref: "#/data_file_error_type"
-  object_id:
-    $ref: "#/object_id"
+  ga4gh_drs_uri:
+    $ref: "#/ga4gh_drs_uri"
 
 workflow_properties:
   $ref: "#/ubiquitous_properties"
