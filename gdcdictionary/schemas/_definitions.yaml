@@ -225,6 +225,10 @@ data_file_properties:
     $ref: "#/data_file_error_type"
   ga4gh_drs_uri:
     $ref: "#/ga4gh_drs_uri"
+  bucket_path:
+    $ref: "#/bucket_path"
+  callset:
+    $ref: "#/callset"
 
 workflow_properties:
   $ref: "#/ubiquitous_properties"
