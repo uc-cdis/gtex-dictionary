@@ -86,11 +86,7 @@ properties:
       - Illumina Infinium HumanExome BeadChip
       - Illumina OMNI 5M SNP Array
       - Illumina OMNI 2.5M SNP Array
-      
-  callset:
-    description: >
-      Periodically, the TOPMed Informatics Research Center (IRC) performs variant identification and genotype calling on all samples available at a given time and the resulting call set is referred to as a genotype "Freeze".
-    type: string      
+       
 
   snp_array_workflows:
     $ref: "_definitions.yaml#/to_one"

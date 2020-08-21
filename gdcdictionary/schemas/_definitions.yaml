@@ -73,6 +73,18 @@ to_many:
         minItems: 1
     - $ref: "#/foreign_key"
 
+bucket_path:
+    type: array
+    items: 
+      type: string
+    term:
+        $ref: "_terms.yaml#/bucket_path"
+
+callset:
+    type: string
+    term:
+        $ref: "_terms.yaml#/callset"
+
 datetime:
   oneOf:
     - type: string
@@ -214,6 +226,10 @@ data_file_properties:
     $ref: "#/data_file_error_type"
   ga4gh_drs_uri:
     $ref: "#/ga4gh_drs_uri"
+  bucket_path:
+    $ref: "#/bucket_path"
+  callset:
+    $ref: "#/callset"    
 
 workflow_properties:
   $ref: "#/ubiquitous_properties"
