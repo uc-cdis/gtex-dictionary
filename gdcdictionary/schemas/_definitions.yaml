@@ -75,7 +75,8 @@ to_many:
 
 bucket_path:
     type: array
-    items: string
+    items: 
+      type: string
     term:
         $ref: "_terms.yaml#/bucket_path"
 
