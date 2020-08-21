@@ -73,6 +73,17 @@ to_many:
         minItems: 1
     - $ref: "#/foreign_key"
 
+bucket_path:
+    type: array
+    items: string
+    term:
+        $ref: "_terms.yaml#/bucket_path"
+
+callset:
+    type: string
+    term:
+        $ref: "_terms.yaml#/callset"
+
 datetime:
   oneOf:
     - type: string
