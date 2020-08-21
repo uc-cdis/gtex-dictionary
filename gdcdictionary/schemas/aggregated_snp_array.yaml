@@ -97,10 +97,7 @@ properties:
       - Illumina OMNI 2.5M SNP Array
       - Affymetrix Genome-Wide Human SNP Array 6.0
       
-  callset:
-    description: >
-      Periodically, the TOPMed Informatics Research Center (IRC) performs variant identification and genotype calling on all samples available at a given time and the resulting call set is referred to as a genotype "Freeze".
-    type: string      
+ 
 
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
