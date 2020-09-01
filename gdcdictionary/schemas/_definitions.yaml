@@ -216,6 +216,8 @@ data_file_properties:
     $ref: "#/file_name"
   file_size:
     $ref: "#/file_size"
+  file_format:
+    $ref: "#/file_format"
   md5sum:
     $ref: "#/md5sum"
   object_id:
