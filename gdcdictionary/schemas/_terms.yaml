@@ -754,6 +754,10 @@ figo_stage:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3225684&version=1.0"
 
+file_format:
+  description: >
+    The format of the data file object.
+
 file_name: # TOREVIEW
   description: >
     The name (or part of a name) of a file (of any type).
