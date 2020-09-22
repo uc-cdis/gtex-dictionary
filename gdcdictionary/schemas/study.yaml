@@ -77,5 +77,53 @@ properties:
       Unique identifier that can be used to retrieve more information for a study.
     type: string
 
+  dbgap_accession:
+    description: >
+      The dbgap accession number provided for the project (example, phs123456.v1.p1.c1).
+    type: string
+    
+  dbgap_phs:
+    description: >
+      The dbGaP phs accession (example, phs123456).
+    type: string
+    
+  dbgap_version:
+    description: >
+      The dbGaP version (example, v1).
+    type: string
+    
+  dbgap_participant_set:
+    description: >
+      The dbGaP participant set (example, p1).
+    type: string
+    
+  dbgap_consent:
+    description: >
+      The dbGaP consent number (example, c1).
+    type: string
+    
+  dbgap_consent_text:
+    description: >
+      The dbGaP consent text (example, HMB-IRB).
+    type: string    
+    
+  authz:
+    description: >
+      The authz string (example, ["/programs/Program.name/projects/Project.code"] ).
+    type: array
+    items:
+      type: string
+        
+  short_name:
+    description: >
+      The shorthand name for the project.
+    type: string
+        
+  full_name:
+    description: >
+      The full name for the project.
+    type: string
+
+
   projects:
     $ref: "_definitions.yaml#/to_one_project"
