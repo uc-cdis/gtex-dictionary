@@ -91,6 +91,7 @@ properties:
       - BCF
       - BED
       - BWT
+      - CSV
       - DOCX
       - FAI
       - FASTA
@@ -103,6 +104,8 @@ properties:
       - R
       - RDATA
       - SA
+      - SAS
+      - SAS7BCAT
       - TAR
       - TBI
       - TSV
