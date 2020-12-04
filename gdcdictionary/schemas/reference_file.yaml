@@ -105,7 +105,7 @@ properties:
       - RDATA
       - SA
       - SAS
-      - SAS7BCAT
+      - SAS7BDAT
       - TAR
       - TBI
       - TSV
