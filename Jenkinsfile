@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('cdis-jenkins-lib@chore/dictionary_ci_flow') _
+@Library('cdis-jenkins-lib@master') _
 
 testPipeline {
   DICTIONARY = "True"
