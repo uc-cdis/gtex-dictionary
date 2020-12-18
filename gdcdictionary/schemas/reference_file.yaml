@@ -90,27 +90,43 @@ properties:
       - AVRO
       - BCF
       - BED
+      - BNP
       - BWT
+      - C
       - CSV
+      - CTR
+      - DAT
+      - DB
+      - DOC
       - DOCX
       - FAI
       - FASTA
+      - FMT
+      - FOR
       - GDS
+      - GRD
       - GZ
       - MD
       - PAC
       - PDF
       - POS
+      - PPT
       - R
       - RDATA
+      - RTF
       - SA
       - SAS
       - SAS7BDAT
+      - STM
       - TAR
       - TBI
+      - TBL
       - TSV
       - TXT
       - VCF
+      - WPD
+      - XLS
+      - XLSX
       - XML
       
     
