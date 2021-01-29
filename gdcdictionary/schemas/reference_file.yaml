@@ -135,6 +135,11 @@ properties:
       The version of the study that was released by data source (e.g., dbGaP)
     type: number
     
+  source_file:
+    description: >
+      The originating compressed file's name.
+    type: string
+    
     
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
