@@ -80,7 +80,11 @@ properties:
     description: >
       The version of the study that was released by data source (e.g., dbGaP)
     type: number
-  
+    
+  source_file:
+    description: >
+      The originating compressed file's name.
+    type: string
     
   reference_files:
     $ref: "_definitions.yaml#/to_one"
