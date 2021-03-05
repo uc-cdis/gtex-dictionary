@@ -71,10 +71,11 @@ properties:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: 
-      - TBI
-      - CSI
       - BCF.CSI
+      - CSI
+      - TBI
       - VCF.CSI
+      - ZIP
   
   study_version:
     description: >
