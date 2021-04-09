@@ -96,6 +96,7 @@ properties:
       - CSV
       - CTR
       - DAT
+      - DTA
       - DB
       - DOC
       - DOCX
@@ -117,6 +118,7 @@ properties:
       - SA
       - SAS
       - SAS7BDAT
+      - SAV
       - STM
       - TAR
       - TBI
