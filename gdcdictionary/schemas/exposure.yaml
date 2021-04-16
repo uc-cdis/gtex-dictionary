@@ -69,7 +69,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-  
+
   current_smoker_baseline:
     description: >
       Indicates whether subject currently smokes cigarettes. (HARMONIZED)

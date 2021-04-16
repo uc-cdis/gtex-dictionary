@@ -62,11 +62,11 @@ properties:
       - Raw
       - Processed
       - Raw/Processed
-      
+
   exclude_from_aggregations:
     description: "Should the study be excluded from aggregations (e.g., Counts of total numbers of studies or total numbers of subjects) for users who are not authorized to access this study?"
     type: boolean
-    
+
   study_registration:
     description: >
       External source from which the identifier included in study_id originates.
@@ -81,44 +81,44 @@ properties:
     description: >
       The dbgap accession number provided for the project (example, phs123456.v1.p1.c1).
     type: string
-    
+
   dbgap_phs:
     description: >
       The dbGaP phs accession (example, phs123456).
     type: string
-    
+
   dbgap_version:
     description: >
       The dbGaP version (example, v1).
     type: string
-    
+
   dbgap_participant_set:
     description: >
       The dbGaP participant set (example, p1).
     type: string
-    
+
   dbgap_consent:
     description: >
       The dbGaP consent number (example, c1).
     type: string
-    
+
   dbgap_consent_text:
     description: >
       The dbGaP consent text (example, HMB-IRB).
-    type: string    
-    
+    type: string
+
   authz:
     description: >
       The authz string (example, ["/programs/Program.name/projects/Project.code"] ).
     type: array
     items:
       type: string
-        
+
   short_name:
     description: >
       The shorthand name for the project.
     type: string
-        
+
   full_name:
     description: >
       The full name for the project.

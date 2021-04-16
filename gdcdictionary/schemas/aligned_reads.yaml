@@ -107,7 +107,7 @@ properties:
       - RNA-Seq
       - miRNA-Seq
       - Total RNA-Seq
-      
+
 
   platform:
     $ref: "read_group.yaml#/properties/platform"

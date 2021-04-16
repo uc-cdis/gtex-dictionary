@@ -64,7 +64,7 @@ properties:
       - Clinical Data
       - Familial Reference
       - Sequencing Reference
-      - Variant Calling Reference 
+      - Variant Calling Reference
       - Other
 
   data_type:
@@ -72,7 +72,7 @@ properties:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Kinship Matrix
-      - Principal Component      
+      - Principal Component
       - Script
       - Sequencing Reference
       - Unharmonized Clinical Data
@@ -131,19 +131,19 @@ properties:
       - XLSX
       - XML
       - ZIP
-      
-    
+
+
   study_version:
     description: >
       The version of the study that was released by data source (e.g., dbGaP)
     type: number
-    
+
   source_file:
     description: >
       The originating compressed file's name.
     type: string
-    
-    
+
+
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
   projects:

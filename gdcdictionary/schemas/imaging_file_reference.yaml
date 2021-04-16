@@ -73,10 +73,9 @@ properties:
     term:
       $ref: "_terms.yaml#/data_format"
     type: string
-    
+
 
   imaging_files:
     $ref: "_definitions.yaml#/to_many"
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
-

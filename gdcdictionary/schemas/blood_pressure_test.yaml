@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Resting blood pressure will be measured in the right arm after five minutes in the seated position. An automated oscillometric method (Dinamap) and appropriate cuff size will be used. Three readings will be taken; the second and third readings will be averaged to obtain the blood pressure levels used in analyses. An additional systolic blood pressure will be measured in both the right and left brachial, posterior tibial, and dorsalis pedis arteries with a Doppler instrument. 
+  Resting blood pressure will be measured in the right arm after five minutes in the seated position. An automated oscillometric method (Dinamap) and appropriate cuff size will be used. Three readings will be taken; the second and third readings will be averaged to obtain the blood pressure levels used in analyses. An additional systolic blood pressure will be measured in both the right and left brachial, posterior tibial, and dorsalis pedis arteries with a Doppler instrument.
 additionalProperties: false
 submittable: true
 validators: null
@@ -50,7 +50,7 @@ properties:
     description: >
       Resting systolic blood pressure from the upper arm in a clinical setting. (mmHg) (HARMONIZED)
     type: number
-  
+
   age_at_bp_systolic:
     description: >
       age at measurement of bp_systolic (years) (HARMONIZED)

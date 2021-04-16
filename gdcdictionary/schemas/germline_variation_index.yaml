@@ -68,11 +68,11 @@ properties:
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    enum: 
+    enum:
       - TBI
       - CSI
-      
-    
+
+
   simple_germline_variations:
     $ref: "_definitions.yaml#/to_one"
   core_metadata_collections:

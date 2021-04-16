@@ -75,7 +75,7 @@ to_many:
 
 bucket_path:
     type: array
-    items: 
+    items:
       type: string
     term:
         $ref: "_terms.yaml#/bucket_path"
@@ -107,7 +107,7 @@ file_format:
     type: string
     term:
         $ref: "_terms.yaml#/file_format"
-        
+
 ga4gh_drs_uri:
     type: string
     term:
@@ -231,7 +231,7 @@ data_file_properties:
   bucket_path:
     $ref: "#/bucket_path"
   callset:
-    $ref: "#/callset"    
+    $ref: "#/callset"
 
 workflow_properties:
   $ref: "#/ubiquitous_properties"

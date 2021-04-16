@@ -19,7 +19,7 @@
     "determining_person": "Coroner/Medical Examiner (ME)",
     "place_of_death": "Hospital inpatient",
     "hours_in_ventilator": 4,
-    "witnessed_death": true,    
+    "witnessed_death": true,
     "cases": {
         "submitter_id": "GTEx-STST"
     }

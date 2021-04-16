@@ -352,7 +352,7 @@ bmi:
 bucket_path:
   description: >
     The directory levels of the file as it would be found in the AWS and/or GCP bucket.
-    
+
 burkitt_lymphoma_clinical_variant:
   description: >
     Burkitt's lymphoma categorization based on clinical features that differ from other forms of the

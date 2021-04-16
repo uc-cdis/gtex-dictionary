@@ -64,7 +64,7 @@ properties:
     description: >
       age at measurement of hemoglobin_mcnc_bld. (years) (HARMONIZED)
     type: number
-  
+
   unit_hemoglobin_mcnc_bld:
     description: >
       Measurement of hematocrit, the fraction of volume (vfr) of blood (bld) that is composed of red blood cells. (percentage) (HARMONIZED)
@@ -234,7 +234,7 @@ properties:
     description: >
       Count by volume, or number concentration (ncnc), of platelets in the blood (bld). (thousands / microliter) (HARMONIZED)
     type: number
-  
+
   pmv_entvol_bld:
     description: >
       Measurement of the mean volume (entvol) of platelets in the blood (bld), known as mean platelet volume (MPV or PMV). (fL = femtoliter) (HARMONIZED)
@@ -299,10 +299,10 @@ properties:
     description: >
       harmonization unit for rbc_ncnc_bld (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
-  
+
   unit_rdw_ratio_rbc:
     description: >
-      harmonization unit for rdw_ratio_rbc (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED) 
+      harmonization unit for rdw_ratio_rbc (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
   unit_wbc_ncnc_bld:

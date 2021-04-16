@@ -9,7 +9,7 @@ program: '*'
 project: '*'
 description: >
   The collection of all data related to a specific subject in the
-  context of a specific experiment. 
+  context of a specific experiment.
 additionalProperties: false
 submittable: true
 validators: null
@@ -22,7 +22,7 @@ systemProperties:
   - state
 
 links:
-  - name: studies 
+  - name: studies
     backref: subjects
     label: member_of
     target_type: study
@@ -33,7 +33,7 @@ required:
   - type
   - submitter_id
   - studies
-  - consent_codes 
+  - consent_codes
 
 uniqueKeys:
   - [id]
@@ -45,7 +45,7 @@ properties:
 
   amputation_type:
     description: >
-      If amputated, the amputation type for leg, above the knee or below the knee.   
+      If amputated, the amputation type for leg, above the knee or below the knee.  
     type: string
 
   geographic_site:
@@ -119,23 +119,23 @@ properties:
 
   cohort_id:
     description: >
-      The study subgroup that the participant belongs to. This indicates whether the participant was a postmortem donor, 
-      an organ donor, or a surgical donor.   
-    enum: 
+      The study subgroup that the participant belongs to. This indicates whether the participant was a postmortem donor,
+      an organ donor, or a surgical donor.  
+    enum:
       - Postmortem
       - Organ Donor (OPO)
       - Surgical Donor
 
   eligibility:
     description: >
-      A verification field of whether the Donor has met the overall eligibility criteria for GTEx collection based on answers 
-      to eligibility questions. All Eligibility conditions require confirmation from the donor procurement team (staff team where 
+      A verification field of whether the Donor has met the overall eligibility criteria for GTEx collection based on answers
+      to eligibility questions. All Eligibility conditions require confirmation from the donor procurement team (staff team where
       tissue collection and data abstraction takes place) and must be met in order for donor to eligible.  
     type: boolean
 
   index_date:
     description: >
-      "Indicates whether the time point reference begins at the donor's actual death, presumed death, 
+      "Indicates whether the time point reference begins at the donor's actual death, presumed death,
       or when the cross clamp was applied in the case of surgical donors."
     enum:
       - Actual Death
@@ -167,7 +167,7 @@ properties:
     description: >
       harmonization unit for site (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
-    
+
   derived_parent_subject_id:
     description: >
       Unique subject identifier associated with parent project; derived from parent accession and submitted subject ID.
@@ -184,4 +184,3 @@ properties:
     type: string
   studies:
     $ref: "_definitions.yaml#/to_many"
-

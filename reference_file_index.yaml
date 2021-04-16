@@ -50,28 +50,28 @@ properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "aligned_reads_index" ]
-  
+
 data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Simple Nucleotide Variation
-  
+
 data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Germline Variation Index" ]
     enum: [ "Sequencing Reference Index"]
     enum: [ "Variant Reference Index"]
-  
+
 data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    enum: 
+    enum:
       - TBI
       - CSI
       - BCF.CSI
       - VCF.CSI
-  
+
 core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"

@@ -52,6 +52,6 @@
     "percent_end1_aligned": 0.9928265,
     "percent_duplicate_aligned": 0,
     "percent_intragenic_end2_in_sense": 50.12628,
-    "read_groups": 
+    "read_groups":
         {"submitter_id": "read_group_a"}
 }

@@ -55,7 +55,7 @@ properties:
     description: >
       age at measurement of age_at_lipid1c (years) (HARMONIZED)
     type: number
-  
+
   unit_lipid_lowering_medication:
     description: >
       harmonization unit for unit_lipid1c (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
@@ -75,7 +75,7 @@ properties:
     description: >
       harmonization unit for fasting_lipids (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
-  
+
   age_at_antihypertensive_meds:
     description: >
       age at measurement of antihypertensive_meds (years) (HARMONIZED)
