@@ -108,6 +108,17 @@ file_format:
     term:
         $ref: "_terms.yaml#/file_format"
         
+file_type:
+    type: string
+    term:
+        $ref: "_terms.yaml#/file_type" 
+
+file_md5sum:
+    type: string
+    term:
+        $ref: "_terms.yaml#/file_md5sum"
+    pattern: "^[a-f0-9]{32}$"
+
 ga4gh_drs_uri:
     type: string
     term:
@@ -232,6 +243,10 @@ data_file_properties:
     $ref: "#/bucket_path"
   callset:
     $ref: "#/callset"    
+  file_md5sum: 
+    $ref: "#/file_md5sum"
+  file_type: 
+    $ref: "#/file_type"
 
 workflow_properties:
   $ref: "#/ubiquitous_properties"

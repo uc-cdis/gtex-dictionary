@@ -758,6 +758,10 @@ file_format:
   description: >
     The format of the data file object.
 
+file_md5sum: # TOREVIEW
+  description: >
+    The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital fingerprint. This version of the property is used for interoperation purposes.
+
 file_name: # TOREVIEW
   description: >
     The name (or part of a name) of a file (of any type).
@@ -769,6 +773,10 @@ file_size: # TOREVIEW
 file_state: # TOREVIEW
   description: >
     The current state of the data file object.
+
+file_type: # TOREVIEW
+  description: >
+    Specific content type of the data file. This version of the property is used for interoperation purposes.
 
 flow_cell_barcode: # TOREVIEW
   description: >
