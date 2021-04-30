@@ -107,6 +107,11 @@ file_format:
     type: string
     term:
         $ref: "_terms.yaml#/file_format"
+        
+file_type:
+    type: string
+    term:
+        $ref: "_terms.yaml#/file_type" 
 
 file_md5sum:
     type: string
@@ -240,6 +245,8 @@ data_file_properties:
     $ref: "#/callset"    
   file_md5sum: 
     $ref: "#/file_md5sum"
+  file_type: 
+    $ref: "#/file_type"
 
 workflow_properties:
   $ref: "#/ubiquitous_properties"
