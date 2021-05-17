@@ -37,16 +37,21 @@ links:
         target_type: project
         multiplicity: many_to_one
         required: false
-
+        
 required:
   - type
   - submitter_id
   - file_name
   - file_size
+  - file_md5sum
   - md5sum
   - data_category
+  - file_type
   - data_type
+  - file_format
   - data_format
+  - experimental_strategy
+  - platform
 
 uniqueKeys:
   - [ id ]
