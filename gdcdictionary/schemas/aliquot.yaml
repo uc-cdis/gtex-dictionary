@@ -25,6 +25,7 @@ required:
   - type
   - submitter_id
   - samples
+  - experimental_strategy
 
 uniqueKeys:
   - [id]
