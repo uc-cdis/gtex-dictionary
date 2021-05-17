@@ -50,9 +50,6 @@ required:
   - data_type
   - file_format
   - data_format
-  - experimental_strategy
-  - platform
-
 
 uniqueKeys:
   - [ id ]
