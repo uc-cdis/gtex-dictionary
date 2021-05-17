@@ -42,14 +42,18 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 required:
-  - submitter_id
   - type
+  - submitter_id
   - file_name
   - file_size
-  - data_format
+  - file_md5sum
   - md5sum
   - data_category
+  - file_type
   - data_type
+  - file_format
+  - data_format
+  - experimental_strategy
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"

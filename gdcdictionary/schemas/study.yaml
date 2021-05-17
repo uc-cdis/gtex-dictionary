@@ -33,6 +33,8 @@ required:
   - type
   - submitter_id
   - projects
+  - study_id
+  - study_registration
 
 uniqueKeys:
   - [ id ]

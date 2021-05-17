@@ -43,16 +43,18 @@ links:
     target_type: core_metadata_collection
     multiplicity: many_to_many
     required: false
-
-
+    
 required:
   - type
   - submitter_id
   - file_name
   - file_size
+  - file_md5sum
   - md5sum
   - data_category
+  - file_type
   - data_type
+  - file_format
   - data_format
 
 uniqueKeys:
