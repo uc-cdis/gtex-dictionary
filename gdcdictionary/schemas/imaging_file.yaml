@@ -54,7 +54,6 @@ required:
   - file_format
   - data_format
   - experimental_strategy
-  - platform
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
