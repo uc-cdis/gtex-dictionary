@@ -102,6 +102,38 @@ properties:
       The image file's data release Phase for a particular study. 
     type: integer 
     
+#TCIA Image Properties
+  series_description:
+    description: >
+       Description of the Series. DICOM (0008,103E)
+    type: string
+    
+  convolution_kernel:
+    description: >
+      A label describing the convolution kernel or algorithm used to reconstruct the data. DICOM (0018,1210)
+    type: string
+    
+  manufacturer:
+    description: >
+      Manufacturer of the device. DICOM (0008,0070)
+    type: string
+    
+  manufacturer_model_name:
+    description: >
+      Manufacturer's model name of the device. DICOM (0008,1090)
+    type: string
+    
+  slice_thickness:
+    description: >
+      Nominal slice thickness, in mm. DICOM (0018,0050)
+    type: number
+    
+  reconstruction_diameter:
+    description: >
+      Diameter in mm of the region from within which data were used in creating the reconstruction of the image. DICOM (0018,1100)
+    type: number
+    
+
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
