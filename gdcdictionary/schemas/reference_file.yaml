@@ -107,6 +107,7 @@ properties:
       - GDS
       - GRD
       - GZ
+      - LST
       - MD
       - PAC
       - PDF
