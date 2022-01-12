@@ -1397,7 +1397,7 @@ qc_metric_state:
 
 race:
   description: >
-    Harmonized race category of participant. (HARMONIZED)
+    Harmonized race category of participant. Acceptable values: white,american indian or alaska native,black or african american,asian,native hawaiian or other pacific islander,hispanic,multiple,other,Unknown,not reported,not allowed to collect (HARMONIZED)
   termDef:
     term: Race Category Text
     source: caDSR
