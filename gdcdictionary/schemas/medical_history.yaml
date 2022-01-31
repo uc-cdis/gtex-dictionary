@@ -808,7 +808,7 @@ properties:
 
   covid_icu:
     description: >
-      Did Was patient admitted to ICU during hospitalization?
+      Was patient admitted to ICU during hospitalization?
     enum:
       - "Yes"
       - "No"
