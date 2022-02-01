@@ -792,5 +792,36 @@ properties:
       harmonization unit for carotid_plaque (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
 
+  covid_pos_ever_yn:
+    description: >
+      Any positive COVID-19 test?
+    enum:
+      - "Yes"
+      - "No"
+
+  covid_hospital_admission:
+    description: >
+      Did COVID-19 contribute to need for hospital admission?
+    enum:
+      - "Yes"
+      - "No"
+
+  covid_icu:
+    description: >
+      Was patient admitted to ICU during hospitalization?
+    enum:
+      - "Yes"
+      - "No"
+
+  covid_icu_stay_length:
+    description: >
+      Total ICU length of stay (from hospital admit)
+    type: integer
+
+  covid_hospital_admission_age:
+    description: >
+      Age on hospital admit (years, age ≥1 year)
+    type: integer
+
   subjects:
     $ref: "_definitions.yaml#/to_one"
