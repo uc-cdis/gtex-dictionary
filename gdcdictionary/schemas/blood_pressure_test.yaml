@@ -25,7 +25,7 @@ links:
     backref: blood_pressure_test
     label: describes
     target_type: subject
-    multiplicity: one_to_one
+    multiplicity: many_to_one
     required: true
 
 uniqueKeys:
