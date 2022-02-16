@@ -75,6 +75,7 @@ properties:
       - "american indian or alaska native"
       - "black or african american"
       - "asian"
+      - "asian, white"
       - "native hawaiian or other pacific islander"
       - "hispanic"
       - "multiple"
