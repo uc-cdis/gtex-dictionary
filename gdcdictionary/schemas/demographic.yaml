@@ -70,19 +70,22 @@ properties:
   race:
     term:
       $ref: "_terms.yaml#/race"
-    enum:
-      - "white"
-      - "american indian or alaska native"
-      - "black or african american"
-      - "asian"
-      - "asian, white"
-      - "native hawaiian or other pacific islander"
-      - "hispanic"
-      - "multiple"
-      - "other"
-      - "Unknown"
-      - "not reported"
-      - "not allowed to collect"
+    description: >
+      Harmonized race category of participant. Acceptable values: white,american indian or alaska native,black or african american,asian,native hawaiian or other pacific islander,hispanic,multiple,other,Unknown,not reported,not allowed to collect (HARMONIZED)
+    type: array
+    items:
+      enum:
+        - "white"
+        - "american indian or alaska native"
+        - "black or african american"
+        - "asian"
+        - "native hawaiian or other pacific islander"
+        - "hispanic"
+        - "multiple"
+        - "other"
+        - "Unknown"
+        - "not reported"
+        - "not allowed to collect"
 
   ethnicity:
     term:
