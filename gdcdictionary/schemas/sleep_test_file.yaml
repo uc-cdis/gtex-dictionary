@@ -1,13 +1,13 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "submitted_unaligned_reads"
-title: Submitted Unaligned Reads
+id: "sleep_test_file"
+title: Sleep Test File
 type: object
-namespace: https://dcp.bionimbus.org/
+namespace: https://gen3.biodatacatalyst.nhlbi.nih.gov/
 category: data_file
 program: '*'
 project: '*'
-description: "Data file containing unaligned reads that have not been GDC Harmonized."
+description: "Polysomnography data containing signal files and event scoring and event staging annotation files."
 additionalProperties: false
 submittable: true
 validators: null
@@ -25,14 +25,14 @@ links:
   - exclusive: false
     required: true
     subgroup:
-      - name: read_groups
-        backref: submitted_unaligned_reads_files
+      - name: subjects
+        backref: sleep_test_files
         label: data_from
-        target_type: read_group
+        target_type: subject
         multiplicity: many_to_many
         required: false
       - name: core_metadata_collections
-        backref: submitted_unaligned_reads_files
+        backref: sleep_test_files
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_many
@@ -60,36 +60,30 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Sequencing Data
-      - Sequencing Reads
-      - Raw Sequencing Data
-
+      - Polysomnography Data
+           
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Unaligned Reads" ]
-
+    enum: 
+      - Signal Data
+      - Annotation Data
+      
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - BAM
-      - FASTQ
+      - EDF
+      - XML
 
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-      - RNA-Seq
-      - miRNA-Seq
-      - Total RNA-Seq
+      - Polysomnography
        
 
-  read_groups:
+  subjects:
     $ref: "_definitions.yaml#/to_many"
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
