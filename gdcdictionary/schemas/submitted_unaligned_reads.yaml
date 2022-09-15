@@ -87,7 +87,8 @@ properties:
       - RNA-Seq
       - miRNA-Seq
       - Total RNA-Seq
-       
+      - Amplicon
+      - Other
 
   read_groups:
     $ref: "_definitions.yaml#/to_many"
