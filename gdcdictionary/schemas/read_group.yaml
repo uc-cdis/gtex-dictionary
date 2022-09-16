@@ -83,8 +83,10 @@ properties:
       - Illumina HiSeq 4000
       - Illumina MiSeq
       - Illumina NextSeq
+      - Illumina NovaSeq 6000
       - Ion Torrent PGM
       - Ion Torrent Proton
+      - NextSeq 500
       - PacBio RS
       - Ion S5 XL System, Ion 530 Chip
       - Other
