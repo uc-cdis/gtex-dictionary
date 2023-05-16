@@ -108,6 +108,7 @@ properties:
       - GDS
       - GRD
       - GZ
+      - JSON
       - MD
       - PAC
       - PDF
