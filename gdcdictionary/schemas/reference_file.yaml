@@ -119,6 +119,7 @@ properties:
       - RTF
       - SA
       - SAS
+      - SAS7BCAT
       - SAS7BDAT
       - SAV
       - STM
