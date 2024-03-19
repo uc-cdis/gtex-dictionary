@@ -61,27 +61,30 @@ properties:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Polysomnography Data
-           
+      - Actigraphy Data
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: 
+    enum:
       - Signal Data
       - Annotation Data
-      
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - EDF
       - XML
+      - CSV
 
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - Polysomnography
-       
+      - Actigraphy
+
 
   subjects:
     $ref: "_definitions.yaml#/to_many"
