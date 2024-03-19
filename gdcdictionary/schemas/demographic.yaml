@@ -144,6 +144,7 @@ properties:
       - "Mexican"
       - "PuertoRican"
       - "SouthAmerican"
+      - "Multiple"
 
   unit_hispanic_subgroup:
     description: >
