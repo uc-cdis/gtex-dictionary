@@ -93,6 +93,7 @@ properties:
       - BNP
       - BWT
       - C
+      - CSI
       - CSV
       - CTR
       - DAT
