@@ -1,0 +1,45 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "original_file"
+title: Original File
+type: object
+namespace: https://dcp.bionimbus.org/
+category: original_data
+program: '*'
+project: '*'
+description: "A storage node for the original, raw contents of a study ingested into our system."
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - state
+  - project_id
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: projects
+    backref: original_data
+    label: data_from
+    target_type: project
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - type
+  - submitter_id
+  - ga4gh_drs_uri
+  - projects
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+  ga4gh_drs_uri:
+    $ref: "_definitions.yaml#/ga4gh_drs_uri"
+  projects:
+    $ref: "_definitions.yaml#/to_one_project"
