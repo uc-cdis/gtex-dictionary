@@ -31,7 +31,6 @@ required:
   - type
   - submitter_id
   - ga4gh_drs_uri
-  - projects
 
 uniqueKeys:
   - [ id ]
