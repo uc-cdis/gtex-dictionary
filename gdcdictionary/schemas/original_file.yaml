@@ -29,12 +29,11 @@ links:
 
 required:
   - type
-  - submitter_id
   - ga4gh_drs_uri
 
 uniqueKeys:
   - [ id ]
-  - [ project_id, submitter_id ]
+  - [ project_id ]
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
