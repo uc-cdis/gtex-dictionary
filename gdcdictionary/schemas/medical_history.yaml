@@ -13,6 +13,7 @@ additionalProperties: false
 submittable: true
 validators: null
 
+
 systemProperties:
   - id
   - project_id
