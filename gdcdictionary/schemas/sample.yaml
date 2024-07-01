@@ -38,7 +38,7 @@ links:
     backref: samples
     label: derived_from
     target_type: subject
-    multiplicity: many_to_one
+    multiplicity: many_to_many
     required: true
 
 properties:
@@ -461,8 +461,8 @@ properties:
 
   collection_site:
     description: >
-      Code for BSS collection site. Indicates the site that enrolled the donor, 
-      brain subregions may have more than one site. 
+      Code for BSS collection site. Indicates the site that enrolled the donor,
+      brain subregions may have more than one site.
     type: string
 
   current_weight:
@@ -616,4 +616,4 @@ properties:
     type: string
 
   subjects:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
