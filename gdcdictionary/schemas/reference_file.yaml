@@ -106,11 +106,14 @@ properties:
       - FASTA
       - FMT
       - FOR
+      - FRM
       - GDS
       - GRD
       - GZ
       - JSON
       - MD
+      - MYD
+      - MYI
       - PAC
       - PDF
       - POS
