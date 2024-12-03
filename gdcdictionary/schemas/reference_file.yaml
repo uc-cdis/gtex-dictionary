@@ -98,6 +98,7 @@ properties:
       - CTR
       - DAT
       - DB
+      - DCM
       - DESC
       - DOC
       - DOCX
