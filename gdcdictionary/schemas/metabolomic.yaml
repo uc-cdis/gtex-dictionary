@@ -1,0 +1,158 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "metabolomic"
+title: Metabolomic
+type: object
+namespace: https://dcp.bionimbus.org/
+category: biospecimen
+program: '*'
+project: '*'
+description: >
+  Pertaining to the study and analysis of metabolites within a biological system; involves the
+  identification and quantification of small molecules produced during metabolism.
+additionalProperties: false
+submittable: true
+validators: []
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+required:
+  - type
+  - submitter_id
+  - samples
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+links:
+  - name: samples
+    backref: metabolomics
+    label: derived_from
+    multiplicity: many_to_one
+    target_type: sample
+    required: true
+
+constraints: null
+
+# Aliquot properties
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  windber_id:
+    description: >
+      The Windber ID for the metabolite.
+    type: string
+
+  casrn:
+    description: >
+      The Chemical Abstracts Service Registry Number (CASRN) for the metabolite.
+    type: string
+
+  dtxs_id:
+    description: >
+      The Distributed Structure-Searchable Toxicity Identifier (DTXSID) for the metabolite.
+    type: string
+
+  name_tar:
+    description: >
+      The target compound name for the metabolite.
+    type: string
+
+  reference:
+    description: >
+      The reference or citation for the metabolite.
+    type: string
+
+  carcinogen:
+    description: >
+      Indicates whether the metabolite is carcinogenic.
+    type: boolean
+
+  chemical_class:
+    description: >
+      The chemical class for the metabolite.
+    enum:
+      - "Organo-Phosphate pesticide"
+      - "PAH"
+      - "Parabens"
+      - "PCDDs/PCDFs"
+      - "PFAS"
+      - "Phenol"
+      - "Phthalate"
+      - "VOC"
+
+  results_file:
+    description: >
+      The file containing results for the subject-metabolite combination.
+    type: string
+
+  data_type:
+    description: >
+      The type of file for the subject-metabolite combination.
+    enum:
+      - ALT
+      - AMB
+      - ANN
+      - AVRO
+      - BCF
+      - BED
+      - BNP
+      - BWT
+      - C
+      - CSI
+      - CSV
+      - CTR
+      - DAT
+      - DB
+      - DCM
+      - DESC
+      - DOC
+      - DOCX
+      - DTA
+      - FAI
+      - FASTA
+      - FMT
+      - FOR
+      - GDS
+      - GRD
+      - GZ
+      - JSON
+      - MD
+      - PAC
+      - PDF
+      - POS
+      - PPT
+      - R
+      - RDATA
+      - RTF
+      - SA
+      - SAS
+      - SAS7BCAT
+      - SAS7BDAT
+      - SAV
+      - STM
+      - TAR
+      - TBI
+      - TBL
+      - TSV
+      - TXT
+      - VCF
+      - WPD
+      - XLS
+      - XLSX
+      - XML
+      - ZIP
+
+  guid:
+    description: >
+      The Globally Unique Identifier (GUID) of file for the subject-metabolite combination.
+    type: string
+
+  samples:
+    $ref: "_definitions.yaml#/to_one"

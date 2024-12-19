@@ -69,7 +69,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-  
+
   current_smoker_baseline:
     description: >
       Indicates whether subject currently smokes cigarettes. (HARMONIZED)
@@ -101,6 +101,251 @@ properties:
     description: >
       harmonization unit for ever_smoker_baseline (A "harmonization unit" is a defined group of subjects whose phenotypes can be similarly processed.) (HARMONIZED)
     type: string
+
+  exposure_category:
+    description: >
+      The category of exposure.
+    enum:
+      - "Biological"
+      - "Chemical"
+      - "Health Preventative"
+      - "Injury"
+      - "Physical"
+      - "Psychological"
+
+  exposure_type:
+    description: >
+      The type of exposure.
+    enum:
+      - "Adhesives"
+      - "Asbestos"
+      - "Combustion Byproducts"
+      - "Chemicals"
+      - "Chemical Warfare Agents"
+      - "Chromium"
+      - "Depleted Uranium"
+      - "Embedded Metallic Fragments"
+      - "Explosives"
+      - "Fog Oils"
+      - "Fuels"
+      - "Heavy Metals"
+      - "Herbicides"
+      - "Industrial Airborne Pollution"
+      - "Paint spraying or dust from sanding"
+      - "Pesticides"
+      - "Petrochemical Fumes"
+      - "Polychlorinated biphenyls (PCBs)"
+      - "Perfluoroalkyl and polyfluoroalkyl substances (PFAS or PFOA)"
+      - "Solvents, Industrial"
+      - "Directed Energy Sources"
+      - "Dust/Sand Storms"
+      - "Extreme Heat or Cold Injuries"
+      - "Excessive Vibration"
+      - "Extreme Sunlight Exposure"
+      - "Ionizing Radiation or Radiological Agents"
+      - "Lasers"
+      - "Non-Ionizing Radiation"
+      - "Noise"
+      - "Biological Warfare Agents"
+      - "Blood/Bodily Fluids"
+      - "Infections"
+      - "Mold"
+      - "Traumatic Injuries"
+      - "Overuse Injuries"
+      - "Combat Stressors"
+      - "Physical Assault"
+      - "Sexual Trauma"
+      - "Vaccinations"
+      - "Anti-Malarial Medications"
+      - "Pyridostigmine Bromide Tablets"
+
+  exposure_agent:
+    description: >
+      The agent of exposure.
+    enum:
+      - "Glues"
+      - "Rubber adhesives"
+      - "Plastic Adhesives"
+      - "Insulation for pipes (steam lines for example)"
+      - "Floor tiles"
+      - "Building materials"
+      - "Vehicle brakes and clutches"
+      - "Burn pits"
+      - "Burning garbage"
+      - "Smoke from burn pits"
+      - "Ammonia"
+      - "Chlorine"
+      - "Formaldehyde"
+      - "Mustard gas"
+      - "Nerve agent"
+      - "Sodium dichromate dust used as anti-corrosive agent"
+      - "High density metal used in tank armor and some bullets"
+      - "Penetrating shrapnel injury"
+      - "Blast injury"
+      - "C4"
+      - "TNT"
+      - "RDX"
+      - "HMX"
+      - "Smoke screens"
+      - "JP fuels"
+      - "Diesel fuels"
+      - "Gasoline"
+      - "Mercury"
+      - "Arsenic"
+      - "Aluminum"
+      - "Cadmium"
+      - "Lead (Lead based paint)"
+      - "Lead (ammunition)"
+      - "Lead (water from lead-based pipes)"
+      - "Lead (soil)"
+      - "Lead leaded gasoline)"
+      - "Agent Orange"
+      - "Airborne pollution from factories"
+      - "Airborne pollution from burning"
+      - "Airborne pollution from combat events"
+      - "Chemical Agent Resistant Coating (CARC)"
+      - "DDT, Diazinon (banned 2004)"
+      - "Malathion"
+      - "Chlordane (banned 1988)"
+      - "Tent heater smoke"
+      - "Oil/Chemical fires"
+      - "Vehicle fumes"
+      - "Products made before 1977 that include old fluorescent lighting fixtures"
+      - "Products made before 1977 that include old electrical devices containing PCB capacitors"
+      - "Products made before 1977 that include old microscope and hydraulic oils"
+      - "Synthetic chemicals in clothing"
+      - "Synthetic chemicals in carpets"
+      - "Synthetic chemicals in fabrics for furniture"
+      - "Synthetic chemicals in adhesives"
+      - "Synthetic chemicals in paper packaging for food"
+      - "Synthetic chemicals in heat- resistant/non-stick cookware"
+      - "Synthetic chemicals in fire- fighting foams (or aqueous film forming foam; AFFF)"
+      - "Acetone"
+      - "Benzene"
+      - "Tetrachloroethylene"
+      - "Trichloroethylene"
+      - "Xylene"
+      - "Various or undifferentiated sources, and possible overlap with non-ionizing radiation (below)"
+      - "Dusty and Sandy Environments"
+      - "Extreme Heat Injury"
+      - "Extreme Cold Injury"
+      - "Quick Movement back and forth or up and down"
+      - "Extreme Sunlight Injury"
+      - "Nuclear weapons"
+      - "X-rays"
+      - "Certain optics"
+      - "Accidental exposure by laser weapon"
+      - "Radar/microwave"
+      - "Radiofrequencies"
+      - "Potential overlap with Directed Energy (above)"
+      - "Generator"
+      - "Aircraft noises"
+      - "Heavy machinery"
+      - "Coxiella Burnetii"
+      - "Francisella tularensis"
+      - "Staphylococcal Enterotoxin B"
+      - "Blood"
+      - "Semen"
+      - "Vaginal Secretions"
+      - "Insect/Animal infections (Malaria, Lyme disease, Ehrlichiosis)"
+      - "Food or Waterborne Infection (Dysentery)"
+      - "Food or Waterborne Infection (leptospirosis)"
+      - "Tuberculosis"
+      - "Skin Infections (Tinea)"
+      - "Skin Infections (Cellulitis)"
+      - "Respiratory Infections (pneumonia)"
+      - "Respiratory Infections (COVID-19)"
+      - "Sexually Transmitted Diseases (HIV)"
+      - "Sexually Transmitted Diseases (syphilis)"
+      - "Sexually Transmitted Diseases (gonorrhea)"
+      - "Sexually Transmitted Diseases (chlamydia)"
+      - "Other"
+      - "Grows in places with lots of moisture"
+      - "Inhalation Injury"
+      - "Head Injury"
+      - "Musculoskeletal Injury"
+      - "Burn (chemical)"
+      - "Burn (thermal)"
+      - "Blast Injury"
+      - "Explosive Injury"
+      - "Back Pain"
+      - "Knee Pain"
+      - "Foot Pain"
+      - "Carpal Tunnel"
+      - "Combat patrols"
+      - "Firing Weapon"
+      - "Threat of being killed"
+      - "Seeing people injured or killed"
+      - "Surrounded by enemy"
+      - "Physical Attacks"
+      - "Military Sexual Trauma"
+      - "Anthrax"
+      - "Doxycycline"
+      - "Mefloquine"
+      - "Primaquine Atovaquone-proguanil (Malarone)"
+      - "Chloroquine"
+      - "Other antimalarial"
+      - "DEET"
+      - "Permethrin"
+      - "Use during Gulf War 1 (1990-1991)"
+
+  exposure_job:
+    description: >
+      Indicates whether subject was exposed on during employment.
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
+  exposure_start_date:
+    $ref: "_definitions.yaml#/datetime"
+
+  exposure_end_date:
+    $ref: "_definitions.yaml#/datetime"
+
+  exposure_method:
+    description: >
+      The method of exposure.
+    enum:
+      - "Skin Contact"
+      - "Injection"
+      - "Eye Contact"
+      - "Breathing"
+      - "Eating or Drinking, by mouth"
+
+  exposure_job:
+    description: >
+      The type of employment during the exposure.
+    enum:
+      - "Military job"
+      - "Civilian job"
+      - "Both"
+
+  exposure_frequency:
+    description: >
+      The type of employment during the exposure.
+    enum:
+      - "Every day"
+      - "1-4 times/month"
+      - "Once/month to once/6 months"
+      - "Once/year or less"
+
+  exposure_protection:
+    description: >
+      Indicates whether subject wore protection during the exposure.
+    type: boolean
+
+  exposure_protection_yes:
+    description: >
+      Indicates the type of protection if the subject wore protection
+    enum:
+      - "Eyewear"
+      - "Gloves"
+      - "Headgear"
+      - "Mask"
+      - "Other"
+      - "Protective suit"
+      - "Respirator"
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
