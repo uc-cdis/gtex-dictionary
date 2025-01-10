@@ -291,6 +291,15 @@ ann_arbor_tumor_stage:
     cde_version: null
     term_url: null
 
+assay_instrument:
+  description: "The specific instrument type used to perform the assay. If applicable, please also indicate the instrument mode and model in 'assay_instrument_mode' and 'assay_instrument_model'."
+
+assay_instrument_model:
+  description: "The specific model of instrument used to perform the assay. Please also indicate the instrument and mode in 'assay_instrument' and 'assay_instrument_mode'."
+
+assay_method:
+  description: "General methodology used to perform the assay."
+
 base_caller_name: # TOREVIEW
   description: >
     Name of the base caller.
@@ -352,7 +361,7 @@ bmi:
 bucket_path:
   description: >
     The directory levels of the file as it would be found in the AWS and/or GCP bucket.
-    
+
 burkitt_lymphoma_clinical_variant:
   description: >
     Burkitt's lymphoma categorization based on clinical features that differ from other forms of the
