@@ -103,7 +103,9 @@ properties:
       - OMNI
       - Other
       - RNA-Seq
+      - scATAC-Seq
       - scRNA-Seq
+      - snRNA-Seq
       - Validation
       - WES
       - WGS
