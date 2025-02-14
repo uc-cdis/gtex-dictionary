@@ -90,6 +90,7 @@ properties:
       - AVRO
       - BCF
       - BED
+      - BIM
       - BNP
       - BWT
       - C
@@ -104,6 +105,7 @@ properties:
       - DOCX
       - DTA
       - FAI
+      - FAM
       - FASTA
       - FMT
       - FOR
@@ -116,6 +118,7 @@ properties:
       - PDF
       - POS
       - PPT
+      - PPTX
       - R
       - RDATA
       - RTF
