@@ -112,6 +112,8 @@ properties:
       - GDS
       - GRD
       - GZ
+      - HTM
+      - HTML
       - JSON
       - MD
       - PAC
