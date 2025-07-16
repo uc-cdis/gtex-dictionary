@@ -114,14 +114,17 @@ properties:
       - GZ
       - HTM
       - HTML
+      - HWE
       - JSON
       - MD
       - PAC
       - PDF
+      - PNG
       - POS
       - PPT
       - PPTX
       - R
+      - RAR
       - RDATA
       - RTF
       - SA
