@@ -95,17 +95,20 @@ properties:
     term:
       $ref: "_terms.yaml#/library_strategy"
     enum:
-      - WGS
-      - WES
-      - RNA-Seq
-      - ChIP-Seq
-      - miRNA-Seq
-      - Bisulfite-Seq
-      - Validation
       - Amplicon
-      - OMNI
+      - Bisulfite-Seq
+      - ChIP-Seq
       - Exclude
+      - miRNA-Seq
+      - OMNI
       - Other
+      - RNA-Seq
+      - scATAC-Seq
+      - scRNA-Seq
+      - snRNA-Seq
+      - Validation
+      - WES
+      - WGS
 
   RIN:
     term:

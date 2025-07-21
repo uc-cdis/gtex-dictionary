@@ -89,6 +89,7 @@ properties:
       - miRNA-Seq
       - Total RNA-Seq
       - Amplicon
+      - scRNA-Seq
       - Other
 
   read_groups:

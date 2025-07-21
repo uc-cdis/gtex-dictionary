@@ -90,6 +90,7 @@ properties:
       - AVRO
       - BCF
       - BED
+      - BIM
       - BNP
       - BWT
       - C
@@ -98,23 +99,28 @@ properties:
       - CTR
       - DAT
       - DB
+      - DCM
       - DESC
       - DOC
       - DOCX
       - DTA
       - FAI
+      - FAM
       - FASTA
       - FMT
       - FOR
       - GDS
       - GRD
       - GZ
+      - HTM
+      - HTML
       - JSON
       - MD
       - PAC
       - PDF
       - POS
       - PPT
+      - PPTX
       - R
       - RDATA
       - RTF
