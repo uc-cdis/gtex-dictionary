@@ -90,8 +90,10 @@ properties:
       - AVRO
       - BCF
       - BED
+      - BIN
       - BIM
       - BNP
+      - BSC
       - BWT
       - C
       - CSI
@@ -104,6 +106,7 @@ properties:
       - DOC
       - DOCX
       - DTA
+      - EGT
       - FAI
       - FAM
       - FASTA
@@ -115,6 +118,8 @@ properties:
       - HTM
       - HTML
       - HWE
+      - IDAT
+      - IND
       - JSON
       - MD
       - PAC
