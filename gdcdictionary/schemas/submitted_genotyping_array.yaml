@@ -40,13 +40,14 @@ links:
         required: false
 
 required:
+  - type
   - submitter_id
   - file_name
   - file_size
   - md5sum
   - data_category
-  - data_format
   - data_type
+  - data_format
   - experimental_strategy
   - platform
 
