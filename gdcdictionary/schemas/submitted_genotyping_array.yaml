@@ -58,35 +58,33 @@ properties:
   $ref: "_definitions.yaml#/data_file_properties"
 
   data_category:
-    $ref:
-      - "_terms.yaml#/data_category"
+    term:
+      $ref: "_terms.yaml#/data_category"
     enum:
       - Copy Number Variation
 
   data_type:
-    $ref:
-      - "_terms.yaml#/data_type"
+    $ref: "_terms.yaml#/data_type"
     enum:
       - Raw Intensities
 
   data_format:
-    $ref:
-      - "_terms.yaml#/data_format"
+    $ref: "_terms.yaml#/data_format"
     enum:
       - CEL
 
   experimental_strategy:
-    $ref:
-      - "_terms.yaml#/experimental_strategy"
+    $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - Genotyping Array
 
   platform:
-    $ref:
-      - "_terms.yaml#/platform"
+    $ref: "_terms.yaml#/platform"
     enum:
       - Affymetrix
       - Affymetrix SNP 6.0
 
   aliquots:
     $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"
