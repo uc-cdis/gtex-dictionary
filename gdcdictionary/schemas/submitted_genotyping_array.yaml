@@ -7,7 +7,7 @@ namespace: https://dcp.bionimbus.org/
 category: data_file
 program: '*'
 project: '*'
-description: >-
+description: >
   Data file containing raw data from a genotyping array.
 additionalProperties: false
 submittable: true
