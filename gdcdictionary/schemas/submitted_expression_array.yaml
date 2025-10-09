@@ -3,16 +3,14 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "submitted_expression_array"
 title: Submitted Expression Array
 type: object
-namespace: https://gdc.cancer.gov
+namespace: https://dcp.bionimbus.org/
 category: data_file
-project: '*'
 program: '*'
+project: '*'
 description: >-
   Data file containing raw data from an expression array.
 additionalProperties: false
 submittable: true
-downloadable: true
-previous_version_downloadable: true
 validators: null
 
 systemProperties:
@@ -20,17 +18,26 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - file_state
   - state
+  - file_state
   - error_type
 
 links:
-  - name: aliquots
-    backref: submitted_expression_arrays
-    label: derived_from
-    target_type: aliquot
-    multiplicity: many_to_one
+  - exclusive: false
     required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: submitted_aligned_reads_files
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_many
+        required: false
+      - name: aliquots
+        backref: submitted_expression_arrays
+        label: derived_from
+        target_type: aliquot
+        multiplicity: many_to_one
+        required: true
 
 required:
   - submitter_id
