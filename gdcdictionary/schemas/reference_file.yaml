@@ -87,6 +87,7 @@ properties:
       - ALT
       - AMB
       - ANN
+      - ARR
       - AVRO
       - BCF
       - BED
