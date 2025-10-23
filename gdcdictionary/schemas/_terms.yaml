@@ -1072,6 +1072,10 @@ microsatellite_instability_abnormal:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3123142&version=1.0"
 
+monitor_name: # TOREVIEW
+  description: >
+    Name of the monitor used to collect the data.
+
 morphology:
   description: >
     The third edition of the International Classification of Diseases for Oncology, published in
