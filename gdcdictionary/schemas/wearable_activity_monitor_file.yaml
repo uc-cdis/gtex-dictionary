@@ -79,6 +79,7 @@ properties:
   monitor_name:
     term:
       $ref: "_terms.yaml#/monitor_name"
+    type: string
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
