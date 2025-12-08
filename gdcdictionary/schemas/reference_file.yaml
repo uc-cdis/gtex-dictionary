@@ -141,6 +141,7 @@ properties:
       - SAV
       - STM
       - TIF
+      - TIFF
       - TAR
       - TBI
       - TBL
