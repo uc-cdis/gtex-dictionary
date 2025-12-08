@@ -97,6 +97,7 @@ properties:
       - BSC
       - BWT
       - C
+      - CEL
       - CSI
       - CSV
       - CTR
@@ -139,6 +140,8 @@ properties:
       - SAS7BDAT
       - SAV
       - STM
+      - TIF
+      - TIFF
       - TAR
       - TBI
       - TBL
