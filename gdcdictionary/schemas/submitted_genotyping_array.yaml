@@ -73,6 +73,7 @@ properties:
     $ref: "_terms.yaml#/data_format"
     enum:
       - CEL
+      - TXT
 
   experimental_strategy:
     $ref: "_terms.yaml#/experimental_strategy"
@@ -84,6 +85,7 @@ properties:
     enum:
       - Affymetrix
       - Affymetrix SNP 6.0
+      - Illumina
 
   aliquots:
     $ref: "_definitions.yaml#/to_one"
