@@ -63,8 +63,7 @@ properties:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Copy Number Variation
-      - Indel Variation
-      - Single Nucleotide Variation
+      - SNV and Indel Variation
 
   data_type:
     $ref: "_terms.yaml#/data_type"
@@ -77,6 +76,7 @@ properties:
     enum:
       - CEL
       - GTC
+      - GTC.TXT
       - TXT
 
   experimental_strategy:
