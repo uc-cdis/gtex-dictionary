@@ -77,6 +77,7 @@ properties:
       - CEL
       - GTC
       - GTC.TXT
+      - IDAT
       - TXT
 
   experimental_strategy:
